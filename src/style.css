@@ -33,3 +33,4 @@ nav button.active{background:#304968;border-color:#5479a8}
 .art-unavailable .splash-controls{position:relative;padding:40px;display:grid;gap:20px}.art-unavailable .splash-controls button,.art-unavailable .remember-control{position:static!important;width:100%!important;height:auto!important;min-height:44px;color:white;background:#233c60}.art-unavailable .remember-control span{position:static;clip-path:none;width:auto;height:auto}
 
 .toolbar{grid-template-columns:1.3fr 1fr 1fr 1fr}@media(max-width:1100px){.toolbar{grid-template-columns:1fr 1fr}}@media(max-width:760px){.toolbar{grid-template-columns:1fr}}
+#intro[hidden],#workspace[hidden]{display:none!important}

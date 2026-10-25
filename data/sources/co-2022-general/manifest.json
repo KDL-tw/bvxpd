@@ -1,0 +1,20 @@
+[
+  {
+    "file": "usSenator.html",
+    "url": "https://www.sos.state.co.us/pubs/elections/Results/Abstract/2022/general/usSenator.html",
+    "sha256": "4b26a822632ea5cf1dbaf5165ba1fb53e851a0059193a52c2ec88c5e48509021",
+    "retrievedAt": "2026-10-25T19:12:38.141171+00:00"
+  },
+  {
+    "file": "governor.html",
+    "url": "https://www.sos.state.co.us/pubs/elections/Results/Abstract/2022/general/governor.html",
+    "sha256": "d8ecc8ffbbf672eddc087bdac61492b6308e360f6ab8f42107ae24ffe51fc22b",
+    "retrievedAt": "2026-10-25T19:12:38.275634+00:00"
+  },
+  {
+    "file": "usRepresentatives.html",
+    "url": "https://www.sos.state.co.us/pubs/elections/Results/Abstract/2022/general/usRepresentatives.html",
+    "sha256": "deabd523a410034c21aff5ac11dd4a208e41456e7d20518cabe7c7c91e77000b",
+    "retrievedAt": "2026-10-25T19:12:38.440105+00:00"
+  }
+]

@@ -18,6 +18,21 @@ export function validatePrediction(prediction) {
   return prediction;
 }
 
+// Conservative days-out baseline. It only averages explicitly supplied,
+// comparable historical shares; it never matches candidates by name.
+export function historicalBaseline({contestId, target, histories = [], weights = []} = {}) {
+  if (!contestId || !target) throw Error('A baseline needs a contest and target.');
+  if (!histories.length) return predictionUnavailable({contestId, target, model: 'historical-baseline', reason: 'No compatible historical contests were supplied.'});
+  const selected = histories.map((h, i) => ({...h, weight: Number(weights[i] ?? h.weight ?? 1)})).filter(h => Number.isFinite(h.share) && h.share >= 0 && h.share <= 1 && Number.isFinite(h.weight) && h.weight > 0 && h.compatible !== false);
+  if (!selected.length) return predictionUnavailable({contestId, target, model: 'historical-baseline', reason: 'Compatible history has no valid measured shares.'});
+  const denominator = selected.reduce((sum, h) => sum + h.weight, 0);
+  const estimate = selected.reduce((sum, h) => sum + h.share * h.weight, 0) / denominator;
+  const deviations = selected.map(h => (h.share - estimate) ** 2);
+  const variance = deviations.reduce((sum, v, i) => sum + selected[i].weight * v, 0) / denominator;
+  const spread = Math.sqrt(variance);
+  return {schemaVersion: 1, kind: 'modeled', status: 'evaluated', contestId, target, model: 'historical-baseline', unavailable: false, estimate, interval: [Math.max(0, estimate - 1.96 * spread), Math.min(1, estimate + 1.96 * spread)], probability: null, sampleSize: selected.length, assumptions: ['Explicitly comparable position/district history only', 'Weights are supplied by the caller', 'Interval reflects historical spread, not full forecast uncertainty']};
+}
+
 export const plannedPredictionCatalog = [
   {model: 'historical-baseline', label: 'Historical baseline', status: 'planned', requirement: 'Comparable prior contests by position, district and geography vintage.'},
   {model: 'remaining-vote-beta', label: 'Remaining-vote beta model', status: 'blocked', requirement: 'Timestamped snapshots plus a separately estimated remaining-vote distribution.'},

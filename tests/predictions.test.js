@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {predictionUnavailable, validatePrediction, plannedPredictionCatalog} from '../src/predictions.js';
+import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline} from '../src/predictions.js';
 
 test('unavailable prediction carries no estimate', () => {
   const p = predictionUnavailable({contestId:'co-2022-general:us-house:8', reason:'No implemented model.'});
@@ -18,4 +18,18 @@ test('prediction validation rejects estimates marked unavailable', () => {
 test('catalog exposes planned model requirements without enabling them', () => {
   assert.equal(plannedPredictionCatalog.length, 6);
   assert.ok(plannedPredictionCatalog.every(p => ['planned','blocked'].includes(p.status)));
+});
+
+test('historical baseline averages only compatible weighted shares and returns an interval', () => {
+  const p=historicalBaseline({contestId:'co:house:8',target:'DEM final share',histories:[{share:.48,weight:1},{share:.52,weight:2},{share:.99,compatible:false}]});
+  assert.equal(p.status,'evaluated');
+  assert.equal(p.sampleSize,2);
+  assert.ok(Math.abs(p.estimate-(.48+1.04)/3)<1e-9);
+  validatePrediction(p);
+});
+
+test('historical baseline refuses missing history', () => {
+  const p=historicalBaseline({contestId:'co:house:8',target:'DEM final share'});
+  assert.equal(p.unavailable,true);
+  validatePrediction(p);
 });

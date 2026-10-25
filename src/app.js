@@ -98,6 +98,7 @@ async function loadArchives(){
     archives=[validateArchive(await response.json())];
     const legislative=await fetch('data/historical/co-2024-legislative.json'); if(legislative.ok) archives.push(await legislative.json());
     const senate2020=await fetch('data/historical/co-2020-state-senate.json'); if(senate2020.ok) archives.push(await senate2020.json());
+    const house2020=await fetch('data/historical/co-2020-state-house.json'); if(house2020.ok) archives.push(await house2020.json());
     const turnout2020=await fetch('data/historical/co-2020-turnout.json'); if(turnout2020.ok) turnoutArchive=await turnout2020.json();
     render();renderHistory();
   }catch{toast('Historical archive could not be loaded or validated. Manual imports and demo remain available.');}

@@ -1,0 +1,12 @@
+{
+  "id": "co-2020-turnout",
+  "label": "Colorado 2020 General Election Turnout",
+  "year": 2020,
+  "electionDate": "2020-11-03",
+  "classification": "Observed · historical final abstract",
+  "sourceUrl": "https://www.coloradosos.gov/pubs/elections/Results/Abstract/2020/general/turnout.html",
+  "records": [
+    {"county":"Statewide total","voterBasis":"active","voters":3803765,"ballotsCast":3291661,"turnoutPct":86.54},
+    {"county":"Statewide total","voterBasis":"registered","voters":4211531,"ballotsCast":3291661,"turnoutPct":78.16}
+  ]
+}

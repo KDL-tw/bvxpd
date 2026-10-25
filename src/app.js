@@ -5,7 +5,7 @@ import {splashUrl} from './config.js';
 import {fields,parseFile,parseDelimited,suggestedMapping,normalize,validateMeta,summarize,demo} from './data.js';
 const $=id=>document.getElementById(id), fmt=n=>n.toLocaleString('en-US');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const key='bullvixen.snapshots.v1'; let archives=[],snapshots=[],watchlist=[],predictions=[],mode='observed',selectedId='',race='',position='All positions',county='All imported areas',table=null,draft=null,fileToken=0,liveSnapshot=null;
+const key='bullvixen.snapshots.v1'; let archives=[],snapshots=[],watchlist=[],predictions=[],mode='observed',selectedId='',race='',position='All positions',county='All imported areas',table=null,draft=null,fileToken=0,liveSnapshot=null,turnoutArchive=null;
 const time=s=>s?new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Denver'}).format(new Date(s))+' MT':'Not applicable';
 function toast(message){$('toast').textContent=message;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').textContent='',6500);}
 try {const saved=JSON.parse(localStorage.getItem(key)||'[]'); if(!Array.isArray(saved)) throw Error(); snapshots=saved.map(s=>{validateMeta(s); if(!Array.isArray(s.records)||!s.id||!Number.isFinite(Date.parse(s.importedAt))) throw Error(); normalize({headers:fields,rows:s.records.map(r=>fields.map(f=>String(r[f]??'')))},Object.fromEntries(fields.map((f,i)=>[f,i]))); return s;}); const watches=JSON.parse(localStorage.getItem('bullvixen.watchlist')||'[]'); if(Array.isArray(watches)) watchlist=watches.filter(s=>typeof s==='string'); const savedPredictions=JSON.parse(localStorage.getItem('bullvixen.predictions.v1')||'[]'); if(Array.isArray(savedPredictions)) predictions=savedPredictions;}catch{toast('Saved data could not be read. Import a source file to continue; existing storage has not been overwritten.');snapshots=[];}
@@ -98,6 +98,7 @@ async function loadArchives(){
     archives=[validateArchive(await response.json())];
     const legislative=await fetch('data/historical/co-2024-legislative.json'); if(legislative.ok) archives.push(await legislative.json());
     const senate2020=await fetch('data/historical/co-2020-state-senate.json'); if(senate2020.ok) archives.push(await senate2020.json());
+    const turnout2020=await fetch('data/historical/co-2020-turnout.json'); if(turnout2020.ok) turnoutArchive=await turnout2020.json();
     render();renderHistory();
   }catch{toast('Historical archive could not be loaded or validated. Manual imports and demo remain available.');}
 }

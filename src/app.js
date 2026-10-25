@@ -1,5 +1,6 @@
 import {validateArchive} from './archive.js';
 import {plannedPredictionCatalog, predictionUnavailable, validatePrediction} from './predictions.js';
+document.getElementById('file-warning')?.remove();
 import {splashUrl} from './config.js';
 import {fields,parseFile,suggestedMapping,normalize,validateMeta,summarize,demo} from './data.js';
 const $=id=>document.getElementById(id), fmt=n=>n.toLocaleString('en-US');

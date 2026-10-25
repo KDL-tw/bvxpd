@@ -1,0 +1,45 @@
+{
+  "id": "co-2018-attorney-general",
+  "label": "Colorado 2018 Attorney General",
+  "year": 2018,
+  "electionDate": "2018-11-06",
+  "classification": "Observed - historical final abstract",
+  "sourceUrl": "https://www.coloradosos.gov/pubs/elections/Results/Abstract/2018/general/attorneyGeneral.html",
+  "positionScope": "Colorado Attorney General",
+  "contests": [
+    {
+      "race": "Attorney General",
+      "position": "Colorado Attorney General",
+      "districtLabel": "Statewide"
+    }
+  ],
+  "records": [
+    {
+      "candidate": "Phil Weiser",
+      "county": "Statewide total",
+      "district": "Statewide",
+      "party": "DEM",
+      "position": "Colorado Attorney General",
+      "race": "Attorney General",
+      "votes": 1285464
+    },
+    {
+      "candidate": "George Brauchler",
+      "county": "Statewide total",
+      "district": "Statewide",
+      "party": "REP",
+      "position": "Colorado Attorney General",
+      "race": "Attorney General",
+      "votes": 1124757
+    },
+    {
+      "candidate": "William F. Robinson III",
+      "county": "Statewide total",
+      "district": "Statewide",
+      "party": "LIB",
+      "position": "Colorado Attorney General",
+      "race": "Attorney General",
+      "votes": 81733
+    }
+  ]
+}

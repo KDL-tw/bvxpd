@@ -102,6 +102,7 @@ async function loadArchives(){
     const senate2022=await fetch('data/historical/co-2022-state-senate.json'); if(senate2022.ok) archives.push(await senate2022.json());
     const house2022=await fetch('data/historical/co-2022-state-house.json'); if(house2022.ok) archives.push(await house2022.json());
     const ag2022=await fetch('data/historical/co-2022-attorney-general.json'); if(ag2022.ok) archives.push(await ag2022.json());
+    const ag2018=await fetch('data/historical/co-2018-attorney-general.json'); if(ag2018.ok) archives.push(await ag2018.json());
     const turnout2020=await fetch('data/historical/co-2020-turnout.json'); if(turnout2020.ok) turnoutArchive=await turnout2020.json();
     const turnout2022=await fetch('data/historical/co-2022-turnout.json'); if(turnout2022.ok) turnoutArchive2022=await turnout2022.json();
     render();renderHistory();

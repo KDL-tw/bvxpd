@@ -1,8 +1,10 @@
 # Prediction mathematics and functionality
 
-Status: **design notes, not an implemented forecasting engine**. Updated October 25, 2026.
+Status: **design notes and a validated prediction contract, not an implemented forecasting engine**. Updated October 25, 2026.
 
 Bullvixen currently calculates descriptive results from a selected snapshot. It does not predict final votes, turnout, winners, or win probabilities. The Research laboratory checkboxes are session-only interface controls; they do not fit, run, save, or combine models. This document separates the mathematics that runs today from proposed work that needs data, implementation and evaluation.
+
+The prediction vestige in `src/predictions.js` defines a separate `modeled` record namespace, model/status vocabulary, and an explicit unavailable record. It validates that blocked predictions contain no estimate, interval, or probability. The Research Laboratory displays this contract and the data requirement for each planned model; it does not produce forecast values.
 
 See the [project README](../../README.md) for installation, source coverage and the outstanding-work list.
 

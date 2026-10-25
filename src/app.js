@@ -1,4 +1,5 @@
 import {validateArchive} from './archive.js';
+import {plannedPredictionCatalog, predictionUnavailable, validatePrediction} from './predictions.js';
 import {splashUrl} from './config.js';
 import {fields,parseFile,suggestedMapping,normalize,validateMeta,summarize,demo} from './data.js';
 const $=id=>document.getElementById(id), fmt=n=>n.toLocaleString('en-US');
@@ -77,7 +78,11 @@ async function loadArchives(){
     render();renderHistory();
   }catch{toast('Historical archive could not be loaded or validated. Manual imports and demo remain available.');}
 }
-$('models').innerHTML=['Historical baseline','Bayesian hierarchical','Kalman filter','Markov regimes','Spatial analysis'].map(n=>`<label class="check"><input type="checkbox"> ${n} <small>Planned</small></label>`).join('');$('advanced').onchange=e=>$('advanced-panel').hidden=!e.target.checked;
+$('models').innerHTML=plannedPredictionCatalog.map(p=>`<label class="check"><input type="checkbox" data-model="${p.model}"> ${p.label} <small>${p.status} · ${p.requirement}</small></label>`).join('');
+const predictionPlaceholder=predictionUnavailable({contestId:'position/district contest required',reason:'No forecast engine, cutoff dataset, fitted parameters or evaluation result exists yet.'});
+validatePrediction(predictionPlaceholder);
+$('prediction-contract').innerHTML=`<dt>Status</dt><dd>Blocked until a model is implemented and evaluated</dd><dt>Shape</dt><dd>Modeled record → contest ID → target → cutoff → model → estimate / interval / probability</dd><dt>Current value</dt><dd>Unavailable · ${predictionPlaceholder.reason}</dd><dt>Boundary</dt><dd>Predictions will never be merged into observed or demo vote snapshots.</dd>`;
+$('advanced').onchange=e=>$('advanced-panel').hidden=!e.target.checked;
 $('today').textContent=new Intl.DateTimeFormat('en-US',{dateStyle:'long',timeZone:'America/Denver'}).format(new Date());
 function enter(){$('intro').hidden=true;$('workspace').hidden=false;$('main').focus();try{localStorage.setItem('bullvixen.skipIntro',String($('remember').checked));}catch{} }
 $('enter').onclick=$('skip-intro').onclick=enter;$('show-intro').onclick=()=>{$('intro').hidden=false;$('workspace').hidden=true;};

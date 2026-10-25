@@ -1,0 +1,4885 @@
+{
+  "id": "co-2026-general-candidates",
+  "label": "Colorado 2026 General Candidate List",
+  "election": "2026 General",
+  "year": 2026,
+  "electionDate": "2026-11-03",
+  "kind": "observed",
+  "classification": "Observed - official candidate certification",
+  "sourceUrl": "https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html",
+  "positionScope": "Colorado statewide and district offices",
+  "contests": [
+    {
+      "race": "U.S. Senate - State",
+      "position": "U.S. Senate",
+      "districtLabel": "State"
+    },
+    {
+      "race": "U.S. House of Representatives - 1",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "1"
+    },
+    {
+      "race": "U.S. House of Representatives - 2",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "2"
+    },
+    {
+      "race": "U.S. House of Representatives - 3",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "3"
+    },
+    {
+      "race": "U.S. House of Representatives - 4",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "4"
+    },
+    {
+      "race": "U.S. House of Representatives - 5",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "5"
+    },
+    {
+      "race": "U.S. House of Representatives - 6",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "6"
+    },
+    {
+      "race": "U.S. House of Representatives - 7",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "7"
+    },
+    {
+      "race": "U.S. House of Representatives - 8",
+      "position": "U.S. House of Representatives",
+      "districtLabel": "8"
+    },
+    {
+      "race": "Governor - State",
+      "position": "Governor",
+      "districtLabel": "State"
+    },
+    {
+      "race": "Lt. Governor - State",
+      "position": "Lt. Governor",
+      "districtLabel": "State"
+    },
+    {
+      "race": "Secretary of State - State",
+      "position": "Secretary of State",
+      "districtLabel": "State"
+    },
+    {
+      "race": "State Treasurer - State",
+      "position": "State Treasurer",
+      "districtLabel": "State"
+    },
+    {
+      "race": "Attorney General - State",
+      "position": "Attorney General",
+      "districtLabel": "State"
+    },
+    {
+      "race": "State Board of Education - 1",
+      "position": "State Board of Education",
+      "districtLabel": "1"
+    },
+    {
+      "race": "State Board of Education - 3",
+      "position": "State Board of Education",
+      "districtLabel": "3"
+    },
+    {
+      "race": "State Board of Education - 7",
+      "position": "State Board of Education",
+      "districtLabel": "7"
+    },
+    {
+      "race": "University of Colorado Board of Regents - 2",
+      "position": "University of Colorado Board of Regents",
+      "districtLabel": "2"
+    },
+    {
+      "race": "University of Colorado Board of Regents - 6",
+      "position": "University of Colorado Board of Regents",
+      "districtLabel": "6"
+    },
+    {
+      "race": "University of Colorado Board of Regents - 7",
+      "position": "University of Colorado Board of Regents",
+      "districtLabel": "7"
+    },
+    {
+      "race": "State Senate - 1",
+      "position": "State Senate",
+      "districtLabel": "1"
+    },
+    {
+      "race": "State Senate - 3",
+      "position": "State Senate",
+      "districtLabel": "3"
+    },
+    {
+      "race": "State Senate - 4",
+      "position": "State Senate",
+      "districtLabel": "4"
+    },
+    {
+      "race": "State Senate - 7",
+      "position": "State Senate",
+      "districtLabel": "7"
+    },
+    {
+      "race": "State Senate - 8",
+      "position": "State Senate",
+      "districtLabel": "8"
+    },
+    {
+      "race": "State Senate - 9",
+      "position": "State Senate",
+      "districtLabel": "9"
+    },
+    {
+      "race": "State Senate - 11",
+      "position": "State Senate",
+      "districtLabel": "11"
+    },
+    {
+      "race": "State Senate - 15",
+      "position": "State Senate",
+      "districtLabel": "15"
+    },
+    {
+      "race": "State Senate - 17",
+      "position": "State Senate",
+      "districtLabel": "17"
+    },
+    {
+      "race": "State Senate - 20",
+      "position": "State Senate",
+      "districtLabel": "20"
+    },
+    {
+      "race": "State Senate - 21",
+      "position": "State Senate",
+      "districtLabel": "21"
+    },
+    {
+      "race": "State Senate - 22",
+      "position": "State Senate",
+      "districtLabel": "22"
+    },
+    {
+      "race": "State Senate - 24",
+      "position": "State Senate",
+      "districtLabel": "24"
+    },
+    {
+      "race": "State Senate - 25",
+      "position": "State Senate",
+      "districtLabel": "25"
+    },
+    {
+      "race": "State Senate - 27",
+      "position": "State Senate",
+      "districtLabel": "27"
+    },
+    {
+      "race": "State Senate - 29",
+      "position": "State Senate",
+      "districtLabel": "29"
+    },
+    {
+      "race": "State Senate - 30",
+      "position": "State Senate",
+      "districtLabel": "30"
+    },
+    {
+      "race": "State Senate - 31",
+      "position": "State Senate",
+      "districtLabel": "31"
+    },
+    {
+      "race": "State Senate - 32",
+      "position": "State Senate",
+      "districtLabel": "32"
+    },
+    {
+      "race": "State Senate - 34",
+      "position": "State Senate",
+      "districtLabel": "34"
+    },
+    {
+      "race": "State Senate - 35",
+      "position": "State Senate",
+      "districtLabel": "35"
+    },
+    {
+      "race": "State House of Representatives - 1",
+      "position": "State House of Representatives",
+      "districtLabel": "1"
+    },
+    {
+      "race": "State House of Representatives - 2",
+      "position": "State House of Representatives",
+      "districtLabel": "2"
+    },
+    {
+      "race": "State House of Representatives - 3",
+      "position": "State House of Representatives",
+      "districtLabel": "3"
+    },
+    {
+      "race": "State House of Representatives - 4",
+      "position": "State House of Representatives",
+      "districtLabel": "4"
+    },
+    {
+      "race": "State House of Representatives - 5",
+      "position": "State House of Representatives",
+      "districtLabel": "5"
+    },
+    {
+      "race": "State House of Representatives - 6",
+      "position": "State House of Representatives",
+      "districtLabel": "6"
+    },
+    {
+      "race": "State House of Representatives - 7",
+      "position": "State House of Representatives",
+      "districtLabel": "7"
+    },
+    {
+      "race": "State House of Representatives - 8",
+      "position": "State House of Representatives",
+      "districtLabel": "8"
+    },
+    {
+      "race": "State House of Representatives - 9",
+      "position": "State House of Representatives",
+      "districtLabel": "9"
+    },
+    {
+      "race": "State House of Representatives - 10",
+      "position": "State House of Representatives",
+      "districtLabel": "10"
+    },
+    {
+      "race": "State House of Representatives - 11",
+      "position": "State House of Representatives",
+      "districtLabel": "11"
+    },
+    {
+      "race": "State House of Representatives - 12",
+      "position": "State House of Representatives",
+      "districtLabel": "12"
+    },
+    {
+      "race": "State House of Representatives - 13",
+      "position": "State House of Representatives",
+      "districtLabel": "13"
+    },
+    {
+      "race": "State House of Representatives - 14",
+      "position": "State House of Representatives",
+      "districtLabel": "14"
+    },
+    {
+      "race": "State House of Representatives - 15",
+      "position": "State House of Representatives",
+      "districtLabel": "15"
+    },
+    {
+      "race": "State House of Representatives - 16",
+      "position": "State House of Representatives",
+      "districtLabel": "16"
+    },
+    {
+      "race": "State House of Representatives - 17",
+      "position": "State House of Representatives",
+      "districtLabel": "17"
+    },
+    {
+      "race": "State House of Representatives - 18",
+      "position": "State House of Representatives",
+      "districtLabel": "18"
+    },
+    {
+      "race": "State House of Representatives - 19",
+      "position": "State House of Representatives",
+      "districtLabel": "19"
+    },
+    {
+      "race": "State House of Representatives - 20",
+      "position": "State House of Representatives",
+      "districtLabel": "20"
+    },
+    {
+      "race": "State House of Representatives - 21",
+      "position": "State House of Representatives",
+      "districtLabel": "21"
+    },
+    {
+      "race": "State House of Representatives - 22",
+      "position": "State House of Representatives",
+      "districtLabel": "22"
+    },
+    {
+      "race": "State House of Representatives - 23",
+      "position": "State House of Representatives",
+      "districtLabel": "23"
+    },
+    {
+      "race": "State House of Representatives - 24",
+      "position": "State House of Representatives",
+      "districtLabel": "24"
+    },
+    {
+      "race": "State House of Representatives - 25",
+      "position": "State House of Representatives",
+      "districtLabel": "25"
+    },
+    {
+      "race": "State House of Representatives - 26",
+      "position": "State House of Representatives",
+      "districtLabel": "26"
+    },
+    {
+      "race": "State House of Representatives - 27",
+      "position": "State House of Representatives",
+      "districtLabel": "27"
+    },
+    {
+      "race": "State House of Representatives - 28",
+      "position": "State House of Representatives",
+      "districtLabel": "28"
+    },
+    {
+      "race": "State House of Representatives - 29",
+      "position": "State House of Representatives",
+      "districtLabel": "29"
+    },
+    {
+      "race": "State House of Representatives - 30",
+      "position": "State House of Representatives",
+      "districtLabel": "30"
+    },
+    {
+      "race": "State House of Representatives - 31",
+      "position": "State House of Representatives",
+      "districtLabel": "31"
+    },
+    {
+      "race": "State House of Representatives - 32",
+      "position": "State House of Representatives",
+      "districtLabel": "32"
+    },
+    {
+      "race": "State House of Representatives - 33",
+      "position": "State House of Representatives",
+      "districtLabel": "33"
+    },
+    {
+      "race": "State House of Representatives - 34",
+      "position": "State House of Representatives",
+      "districtLabel": "34"
+    },
+    {
+      "race": "State House of Representatives - 35",
+      "position": "State House of Representatives",
+      "districtLabel": "35"
+    },
+    {
+      "race": "State House of Representatives - 36",
+      "position": "State House of Representatives",
+      "districtLabel": "36"
+    },
+    {
+      "race": "State House of Representatives - 37",
+      "position": "State House of Representatives",
+      "districtLabel": "37"
+    },
+    {
+      "race": "State House of Representatives - 38",
+      "position": "State House of Representatives",
+      "districtLabel": "38"
+    },
+    {
+      "race": "State House of Representatives - 39",
+      "position": "State House of Representatives",
+      "districtLabel": "39"
+    },
+    {
+      "race": "State House of Representatives - 40",
+      "position": "State House of Representatives",
+      "districtLabel": "40"
+    },
+    {
+      "race": "State House of Representatives - 41",
+      "position": "State House of Representatives",
+      "districtLabel": "41"
+    },
+    {
+      "race": "State House of Representatives - 42",
+      "position": "State House of Representatives",
+      "districtLabel": "42"
+    },
+    {
+      "race": "State House of Representatives - 43",
+      "position": "State House of Representatives",
+      "districtLabel": "43"
+    },
+    {
+      "race": "State House of Representatives - 44",
+      "position": "State House of Representatives",
+      "districtLabel": "44"
+    },
+    {
+      "race": "State House of Representatives - 45",
+      "position": "State House of Representatives",
+      "districtLabel": "45"
+    },
+    {
+      "race": "State House of Representatives - 46",
+      "position": "State House of Representatives",
+      "districtLabel": "46"
+    },
+    {
+      "race": "State House of Representatives - 47",
+      "position": "State House of Representatives",
+      "districtLabel": "47"
+    },
+    {
+      "race": "State House of Representatives - 48",
+      "position": "State House of Representatives",
+      "districtLabel": "48"
+    },
+    {
+      "race": "State House of Representatives - 49",
+      "position": "State House of Representatives",
+      "districtLabel": "49"
+    },
+    {
+      "race": "State House of Representatives - 50",
+      "position": "State House of Representatives",
+      "districtLabel": "50"
+    },
+    {
+      "race": "State House of Representatives - 51",
+      "position": "State House of Representatives",
+      "districtLabel": "51"
+    },
+    {
+      "race": "State House of Representatives - 52",
+      "position": "State House of Representatives",
+      "districtLabel": "52"
+    },
+    {
+      "race": "State House of Representatives - 53",
+      "position": "State House of Representatives",
+      "districtLabel": "53"
+    },
+    {
+      "race": "State House of Representatives - 54",
+      "position": "State House of Representatives",
+      "districtLabel": "54"
+    },
+    {
+      "race": "State House of Representatives - 55",
+      "position": "State House of Representatives",
+      "districtLabel": "55"
+    },
+    {
+      "race": "State House of Representatives - 56",
+      "position": "State House of Representatives",
+      "districtLabel": "56"
+    },
+    {
+      "race": "State House of Representatives - 57",
+      "position": "State House of Representatives",
+      "districtLabel": "57"
+    },
+    {
+      "race": "State House of Representatives - 58",
+      "position": "State House of Representatives",
+      "districtLabel": "58"
+    },
+    {
+      "race": "State House of Representatives - 59",
+      "position": "State House of Representatives",
+      "districtLabel": "59"
+    },
+    {
+      "race": "State House of Representatives - 60",
+      "position": "State House of Representatives",
+      "districtLabel": "60"
+    },
+    {
+      "race": "State House of Representatives - 61",
+      "position": "State House of Representatives",
+      "districtLabel": "61"
+    },
+    {
+      "race": "State House of Representatives - 62",
+      "position": "State House of Representatives",
+      "districtLabel": "62"
+    },
+    {
+      "race": "State House of Representatives - 63",
+      "position": "State House of Representatives",
+      "districtLabel": "63"
+    },
+    {
+      "race": "State House of Representatives - 64",
+      "position": "State House of Representatives",
+      "districtLabel": "64"
+    },
+    {
+      "race": "State House of Representatives - 65",
+      "position": "State House of Representatives",
+      "districtLabel": "65"
+    },
+    {
+      "race": "RTD Board of Directors - B",
+      "position": "RTD Board of Directors",
+      "districtLabel": "B"
+    },
+    {
+      "race": "RTD Board of Directors - C",
+      "position": "RTD Board of Directors",
+      "districtLabel": "C"
+    },
+    {
+      "race": "RTD Board of Directors - J",
+      "position": "RTD Board of Directors",
+      "districtLabel": "J"
+    },
+    {
+      "race": "RTD Board of Directors - K",
+      "position": "RTD Board of Directors",
+      "districtLabel": "K"
+    },
+    {
+      "race": "RTD Board of Directors - L",
+      "position": "RTD Board of Directors",
+      "districtLabel": "L"
+    },
+    {
+      "race": "RTD Board of Directors - N",
+      "position": "RTD Board of Directors",
+      "districtLabel": "N"
+    },
+    {
+      "race": "RTD Board of Directors - O",
+      "position": "RTD Board of Directors",
+      "districtLabel": "O"
+    },
+    {
+      "race": "Colorado Supreme Court - State",
+      "position": "Colorado Supreme Court",
+      "districtLabel": "State"
+    },
+    {
+      "race": "Colorado Court of Appeals - State",
+      "position": "Colorado Court of Appeals",
+      "districtLabel": "State"
+    },
+    {
+      "race": "District Court - 1",
+      "position": "District Court",
+      "districtLabel": "1"
+    },
+    {
+      "race": "District Court - 2",
+      "position": "District Court",
+      "districtLabel": "2"
+    },
+    {
+      "race": "District Court - Denver Juvenile Court - 2",
+      "position": "District Court - Denver Juvenile Court",
+      "districtLabel": "2"
+    },
+    {
+      "race": "Distirct Court - Denver Probate Court - 2",
+      "position": "Distirct Court - Denver Probate Court",
+      "districtLabel": "2"
+    },
+    {
+      "race": "District Court - 3",
+      "position": "District Court",
+      "districtLabel": "3"
+    },
+    {
+      "race": "District Court - 4",
+      "position": "District Court",
+      "districtLabel": "4"
+    },
+    {
+      "race": "District Court - 7",
+      "position": "District Court",
+      "districtLabel": "7"
+    },
+    {
+      "race": "District Court - 9",
+      "position": "District Court",
+      "districtLabel": "9"
+    },
+    {
+      "race": "District Court - 10",
+      "position": "District Court",
+      "districtLabel": "10"
+    },
+    {
+      "race": "District Court - 11",
+      "position": "District Court",
+      "districtLabel": "11"
+    },
+    {
+      "race": "District Court - 12",
+      "position": "District Court",
+      "districtLabel": "12"
+    },
+    {
+      "race": "District Court - 13",
+      "position": "District Court",
+      "districtLabel": "13"
+    },
+    {
+      "race": "District Court - 14",
+      "position": "District Court",
+      "districtLabel": "14"
+    },
+    {
+      "race": "District Court - 15",
+      "position": "District Court",
+      "districtLabel": "15"
+    },
+    {
+      "race": "District Court - 17",
+      "position": "District Court",
+      "districtLabel": "17"
+    },
+    {
+      "race": "District Court - 18",
+      "position": "District Court",
+      "districtLabel": "18"
+    },
+    {
+      "race": "District Court - 19",
+      "position": "District Court",
+      "districtLabel": "19"
+    },
+    {
+      "race": "District Court - 20",
+      "position": "District Court",
+      "districtLabel": "20"
+    },
+    {
+      "race": "District Court - 21",
+      "position": "District Court",
+      "districtLabel": "21"
+    },
+    {
+      "race": "District Court - 22",
+      "position": "District Court",
+      "districtLabel": "22"
+    },
+    {
+      "race": "District Court - 23",
+      "position": "District Court",
+      "districtLabel": "23"
+    },
+    {
+      "race": "County Court - Adams",
+      "position": "County Court",
+      "districtLabel": "Adams"
+    },
+    {
+      "race": "County Court - Alamosa",
+      "position": "County Court",
+      "districtLabel": "Alamosa"
+    },
+    {
+      "race": "County Court - Arapahoe",
+      "position": "County Court",
+      "districtLabel": "Arapahoe"
+    },
+    {
+      "race": "County Court - Boulder",
+      "position": "County Court",
+      "districtLabel": "Boulder"
+    },
+    {
+      "race": "County Court - Costilla",
+      "position": "County Court",
+      "districtLabel": "Costilla"
+    },
+    {
+      "race": "County Court - Crowley",
+      "position": "County Court",
+      "districtLabel": "Crowley"
+    },
+    {
+      "race": "County Court - Custer",
+      "position": "County Court",
+      "districtLabel": "Custer"
+    },
+    {
+      "race": "County Court - Denver",
+      "position": "County Court",
+      "districtLabel": "Denver"
+    },
+    {
+      "race": "County Court - Douglas",
+      "position": "County Court",
+      "districtLabel": "Douglas"
+    },
+    {
+      "race": "County Court - Eagle",
+      "position": "County Court",
+      "districtLabel": "Eagle"
+    },
+    {
+      "race": "County Court - El Paso",
+      "position": "County Court",
+      "districtLabel": "El Paso"
+    },
+    {
+      "race": "County Court - Fremont",
+      "position": "County Court",
+      "districtLabel": "Fremont"
+    },
+    {
+      "race": "County Court - Garfield",
+      "position": "County Court",
+      "districtLabel": "Garfield"
+    },
+    {
+      "race": "County Court - Gilpin",
+      "position": "County Court",
+      "districtLabel": "Gilpin"
+    },
+    {
+      "race": "County Court - Grand",
+      "position": "County Court",
+      "districtLabel": "Grand"
+    },
+    {
+      "race": "County Court - Hinsdale",
+      "position": "County Court",
+      "districtLabel": "Hinsdale"
+    },
+    {
+      "race": "County Court - Huerfano",
+      "position": "County Court",
+      "districtLabel": "Huerfano"
+    },
+    {
+      "race": "County Court - Jackson",
+      "position": "County Court",
+      "districtLabel": "Jackson"
+    },
+    {
+      "race": "County Court - Jefferson",
+      "position": "County Court",
+      "districtLabel": "Jefferson"
+    },
+    {
+      "race": "County Court - Larimer",
+      "position": "County Court",
+      "districtLabel": "Larimer"
+    },
+    {
+      "race": "County Court - Mesa",
+      "position": "County Court",
+      "districtLabel": "Mesa"
+    },
+    {
+      "race": "County Court - Mineral",
+      "position": "County Court",
+      "districtLabel": "Mineral"
+    },
+    {
+      "race": "County Court - Moffat",
+      "position": "County Court",
+      "districtLabel": "Moffat"
+    },
+    {
+      "race": "County Court - Otero",
+      "position": "County Court",
+      "districtLabel": "Otero"
+    },
+    {
+      "race": "County Court - Park",
+      "position": "County Court",
+      "districtLabel": "Park"
+    },
+    {
+      "race": "County Court - Prowers",
+      "position": "County Court",
+      "districtLabel": "Prowers"
+    },
+    {
+      "race": "County Court - Rio Blanco",
+      "position": "County Court",
+      "districtLabel": "Rio Blanco"
+    },
+    {
+      "race": "Associate County Court - Rio Blanco",
+      "position": "Associate County Court",
+      "districtLabel": "Rio Blanco"
+    },
+    {
+      "race": "County Court - Washington",
+      "position": "County Court",
+      "districtLabel": "Washington"
+    },
+    {
+      "race": "County Court - Weld",
+      "position": "County Court",
+      "districtLabel": "Weld"
+    }
+  ],
+  "records": [
+    {
+      "candidate": "Mark Baisley",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "U.S. Senate",
+      "writeIn": false,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John Hickenlooper",
+      "district": "State",
+      "party": "Democratic Party",
+      "position": "U.S. Senate",
+      "writeIn": false,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Bob Chew",
+      "district": "State",
+      "party": "Forward Party",
+      "position": "U.S. Senate",
+      "writeIn": false,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christopher Baum",
+      "district": "State",
+      "party": "Approval Voting Party",
+      "position": "U.S. Senate",
+      "writeIn": false,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Blake Huber",
+      "district": "State",
+      "party": "Libertarian Party",
+      "position": "U.S. Senate",
+      "writeIn": false,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Adam Withrow",
+      "district": "State",
+      "party": "Unity Party",
+      "position": "U.S. Senate",
+      "writeIn": false,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Donald Willoughby",
+      "district": "State",
+      "party": "Unaffiliated",
+      "position": "U.S. Senate",
+      "writeIn": true,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Will Powers",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "U.S. Senate",
+      "writeIn": true,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ryan Apelbaum",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "U.S. Senate",
+      "writeIn": true,
+      "race": "U.S. Senate - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Melat Kiros",
+      "district": "1",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christy Peterson",
+      "district": "1",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Critter Milton",
+      "district": "1",
+      "party": "Unity Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chad Humphrey",
+      "district": "1",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Shimon Blau",
+      "district": "1",
+      "party": "Unaffiliated",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kevin StClair",
+      "district": "1",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": true,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John Wren",
+      "district": "1",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": true,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Stephen Replin",
+      "district": "1",
+      "party": "Unaffiliated",
+      "position": "U.S. House of Representatives",
+      "writeIn": true,
+      "race": "U.S. House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Joe Neguse",
+      "district": "2",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kelley Anne Dennison",
+      "district": "2",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Gaylon Kent",
+      "district": "2",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dwayne L. Romero",
+      "district": "3",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeff Hurd",
+      "district": "3",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Cory Robertson",
+      "district": "3",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Clifton Brown",
+      "district": "3",
+      "party": "Unaffiliated",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lauren Boebert",
+      "district": "4",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Eileen Laubacher",
+      "district": "4",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Douglas Mangeris",
+      "district": "4",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Luis Galvan",
+      "district": "4",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": true,
+      "race": "U.S. House of Representatives - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeff Crank",
+      "district": "5",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 5",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jessica Killin",
+      "district": "5",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 5",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christopher Mitchell",
+      "district": "5",
+      "party": "American Constitution Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 5",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Mark \"Marky Jr\" Elworth",
+      "district": "5",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 5",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Steven Fuller",
+      "district": "5",
+      "party": "Unaffiliated",
+      "position": "U.S. House of Representatives",
+      "writeIn": true,
+      "race": "U.S. House of Representatives - 5",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jason Crow",
+      "district": "6",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jason Clark",
+      "district": "6",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Patty McMahon",
+      "district": "6",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Meredith Ryan",
+      "district": "6",
+      "party": "Unity Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Samir Ezzeldin Witta",
+      "district": "6",
+      "party": "Unaffiliated",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tim Bennett",
+      "district": "7",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Brittany Pettersen",
+      "district": "7",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Susan Hall",
+      "district": "7",
+      "party": "Unity Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lawrence Kyle Clark",
+      "district": "7",
+      "party": "American Constitution Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dan \"Kilo\" Sallis",
+      "district": "7",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Joe Krzeczkowski",
+      "district": "7",
+      "party": "Unaffiliated",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Gabe Evans",
+      "district": "8",
+      "party": "Republican Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Manny Rutinel",
+      "district": "8",
+      "party": "Democratic Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dave Wood",
+      "district": "8",
+      "party": "Libertarian Party",
+      "position": "U.S. House of Representatives",
+      "writeIn": false,
+      "race": "U.S. House of Representatives - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Victor Marx",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "Governor",
+      "writeIn": false,
+      "race": "Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "George Washington Markert",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "Lt. Governor",
+      "writeIn": false,
+      "race": "Lt. Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Phil Weiser",
+      "district": "State",
+      "party": "Democratic Party",
+      "position": "Governor",
+      "writeIn": false,
+      "race": "Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lesley Dahlkemper",
+      "district": "State",
+      "party": "Democratic Party",
+      "position": "Lt. Governor",
+      "writeIn": false,
+      "race": "Lt. Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Stephen T. Hamilton",
+      "district": "State",
+      "party": "American Constitution Party",
+      "position": "Governor",
+      "writeIn": false,
+      "race": "Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "James K Treibert",
+      "district": "State",
+      "party": "American Constitution Party",
+      "position": "Lt. Governor",
+      "writeIn": false,
+      "race": "Lt. Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Eric Mulder",
+      "district": "State",
+      "party": "Libertarian Party",
+      "position": "Governor",
+      "writeIn": false,
+      "race": "Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Wayne Harlos",
+      "district": "State",
+      "party": "Libertarian Party",
+      "position": "Lt. Governor",
+      "writeIn": false,
+      "race": "Lt. Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeff Peckman",
+      "district": "State",
+      "party": "Unity Party",
+      "position": "Governor",
+      "writeIn": false,
+      "race": "Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "T.J. Cole",
+      "district": "State",
+      "party": "Unity Party",
+      "position": "Lt. Governor",
+      "writeIn": false,
+      "race": "Lt. Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Erik Underwood",
+      "district": "State",
+      "party": "Approval Voting Party",
+      "position": "Governor",
+      "writeIn": false,
+      "race": "Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Frank Atwood",
+      "district": "State",
+      "party": "Approval Voting Party",
+      "position": "Lt. Governor",
+      "writeIn": false,
+      "race": "Lt. Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Greg Lopez",
+      "district": "State",
+      "party": "Unaffiliated",
+      "position": "Governor",
+      "writeIn": false,
+      "race": "Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Taralyn Romero",
+      "district": "State",
+      "party": "Unaffiliated",
+      "position": "Lt. Governor",
+      "writeIn": false,
+      "race": "Lt. Governor - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amanda Gonzalez",
+      "district": "State",
+      "party": "Democratic Party",
+      "position": "Secretary of State",
+      "writeIn": false,
+      "race": "Secretary of State - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "James Wiley",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "Secretary of State",
+      "writeIn": false,
+      "race": "Secretary of State - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sean Vadney",
+      "district": "State",
+      "party": "Libertarian Party",
+      "position": "Secretary of State",
+      "writeIn": false,
+      "race": "Secretary of State - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amanda Campbell",
+      "district": "State",
+      "party": "American Constitution Party",
+      "position": "Secretary of State",
+      "writeIn": false,
+      "race": "Secretary of State - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Celeste Landry",
+      "district": "State",
+      "party": "Forward Party",
+      "position": "Secretary of State",
+      "writeIn": false,
+      "race": "Secretary of State - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeff Bridges",
+      "district": "State",
+      "party": "Democratic Party",
+      "position": "State Treasurer",
+      "writeIn": false,
+      "race": "State Treasurer - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kevin Grantham",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "State Treasurer",
+      "writeIn": false,
+      "race": "State Treasurer - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jodie Barr",
+      "district": "State",
+      "party": "Libertarian Party",
+      "position": "State Treasurer",
+      "writeIn": false,
+      "race": "State Treasurer - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Marilee Langner Sturgis",
+      "district": "State",
+      "party": "Approval Voting Party",
+      "position": "State Treasurer",
+      "writeIn": false,
+      "race": "State Treasurer - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael J. Allen",
+      "district": "State",
+      "party": "Republican Party",
+      "position": "Attorney General",
+      "writeIn": false,
+      "race": "Attorney General - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jena Griswold",
+      "district": "State",
+      "party": "Democratic Party",
+      "position": "Attorney General",
+      "writeIn": false,
+      "race": "Attorney General - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lisa Escárcega",
+      "district": "1",
+      "party": "Democratic Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Frederick Espinoza",
+      "district": "1",
+      "party": "Republican Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Clayton Casciato",
+      "district": "1",
+      "party": "Libertarian Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sherri M Wright",
+      "district": "3",
+      "party": "Republican Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Barb Clementi",
+      "district": "3",
+      "party": "Democratic Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Karla Esser",
+      "district": "7",
+      "party": "Democratic Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Steve Barton",
+      "district": "7",
+      "party": "Republican Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ross Klopf",
+      "district": "7",
+      "party": "Libertarian Party",
+      "position": "State Board of Education",
+      "writeIn": false,
+      "race": "State Board of Education - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Marty Neilson",
+      "district": "2",
+      "party": "Republican Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Edie Hooton",
+      "district": "2",
+      "party": "Democratic Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Richard Friend",
+      "district": "2",
+      "party": "Libertarian Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Veanessa Burbage",
+      "district": "6",
+      "party": "Republican Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ilana Spiegel",
+      "district": "6",
+      "party": "Democratic Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Joe Johnson",
+      "district": "6",
+      "party": "Libertarian Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Paul Mueller",
+      "district": "7",
+      "party": "Republican Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Nolbert Chavez",
+      "district": "7",
+      "party": "Democratic Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "BetteRose Ryan",
+      "district": "7",
+      "party": "Libertarian Party",
+      "position": "University of Colorado Board of Regents",
+      "writeIn": false,
+      "race": "University of Colorado Board of Regents - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jamie Jeffery",
+      "district": "1",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Byron Pelton",
+      "district": "1",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Aaron Gutierrez",
+      "district": "3",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dana Charles",
+      "district": "3",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Justin Kurth",
+      "district": "4",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Teddy Collins",
+      "district": "4",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Janice Rich",
+      "district": "7",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dylan Roberts",
+      "district": "8",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Corey Marshall",
+      "district": "8",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Terri Carver",
+      "district": "9",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 9",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William Delano Moses III",
+      "district": "9",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 9",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tony Exum Sr",
+      "district": "11",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 11",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Levon Stilson",
+      "district": "11",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 11",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Janet Turner",
+      "district": "11",
+      "party": "Libertarian Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 11",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Rob Woodward",
+      "district": "15",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 15",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Janice Marchman",
+      "district": "15",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 15",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Katie Wallace",
+      "district": "17",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Pat Miller",
+      "district": "17",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Richard (Rich) Mancuso",
+      "district": "20",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 20",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sheila Lieder",
+      "district": "20",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 20",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Frederick Alfred Jr",
+      "district": "21",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Adrienne Benavidez",
+      "district": "21",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Steve Harkess",
+      "district": "22",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 22",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Monica Irasema Duran",
+      "district": "22",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 22",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kevin Allen",
+      "district": "24",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 24",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kyle Mullica",
+      "district": "24",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 24",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Paul Kohlhoff",
+      "district": "25",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 25",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William Lindstedt",
+      "district": "25",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 25",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Mark Philip Bromley",
+      "district": "25",
+      "party": "Unaffiliated",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 25",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Danielle Lammon",
+      "district": "27",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 27",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tom Sullivan",
+      "district": "27",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 27",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michele Poague",
+      "district": "27",
+      "party": "Libertarian Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 27",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Iman M. Jodeh",
+      "district": "29",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 29",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Robert McKenna",
+      "district": "29",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 29",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John Carson",
+      "district": "30",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 30",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kevin Leung",
+      "district": "30",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 30",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Matt Ball",
+      "district": "31",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 31",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Emily Sirota",
+      "district": "32",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 32",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sydnnia Wulff",
+      "district": "32",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 32",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chela Garcia Irlando",
+      "district": "34",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 34",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jennifer Qualteri",
+      "district": "34",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 34",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jacob Luria",
+      "district": "34",
+      "party": "Libertarian Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 34",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Rod Pelton",
+      "district": "35",
+      "party": "Republican Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 35",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Duane L Gurule",
+      "district": "35",
+      "party": "Democratic Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 35",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Richard Graf",
+      "district": "35",
+      "party": "Libertarian Party",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 35",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Travis Star Nelson",
+      "district": "35",
+      "party": "Unaffiliated",
+      "position": "State Senate",
+      "writeIn": false,
+      "race": "State Senate - 35",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Javier Mabrey",
+      "district": "1",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Joseph Montoya",
+      "district": "1",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Scott Baldermann",
+      "district": "2",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Carey Marin",
+      "district": "2",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Gena Ozols",
+      "district": "3",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Rebecca Winegar",
+      "district": "3",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ellwood Ervin",
+      "district": "4",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Cecelia Espenoza",
+      "district": "4",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Bill Hare",
+      "district": "4",
+      "party": "Forward Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Justine Sandoval",
+      "district": "5",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 5",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Johnnie W. Johnson",
+      "district": "5",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 5",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Iris Halpern",
+      "district": "6",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kathleen Angel",
+      "district": "6",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 6",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jennifer Bacon",
+      "district": "7",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeff Wilson",
+      "district": "7",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Carolyn Barnes",
+      "district": "8",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lindsay Gilchrist",
+      "district": "8",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jesse Lashawn Parris",
+      "district": "8",
+      "party": "Unity Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 8",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tom Cowhick",
+      "district": "9",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 9",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Monica VanBuskirk",
+      "district": "9",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 9",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Junie Joseph",
+      "district": "10",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 10",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Karen McCormick",
+      "district": "11",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 11",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ryan Rhatigan",
+      "district": "12",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 12",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kyle Brown",
+      "district": "12",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 12",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Consuelo Redhorse",
+      "district": "13",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 13",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Miguel Martinez",
+      "district": "13",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 13",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ava Flanell",
+      "district": "14",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 14",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sarah Emery",
+      "district": "14",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 14",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeff K. Livingston",
+      "district": "15",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 15",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Pricella Tiegen",
+      "district": "15",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 15",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Doug Jones",
+      "district": "15",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 15",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jill Haffley",
+      "district": "16",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 16",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Steph Vigil",
+      "district": "16",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 16",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John C Hjersman",
+      "district": "16",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 16",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Isaac Contreras",
+      "district": "16",
+      "party": "Unaffiliated",
+      "position": "State House of Representatives",
+      "writeIn": true,
+      "race": "State House of Representatives - 16",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Regina English",
+      "district": "17",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Laura Martin",
+      "district": "17",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John Michael Angle",
+      "district": "17",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sherrea Sterling",
+      "district": "17",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": true,
+      "race": "State House of Representatives - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amy T Paschal",
+      "district": "18",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Adriana Cuva",
+      "district": "18",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dan Woog",
+      "district": "19",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 19",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jillaire McMillan",
+      "district": "19",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 19",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jarvis Caldwell",
+      "district": "20",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 20",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Brenda Miller",
+      "district": "21",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michelle Tweed",
+      "district": "21",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael Pierson",
+      "district": "22",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 22",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ken deGraaf",
+      "district": "22",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 22",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Alexis Hoffkling",
+      "district": "23",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 23",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ross Metler",
+      "district": "23",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 23",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lisa Feret",
+      "district": "24",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 24",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kristopher Johnson",
+      "district": "24",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 24",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Mark Herzfeld",
+      "district": "25",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 25",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tammy Story",
+      "district": "25",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 25",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Meghan Lukens",
+      "district": "26",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 26",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "James Kellogg",
+      "district": "26",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 26",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Danielle Varda",
+      "district": "27",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 27",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Eric Bodenstab",
+      "district": "27",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 27",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "David Rein",
+      "district": "28",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 28",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kristine Ireland",
+      "district": "29",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 29",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lori Goldstein",
+      "district": "29",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 29",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Rebekah Stewart",
+      "district": "30",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 30",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William Tyler Switzer",
+      "district": "30",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 30",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Gabriel Cervantes",
+      "district": "31",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 31",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ray Roll",
+      "district": "31",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 31",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michelle D. Lee",
+      "district": "32",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 32",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chris VanDijk",
+      "district": "32",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 32",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kenny Van Nguyen",
+      "district": "33",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 33",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Nate Jorgensen",
+      "district": "33",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 33",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Craig Sullivan",
+      "district": "34",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 34",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jenny Willford",
+      "district": "34",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 34",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lorena Garcia",
+      "district": "35",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 35",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael Carter",
+      "district": "36",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 36",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Paul E. Nelson",
+      "district": "36",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 36",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Andrew Gibson",
+      "district": "36",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 36",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jill Thompson",
+      "district": "37",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 37",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chad Clifford",
+      "district": "37",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 37",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Gretchen Rydin",
+      "district": "38",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 38",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tim Martin",
+      "district": "38",
+      "party": "Center Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 38",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Norm Olsen",
+      "district": "38",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 38",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Allison Madrigal",
+      "district": "38",
+      "party": "Unaffiliated",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 38",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Brandi Bradley",
+      "district": "39",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 39",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christian Schilder",
+      "district": "39",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 39",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Clinton Porter",
+      "district": "40",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 40",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Naquetta Ricks",
+      "district": "40",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 40",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jamie Jackson",
+      "district": "41",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 41",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sarah Amelia Woodson",
+      "district": "42",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 42",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Robert \"Bob\" Marshall",
+      "district": "43",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 43",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Nate Marsh",
+      "district": "43",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 43",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Anthony Hartsook",
+      "district": "44",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 44",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Richard Bowness",
+      "district": "44",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 44",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John H Sutton",
+      "district": "44",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 44",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael Clarkson",
+      "district": "45",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 45",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Max Brooks",
+      "district": "45",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 45",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Caryn Ann Harlos",
+      "district": "45",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 45",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jonathan Post",
+      "district": "46",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 46",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tisha Mauro",
+      "district": "46",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 46",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Vic Meyers",
+      "district": "47",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 47",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ty Winter",
+      "district": "47",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 47",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Carlos Barron",
+      "district": "48",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 48",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dez Packard",
+      "district": "48",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 48",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Eric E. Joss",
+      "district": "48",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 48",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael Sheperek",
+      "district": "49",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 49",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lesley Smith",
+      "district": "49",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 49",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ryan Gonzalez",
+      "district": "50",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 50",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tommy Butler",
+      "district": "50",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 50",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amy Parks",
+      "district": "51",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 51",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jacki Marsh",
+      "district": "51",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 51",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Yara Zokaie",
+      "district": "52",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 52",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Steve Yurash",
+      "district": "52",
+      "party": "Center Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 52",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Daniel Frick",
+      "district": "53",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 53",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Andy Boesenecker",
+      "district": "53",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 53",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jason Bias",
+      "district": "54",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 54",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Mallory Martin",
+      "district": "54",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 54",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Rick Taggart",
+      "district": "55",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 55",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Brittni Packard",
+      "district": "55",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 55",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chris Richardson",
+      "district": "56",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 56",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amy L. Lunde",
+      "district": "56",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 56",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Elizabeth Velasco",
+      "district": "57",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 57",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Russ Andrews",
+      "district": "57",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 57",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Larry Don Suckla",
+      "district": "58",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 58",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Katie Stewart",
+      "district": "59",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 59",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Naomi Riess",
+      "district": "59",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 59",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kathryn Kester Green",
+      "district": "60",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 60",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Matt Alexander",
+      "district": "60",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 60",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Scott Shamblin",
+      "district": "61",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 61",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Eliza Hamrick",
+      "district": "61",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 61",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kevin Gulbranson",
+      "district": "61",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 61",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Matthew Martinez",
+      "district": "62",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 62",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Steven Rodriguez",
+      "district": "62",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 62",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Donald Luke Vermillion",
+      "district": "62",
+      "party": "Libertarian Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 62",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dusty Johnson",
+      "district": "63",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 63",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Maureen (Mo) Dower",
+      "district": "64",
+      "party": "Democratic Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 64",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Scott L. Slaugh",
+      "district": "64",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 64",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lori Garcia Sander",
+      "district": "65",
+      "party": "Republican Party",
+      "position": "State House of Representatives",
+      "writeIn": false,
+      "race": "State House of Representatives - 65",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John Glenn",
+      "district": "B",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - B",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Bianka Emerson",
+      "district": "B",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - B",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Joe Meyer",
+      "district": "C",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - C",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Coleman Erickson",
+      "district": "J",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - J",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael Farrington",
+      "district": "K",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - K",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jessica Sandgren",
+      "district": "K",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - K",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ian Harwick",
+      "district": "L",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - L",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Cindy Arcuri",
+      "district": "N",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - N",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jack Rosenthal",
+      "district": "O",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - O",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Audrey DeBarros",
+      "district": "O",
+      "party": "",
+      "position": "RTD Board of Directors",
+      "writeIn": false,
+      "race": "RTD Board of Directors - O",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William W. Hood, III",
+      "district": "State",
+      "party": "",
+      "position": "Colorado Supreme Court",
+      "writeIn": false,
+      "race": "Colorado Supreme Court - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Rebecca Rankin Freyre",
+      "district": "State",
+      "party": "",
+      "position": "Colorado Court of Appeals",
+      "writeIn": false,
+      "race": "Colorado Court of Appeals - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Elizabeth L. Harris",
+      "district": "State",
+      "party": "",
+      "position": "Colorado Court of Appeals",
+      "writeIn": false,
+      "race": "Colorado Court of Appeals - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Katharine E. Lum",
+      "district": "State",
+      "party": "",
+      "position": "Colorado Court of Appeals",
+      "writeIn": false,
+      "race": "Colorado Court of Appeals - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Pax Moultrie",
+      "district": "State",
+      "party": "",
+      "position": "Colorado Court of Appeals",
+      "writeIn": false,
+      "race": "Colorado Court of Appeals - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Karl L. Schock",
+      "district": "State",
+      "party": "",
+      "position": "Colorado Court of Appeals",
+      "writeIn": false,
+      "race": "Colorado Court of Appeals - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Grant Sullivan",
+      "district": "State",
+      "party": "",
+      "position": "Colorado Court of Appeals",
+      "writeIn": false,
+      "race": "Colorado Court of Appeals - State",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chantel E. Contiguglia",
+      "district": "1",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ryan P. Loewer",
+      "district": "1",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Meegan Miloud",
+      "district": "1",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Andrew C. Poland",
+      "district": "1",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christopher Rhamey",
+      "district": "1",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tamara S. Russell",
+      "district": "1",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christopher C. Zenisek",
+      "district": "1",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 1",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael W.V. Angel",
+      "district": "2",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christopher J. Baumann",
+      "district": "2",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John Eric Elliff",
+      "district": "2",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Andrew Luxen",
+      "district": "2",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jon J. Olafson",
+      "district": "2",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sarah Block Wallace",
+      "district": "2",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lisa Gomez",
+      "district": "2",
+      "party": "",
+      "position": "District Court - Denver Juvenile Court",
+      "writeIn": false,
+      "race": "District Court - Denver Juvenile Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Elizabeth Joan McCarthy",
+      "district": "2",
+      "party": "",
+      "position": "District Court - Denver Juvenile Court",
+      "writeIn": false,
+      "race": "District Court - Denver Juvenile Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Elizabeth D. Leith",
+      "district": "2",
+      "party": "",
+      "position": "Distirct Court - Denver Probate Court",
+      "writeIn": false,
+      "race": "Distirct Court - Denver Probate Court - 2",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Pierce L. Fowler",
+      "district": "3",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 3",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William B. Bain",
+      "district": "4",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Hilary Gurney",
+      "district": "4",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dennis L. McGuire",
+      "district": "4",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amanda J. Philipps",
+      "district": "4",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Erin Lynn Sokol",
+      "district": "4",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Gregory Robert Werner",
+      "district": "4",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 4",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "D. Cory Jackson",
+      "district": "7",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kellie L. Starritt",
+      "district": "7",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 7",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Elise Myer",
+      "district": "9",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 9",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William David Alexander",
+      "district": "10",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 10",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michelle Chostner",
+      "district": "10",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 10",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Allison P. Ernst",
+      "district": "10",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 10",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tayler M. Thomas",
+      "district": "10",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 10",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amanda Hunter",
+      "district": "11",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 11",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dayna L. Vise",
+      "district": "11",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 11",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael A. Gonzales",
+      "district": "12",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 12",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Amanda C. Hopkins",
+      "district": "12",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 12",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dina M. Christiansen",
+      "district": "13",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 13",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Brittany Schneider",
+      "district": "14",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 14",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tarryn L. Johnson",
+      "district": "15",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 15",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Caryn A. Datz",
+      "district": "17",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sean Patrick Finn",
+      "district": "17",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Priscilla Loew",
+      "district": "17",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeffrey Dean Ruff",
+      "district": "17",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kelley R. Southerland",
+      "district": "17",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 17",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michelle Ann Amico",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "LaQunya Latrese Baker-McKay",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jacob A. Edson",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Thomas W. Henderson",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michelle Jones",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "David N. Karpel",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Natalie G. Stricklin",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Darren L. Vahle",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christine A. Washburn",
+      "district": "18",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 18",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Audrey A. Galloway",
+      "district": "19",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 19",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Timothy Gerard Kerns",
+      "district": "19",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 19",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael Kotlarczyk",
+      "district": "20",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 20",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "J. Chris Larson",
+      "district": "20",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 20",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Nancy Woodruff Salomone",
+      "district": "20",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 20",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeremy Chaffin",
+      "district": "21",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Craig Peter Henderson",
+      "district": "21",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Gretchen B. Larson",
+      "district": "21",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "JenniLynn E. Lawrence",
+      "district": "21",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 21",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William Young Furse",
+      "district": "22",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 22",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Andrew Baum",
+      "district": "23",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 23",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Victoria E. Klingensmith",
+      "district": "23",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 23",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Theresa Slade",
+      "district": "23",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 23",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Daniel W. Warhola",
+      "district": "23",
+      "party": "",
+      "position": "District Court",
+      "writeIn": false,
+      "race": "District Court - 23",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lara M. Jimenez",
+      "district": "Adams",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Adams",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "MaryAnn \"Mariana\" Vielma",
+      "district": "Adams",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Adams",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Daniel Walzl",
+      "district": "Alamosa",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Alamosa",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Christina Marie Apostoli",
+      "district": "Arapahoe",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Arapahoe",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Colleen Clark",
+      "district": "Arapahoe",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Arapahoe",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Cheryl Rowles-Stokes",
+      "district": "Arapahoe",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Arapahoe",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Elizabeth House Moulton Brodsky",
+      "district": "Boulder",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Boulder",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Monica Haenselman",
+      "district": "Boulder",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Boulder",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Zachary Ilya Malkinson",
+      "district": "Boulder",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Boulder",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Tamara McSherry Sullivan",
+      "district": "Costilla",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Costilla",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jeremy P Boyce",
+      "district": "Crowley",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Crowley",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michael Patrick Halpin",
+      "district": "Custer",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Custer",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Andrea Eddy",
+      "district": "Denver",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Denver",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Olympia Z. Fay",
+      "district": "Denver",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Denver",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kerri Lombardi",
+      "district": "Denver",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Denver",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chelsea Malone",
+      "district": "Denver",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Denver",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michelle Martinez-Thomas",
+      "district": "Denver",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Denver",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Isaam L. Shamsid-Deen",
+      "district": "Denver",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Denver",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Judith Smith",
+      "district": "Denver",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Denver",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Lawrence Bowling",
+      "district": "Douglas",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Douglas",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kolony L. Fields",
+      "district": "Douglas",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Douglas",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Inga Haagenson Causey",
+      "district": "Eagle",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Eagle",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sam Burney",
+      "district": "El Paso",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - El Paso",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Marika Frady",
+      "district": "El Paso",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - El Paso",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Meredith Patrick Cord",
+      "district": "El Paso",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - El Paso",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Ann M. Rotolo",
+      "district": "El Paso",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - El Paso",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Alexandra Robak",
+      "district": "Fremont",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Fremont",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jonathan Bruce Pototsky",
+      "district": "Garfield",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Garfield",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Timothy Lane",
+      "district": "Gilpin",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Gilpin",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Nicholas Catanzarite",
+      "district": "Grand",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Grand",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "James R. McDonald",
+      "district": "Hinsdale",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Hinsdale",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dawn Mann",
+      "district": "Huerfano",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Huerfano",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Chelsea Williams Ryan",
+      "district": "Jackson",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Jackson",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Sara Garrido",
+      "district": "Jefferson",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Jefferson",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Corinne Magid",
+      "district": "Jefferson",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Jefferson",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jennifer Lynn Melton",
+      "district": "Jefferson",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Jefferson",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Katharine \"Jenny\" Ellison",
+      "district": "Larimer",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Larimer",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Thomas L. Lynch",
+      "district": "Larimer",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Larimer",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Matthew R. Zehe",
+      "district": "Larimer",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Larimer",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Scott Joseph Burrill",
+      "district": "Mesa",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Mesa",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Bruce R. Raaum",
+      "district": "Mesa",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Mesa",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Hollie Wheelwright",
+      "district": "Mineral",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Mineral",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "James Hesson",
+      "district": "Moffat",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Moffat",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "William Culver",
+      "district": "Otero",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Otero",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Brian Louis Green",
+      "district": "Park",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Park",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Curtis Lane Porter",
+      "district": "Prowers",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Prowers",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jay A. Edwards",
+      "district": "Rio Blanco",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Rio Blanco",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Jay A. Edwards",
+      "district": "Rio Blanco",
+      "party": "",
+      "position": "Associate County Court",
+      "writeIn": false,
+      "race": "Associate County Court - Rio Blanco",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Kelly S. Hansen",
+      "district": "Washington",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Washington",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "John J. Briggs",
+      "district": "Weld",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Weld",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Michele Lynn Meyer",
+      "district": "Weld",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Weld",
+      "county": "Statewide",
+      "votes": 0
+    },
+    {
+      "candidate": "Dana Nichols",
+      "district": "Weld",
+      "party": "",
+      "position": "County Court",
+      "writeIn": false,
+      "race": "County Court - Weld",
+      "county": "Statewide",
+      "votes": 0
+    }
+  ]
+}

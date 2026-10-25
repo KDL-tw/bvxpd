@@ -1,0 +1,13 @@
+{
+  "election": "2024 Colorado general election",
+  "source": "https://www.coloradosos.gov/pubs/elections/Results/2024/2024BiennialAbstract.pdf",
+  "retrievedAt": "2026-10-25",
+  "format": "official SOS PDF",
+  "sections": {
+    "federal_and_state_offices": {"pages": "110-129"},
+    "judicial_retention": {"pages": "134-153"},
+    "ballot_measures": {"pages": "154-167"},
+    "ballot_language": {"pages": "168-172"}
+  },
+  "normalization": "Pending page-table reconciliation; source bytes pinned before parsing."
+}

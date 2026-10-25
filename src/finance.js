@@ -7,3 +7,13 @@ if(!/^\d{4}-\d{2}-\d{2}$/.test(out.periodStart)||!/^\d{4}-\d{2}-\d{2}$/.test(out
 return out;}
 export function financeMetrics(record){const days=Math.max(1,(Date.parse(record.periodEnd)-Date.parse(record.periodStart))/86400000+1);return {...record,netCashChange:record.receipts-record.spending,burnRate:record.spending/days,cashRunwayDays:record.spending?record.cashOnHand/(record.spending/days):null,fundraisingAcceleration:null,smallDollarShare:record.receipts?record.smallDollarReceipts/record.receipts:null,largeDollarShare:record.receipts?record.largeDollarReceipts/record.receipts:null};}
 export function compareFinance(current,prior){const a=financeMetrics(current),b=prior&&financeMetrics(prior);return {...a,fundraisingAcceleration:b?a.receipts-b.receipts:null};}
+
+const aliases={candidate:['CandidateName','Candidate','Candidate Name'],position:['Position','Office','Office Sought'],district:['District','District Number'],committee:['CommitteeName','Committee Name','Committee'],periodStart:['PeriodStart','ReportingPeriodStart','Report Period Start'],periodEnd:['PeriodEnd','ReportingPeriodEnd','Report Period End'],receipts:['ContributionAmount','Receipts','Receipt Amount'],spending:['Spending','Expenditures'],cashOnHand:['CashOnHand','Cash On Hand'],outsideSpending:['OutsideSpending','Outside Spending'],smallDollarReceipts:['SmallDollarReceipts','Small Dollar Receipts'],largeDollarReceipts:['LargeDollarReceipts','Large Dollar Receipts']};
+const findColumn=(headers,names)=>{const lower=headers.map(h=>String(h).trim().toLowerCase());return names.map(n=>lower.indexOf(n.toLowerCase())).find(i=>i>=0)??-1;};
+export function normalizeTracerExport(headers, rows, source, sourceAsOf=new Date().toISOString()){
+  const idx=Object.fromEntries(Object.entries(aliases).map(([k,n])=>[k,findColumn(headers,n)]));
+  if(idx.committee<0||idx.receipts<0) throw Error('TRACER export needs CommitteeName and ContributionAmount (or equivalent) columns.');
+  const grouped=new Map();
+  for(const row of rows){const value=i=>i<0?'':String(row[i]??'').trim();const candidate=value(idx.candidate)||'Committee-level';const position=value(idx.position)||'Unmapped position';const district=value(idx.district)||'Statewide';const committee=value(idx.committee)||'Unidentified committee';const key=[candidate,position,district,committee].join('|');const prior=grouped.get(key)||{candidate,position,district,committee,periodStart:value(idx.periodStart),periodEnd:value(idx.periodEnd),receipts:0,spending:0,cashOnHand:0,outsideSpending:0,smallDollarReceipts:0,largeDollarReceipts:0};prior.receipts+=Number(String(value(idx.receipts)||0).replace(/[$,\s]/g,''))||0;grouped.set(key,prior);}
+  return [...grouped.values()].map(r=>normalizeFinance({...r,source,sourceAsOf}));
+}

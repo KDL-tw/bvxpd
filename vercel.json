@@ -1,0 +1,3 @@
+{
+  "functions": { "api/live-results.js": { "maxDuration": 15 } }
+}

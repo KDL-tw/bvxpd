@@ -5,7 +5,7 @@ import {splashUrl} from './config.js';
 import {fields,parseFile,suggestedMapping,normalize,validateMeta,summarize,demo} from './data.js';
 const $=id=>document.getElementById(id), fmt=n=>n.toLocaleString('en-US');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const key='bullvixen.snapshots.v1'; let archives=[],snapshots=[],watchlist=[],mode='observed',selectedId='',race='',position='All positions',county='All imported areas',table=null,draft=null,fileToken=0;
+const key='bullvixen.snapshots.v1'; let archives=[],snapshots=[],watchlist=[],mode='observed',selectedId='',race='',position='All positions',county='All imported areas',table=null,draft=null,fileToken=0,liveSnapshot=null;
 const time=s=>s?new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Denver'}).format(new Date(s))+' MT':'Not applicable';
 function toast(message){$('toast').textContent=message;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').textContent='',6500);}
 try {const saved=JSON.parse(localStorage.getItem(key)||'[]'); if(!Array.isArray(saved)) throw Error(); snapshots=saved.map(s=>{validateMeta(s); if(!Array.isArray(s.records)||!s.id||!Number.isFinite(Date.parse(s.importedAt))) throw Error(); normalize({headers:fields,rows:s.records.map(r=>fields.map(f=>String(r[f]??'')))},Object.fromEntries(fields.map((f,i)=>[f,i]))); return s;}); const watches=JSON.parse(localStorage.getItem('bullvixen.watchlist')||'[]'); if(Array.isArray(watches)) watchlist=watches.filter(s=>typeof s==='string');}catch{toast('Saved data could not be read. Import a source file to continue; existing storage has not been overwritten.');snapshots=[];}
@@ -13,7 +13,7 @@ function save(next){try{localStorage.setItem(key,JSON.stringify(next)); snapshot
 function page(id){if(!['overview','imports','history','research'].includes(id)) id='overview';document.querySelectorAll('.page').forEach(el=>el.hidden=el.id!==id);document.querySelectorAll('nav button').forEach(el=>{el.classList.toggle('active',el.dataset.page===id); if(el.dataset.page===id)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');}); if(id==='history')renderHistory();location.hash=id;}
 document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',()=>page(el.dataset.page)));
 window.addEventListener('hashchange',()=>page(location.hash.slice(1)));
-const allSnapshots=()=>[...snapshots,...archives];
+const allSnapshots=()=>[...(liveSnapshot?[liveSnapshot]:[]),...snapshots,...archives];
 const isArchive=s=>archives.includes(s);
 function active(){return mode==='demo'&&selectedId==='demo'?demo:allSnapshots().find(s=>s.id===selectedId&&s.kind===mode);}
 function setMode(value){mode=value;selectedId=value==='demo'?'demo':allSnapshots().find(s=>s.kind==='observed')?.id||'';race='';position='All positions';county='All imported areas';render();}
@@ -35,7 +35,7 @@ function render(){
   options($('race-select'),names.map(n=>[n,position==='All positions'?n:contests.find(c=>c.race===n).districtLabel]),race);options($('county-select'),s?['All imported areas',...areas].map(n=>[n,n]):[],county);
   $('observed-mode').setAttribute('aria-pressed',String(mode==='observed'));$('demo-mode').setAttribute('aria-pressed',String(mode==='demo'));
   $('data-banner').classList.toggle('observed',mode==='observed');
-  $('data-banner').textContent=mode==='demo'?'DEMO / SYNTHETIC — Fictional counts and candidates for exploring the interface. Not observed results, forecasts or current election data.':s&&isArchive(s)?'OBSERVED / HISTORICAL ARCHIVE — 2022 final abstract; 10 selected races. County and candidate totals reconciled against the archived SOS tables. Not current or live results.':s?'OBSERVED / MANUAL IMPORT — User-supplied source data. Provenance is recorded; authenticity and completeness are not independently verified.':'OBSERVED — No source data imported. This workspace does not fetch live election results.';
+  $('data-banner').textContent=mode==='demo'?'DEMO / SYNTHETIC — Fictional counts and candidates for exploring the interface. Not observed results, forecasts or current election data.':s?.id==='live-results'?'OBSERVED / LIVE FEED — Current upstream response, timestamped when this dashboard fetched it. Verify the source before publication.':s&&isArchive(s)?'OBSERVED / HISTORICAL ARCHIVE — 2022 final abstract; 10 selected races. County and candidate totals reconciled against the archived SOS tables. Not current or live results.':s?'OBSERVED / MANUAL IMPORT — User-supplied source data. Provenance is recorded; authenticity and completeness are not independently verified.':'OBSERVED — No source data imported. This workspace does not fetch live election results.';
   $('empty').hidden=!!s;$('results').hidden=!s;
   renderWatches();
   if(!s){$('race-cards').replaceChildren();return;}
@@ -47,7 +47,7 @@ function render(){
   const archived=isArchive(s), check=archived?s.reconciliation.find(c=>c.race===race):null;
   const sourceLink=s.kind==='observed'?`<a href="${esc(check?.url||s.url)}" target="_blank" rel="noopener">Open Colorado SOS source ↗</a>`:'Fictional / supplied demo';
   $('source-details').innerHTML=`<dt>Classification</dt><dd>${archived?'Observed · bundled historical archive':s.kind==='observed'?'Observed · manual import':'Demo · synthetic'}</dd><dt>Election</dt><dd>${esc(s.election)}</dd>${archived?`<dt>Position / district</dt><dd>${esc(contests.find(c=>c.race===race).position)} · ${esc(contests.find(c=>c.race===race).districtLabel)}</dd>`:''}<dt>Source reporting time</dt><dd>${archived?'Not provided in archive':esc(time(s.asOf))}</dd>${archived?`<dt>Election date</dt><dd>${esc(s.electionDate)}</dd><dt>Archive retrieved</dt><dd>${esc(time(s.retrievedAt))}</dd>`:`<dt>Imported on this device</dt><dd>${esc(time(s.importedAt))}</dd>`}<dt>Reporting stage</dt><dd>${archived?'Historical final abstract':s.stage==='certified'?'Certified — per importer’s source label':'Unofficial / preliminary'}</dd><dt>File</dt><dd>${esc(check?.sourceFile||s.filename)}</dd><dt>Source</dt><dd>${sourceLink}</dd>${archived?`<dt>Coverage</dt><dd>${esc(s.coverage)}</dd><dt>Validation</dt><dd>${esc(check.reconciliation)}</dd><dt>Source SHA-256</dt><dd class="checksum">${esc(check.sha256)}</dd>`:''}`;
-  $('storage-note').textContent=archived?'This historical dataset ships with the dashboard. Your manual imports remain local to this browser.':'Imports stay in this browser. They are not published to other visitors.';
+  $('storage-note').textContent=s?.id==='live-results'?'Live response is held in memory for this session; it is not persisted.':archived?'This historical dataset ships with the dashboard. Your manual imports remain local to this browser.':'Imports stay in this browser. They are not published to other visitors.';
   $('race-cards').innerHTML=names.map(n=>{const t=summarize(s.records,n);return `<button class="race-card ${race===n?'selected':''}" data-race="${esc(n)}"><span class="eyebrow">${s.kind.toUpperCase()}</span><b>${esc(n)}</b><small>${fmt(t.total)} candidate votes · ${t.candidates.length} choices</small></button>`;}).join('');
   $('race-cards').querySelectorAll('button').forEach(b=>b.onclick=()=>{race=b.dataset.race;county='All imported areas';render();});renderWatches();
 }
@@ -71,6 +71,21 @@ function renderHistory(){
   $('history-list').querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{const s=allSnapshots().find(s=>s.id===b.dataset.open);mode=s.kind;selectedId=s.id;race='';render();page('overview');});
   $('history-list').querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{if(confirm('Delete this snapshot from this browser? Export it first if you need a backup.')){if(save(snapshots.filter(s=>s.id!==b.dataset.delete))){render();renderHistory();}}});
 }
+async function refreshLive(){
+  const status=$('live-status'), button=$('refresh-live'); status.textContent='Refreshing live feed…'; button.disabled=true;
+  try {
+    const response=await fetch('/api/live-results',{cache:'no-store'}); const payload=await response.json();
+    if(!response.ok) throw Error(payload.error||'Live feed unavailable');
+    const rows=payload.records.map((r,i)=>({race:String(r.race||r.contest||''),candidate:String(r.candidate||r.choice||''),county:String(r.county||r.area||'Statewide'),party:String(r.party||''),votes:Number(r.votes)}));
+    if(!rows.length||rows.some(r=>!r.race||!r.candidate||!Number.isSafeInteger(r.votes)||r.votes<0)) throw Error('Live feed returned invalid candidate-result rows.');
+    liveSnapshot={id:'live-results',kind:'observed',stage:'unofficial',election:payload.election||'Live Colorado results',asOf:payload.asOf||payload.fetchedAt,importedAt:payload.fetchedAt,filename:'Live upstream feed',url:payload.sourceUrl||'',records:rows,schemaVersion:1};
+    mode='observed'; selectedId='live-results'; race=''; position='All positions'; county='All imported areas'; render();
+    status=`Live feed updated ${time(payload.fetchedAt)}`; toast('Live results refreshed.');
+  } catch(error) { status.textContent=error.message; toast('Live results are unavailable. Check the Vercel feed configuration.'); }
+  finally { button.disabled=false; }
+}
+$('refresh-live').onclick=refreshLive;
+
 async function loadArchives(){
   try {
     const response=await fetch('data/historical/co-2022-general.json');

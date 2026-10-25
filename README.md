@@ -138,3 +138,7 @@ Current automated checks cover 15 JavaScript tests and 5 Python adapter tests, J
 ## Data boundaries
 
 Selected official 2022 historical results ship with the app. No donor records are included. Public source snapshots intentionally belong under `data/sources/`; do not commit personal data or unreviewed manual uploads. Browser storage is device-specific, quota-limited and not a database or backup. Recorded observations, synthetic demo counts and any future modeled estimates must retain separate provenance and labeling.
+
+## Live deployment
+
+The dashboard can refresh current results through the Vercel function at `/api/live-results`. Configure the Vercel environment variable `LIVE_RESULTS_URL` with an approved JSON feed that returns either an array of rows or `{ "records": [...] }`. Each row must contain `race`, `candidate`, and a non-negative integer `votes`; `county`, `party`, `asOf`, and `sourceUrl` are optional. The function proxies the feed server-side, avoiding browser CORS limits, and the UI labels the response as observed/live with its fetch time. A missing or failing feed remains clearly unavailable; the bundled 2022 archive is never presented as current. Live responses are held in memory for the browser session and are not a shared database.

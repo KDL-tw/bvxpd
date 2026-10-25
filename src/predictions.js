@@ -46,6 +46,14 @@ export function testFundraisingHypothesis(observations = []) {
   return {status:'evaluated',sampleSize:rows.length,correlation,slope,conclusion:correlation>0?'Positive association observed; this does not establish causation.':correlation<0?'Negative association observed; the assumption is not supported by this sample.':'No linear association observed.'};
 }
 
+export function fundraisingAdjustedBaseline({contestId, target, baselineShare, fundingAdvantage, training = []} = {}) {
+  if (!contestId || !target || !Number.isFinite(baselineShare) || !Number.isFinite(fundingAdvantage)) throw Error('A fundraising-adjusted baseline needs contest, target, baseline share and funding advantage.');
+  const test=testFundraisingHypothesis(training);
+  if(test.status!=='evaluated') return predictionUnavailable({contestId,target,model:'historical-baseline',reason:`Fundraising comparison unavailable: ${test.conclusion}`});
+  const estimate=Math.max(0,Math.min(1,baselineShare+test.slope*fundingAdvantage));
+  return {schemaVersion:1,kind:'modeled',status:'evaluated',contestId,target,model:'historical-baseline',unavailable:false,estimate,interval:[Math.max(0,estimate-.10),Math.min(1,estimate+.10)],probability:null,sampleSize:test.sampleSize,inputs:{baselineShare,fundingAdvantage},assumptions:['Funding effect is estimated from matched historical observations','The adjustment is clipped to [0,1]','Interval is a comparison band, not a calibrated probability interval']};
+}
+
 export const plannedPredictionCatalog = [
   {model: 'historical-baseline', label: 'Historical baseline', status: 'planned', requirement: 'Comparable prior contests by position, district and geography vintage.'},
   {model: 'remaining-vote-beta', label: 'Remaining-vote beta model', status: 'blocked', requirement: 'Timestamped snapshots plus a separately estimated remaining-vote distribution.'},

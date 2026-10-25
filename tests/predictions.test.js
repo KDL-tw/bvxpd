@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline, testFundraisingHypothesis} from '../src/predictions.js';
+import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline, testFundraisingHypothesis, fundraisingAdjustedBaseline} from '../src/predictions.js';
 
 test('unavailable prediction carries no estimate', () => {
   const p = predictionUnavailable({contestId:'co-2022-general:us-house:8', reason:'No implemented model.'});
@@ -43,4 +43,12 @@ test('fundraising hypothesis reports positive association without claiming causa
 
 test('fundraising hypothesis refuses a thin sample', () => {
   assert.equal(testFundraisingHypothesis([{fundingAdvantage:1,outcomeShare:.6}]).status,'insufficient-data');
+});
+
+test('fundraising adjustment applies the fitted comparison effect and preserves inputs', () => {
+  const p=fundraisingAdjustedBaseline({contestId:'co:house:8',target:'DEM final share',baselineShare:.5,fundingAdvantage:1,training:[{fundingAdvantage:-1,outcomeShare:.42},{fundingAdvantage:0,outcomeShare:.5},{fundingAdvantage:1,outcomeShare:.58}]});
+  assert.equal(p.status,'evaluated');
+  assert.ok(p.estimate>.5);
+  assert.equal(p.inputs.fundingAdvantage,1);
+  validatePrediction(p);
 });

@@ -1,0 +1,6 @@
+export const contestKinds=['candidate','measure','retention'];
+export const offices=['President','U.S. Senate','U.S. House','Governor / Lieutenant Governor','Colorado State Senate','Colorado State House','Judicial retention','Ballot measure'];
+export function contestId({election,kind='candidate',office,district='Statewide',seat=''}){if(!election||!contestKinds.includes(kind)||!office||!district)throw Error('Contest requires election, kind, office, and district.');return [election,kind,office,district,seat].map(v=>String(v).trim().toLowerCase()).join('|');}
+export function validateContest(c){if(c?.schemaVersion!==1||!c.id||!contestKinds.includes(c.kind)||!offices.includes(c.office)||!c.election||!c.district)throw Error('Invalid contest identity.');if(c.kind==='measure'&&!c.measureId)throw Error('Ballot measures require a measure identifier.');return c;}
+export function candidateContest({election,office,district,seat=''}){return {schemaVersion:1,kind:'candidate',id:contestId({election,office,district,seat}),election,office,district,seat};}
+export function measureContest({election,measureId,title,jurisdiction='Colorado'}){const c={schemaVersion:1,kind:'measure',id:contestId({election,kind:'measure',office:'Ballot measure',district:jurisdiction,seat:measureId}),election,office:'Ballot measure',district:jurisdiction,measureId,title};return validateContest(c);}

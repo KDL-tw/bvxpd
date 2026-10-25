@@ -1,0 +1,1670 @@
+{
+  "id": "co-2022-state-house",
+  "label": "Colorado 2022 State House",
+  "year": 2022,
+  "electionDate": "2022-11-08",
+  "classification": "Observed - historical final abstract",
+  "sourceUrl": "https://www.coloradosos.gov/pubs/elections/Results/Abstract/2022/general/stateRepresentatives.html",
+  "positionScope": "Colorado State House",
+  "contests": [
+    {
+      "race": "State Representative - District 1",
+      "position": "Colorado State House",
+      "districtLabel": "District 1"
+    },
+    {
+      "race": "State Representative - District 2",
+      "position": "Colorado State House",
+      "districtLabel": "District 2"
+    },
+    {
+      "race": "State Representative - District 3",
+      "position": "Colorado State House",
+      "districtLabel": "District 3"
+    },
+    {
+      "race": "State Representative - District 4",
+      "position": "Colorado State House",
+      "districtLabel": "District 4"
+    },
+    {
+      "race": "State Representative - District 5",
+      "position": "Colorado State House",
+      "districtLabel": "District 5"
+    },
+    {
+      "race": "State Representative - District 6",
+      "position": "Colorado State House",
+      "districtLabel": "District 6"
+    },
+    {
+      "race": "State Representative - District 7",
+      "position": "Colorado State House",
+      "districtLabel": "District 7"
+    },
+    {
+      "race": "State Representative - District 8",
+      "position": "Colorado State House",
+      "districtLabel": "District 8"
+    },
+    {
+      "race": "State Representative - District 9",
+      "position": "Colorado State House",
+      "districtLabel": "District 9"
+    },
+    {
+      "race": "State Representative - District 10",
+      "position": "Colorado State House",
+      "districtLabel": "District 10"
+    },
+    {
+      "race": "State Representative - District 11",
+      "position": "Colorado State House",
+      "districtLabel": "District 11"
+    },
+    {
+      "race": "State Representative - District 12",
+      "position": "Colorado State House",
+      "districtLabel": "District 12"
+    },
+    {
+      "race": "State Representative - District 13",
+      "position": "Colorado State House",
+      "districtLabel": "District 13"
+    },
+    {
+      "race": "State Representative - District 14",
+      "position": "Colorado State House",
+      "districtLabel": "District 14"
+    },
+    {
+      "race": "State Representative - District 15",
+      "position": "Colorado State House",
+      "districtLabel": "District 15"
+    },
+    {
+      "race": "State Representative - District 16",
+      "position": "Colorado State House",
+      "districtLabel": "District 16"
+    },
+    {
+      "race": "State Representative - District 17",
+      "position": "Colorado State House",
+      "districtLabel": "District 17"
+    },
+    {
+      "race": "State Representative - District 18",
+      "position": "Colorado State House",
+      "districtLabel": "District 18"
+    },
+    {
+      "race": "State Representative - District 19",
+      "position": "Colorado State House",
+      "districtLabel": "District 19"
+    },
+    {
+      "race": "State Representative - District 20",
+      "position": "Colorado State House",
+      "districtLabel": "District 20"
+    },
+    {
+      "race": "State Representative - District 21",
+      "position": "Colorado State House",
+      "districtLabel": "District 21"
+    },
+    {
+      "race": "State Representative - District 22",
+      "position": "Colorado State House",
+      "districtLabel": "District 22"
+    },
+    {
+      "race": "State Representative - District 23",
+      "position": "Colorado State House",
+      "districtLabel": "District 23"
+    },
+    {
+      "race": "State Representative - District 24",
+      "position": "Colorado State House",
+      "districtLabel": "District 24"
+    },
+    {
+      "race": "State Representative - District 25",
+      "position": "Colorado State House",
+      "districtLabel": "District 25"
+    },
+    {
+      "race": "State Representative - District 26",
+      "position": "Colorado State House",
+      "districtLabel": "District 26"
+    },
+    {
+      "race": "State Representative - District 27",
+      "position": "Colorado State House",
+      "districtLabel": "District 27"
+    },
+    {
+      "race": "State Representative - District 28",
+      "position": "Colorado State House",
+      "districtLabel": "District 28"
+    },
+    {
+      "race": "State Representative - District 29",
+      "position": "Colorado State House",
+      "districtLabel": "District 29"
+    },
+    {
+      "race": "State Representative - District 30",
+      "position": "Colorado State House",
+      "districtLabel": "District 30"
+    },
+    {
+      "race": "State Representative - District 31",
+      "position": "Colorado State House",
+      "districtLabel": "District 31"
+    },
+    {
+      "race": "State Representative - District 32",
+      "position": "Colorado State House",
+      "districtLabel": "District 32"
+    },
+    {
+      "race": "State Representative - District 33",
+      "position": "Colorado State House",
+      "districtLabel": "District 33"
+    },
+    {
+      "race": "State Representative - District 34",
+      "position": "Colorado State House",
+      "districtLabel": "District 34"
+    },
+    {
+      "race": "State Representative - District 35",
+      "position": "Colorado State House",
+      "districtLabel": "District 35"
+    },
+    {
+      "race": "State Representative - District 36",
+      "position": "Colorado State House",
+      "districtLabel": "District 36"
+    },
+    {
+      "race": "State Representative - District 37",
+      "position": "Colorado State House",
+      "districtLabel": "District 37"
+    },
+    {
+      "race": "State Representative - District 38",
+      "position": "Colorado State House",
+      "districtLabel": "District 38"
+    },
+    {
+      "race": "State Representative - District 39",
+      "position": "Colorado State House",
+      "districtLabel": "District 39"
+    },
+    {
+      "race": "State Representative - District 40",
+      "position": "Colorado State House",
+      "districtLabel": "District 40"
+    },
+    {
+      "race": "State Representative - District 41",
+      "position": "Colorado State House",
+      "districtLabel": "District 41"
+    },
+    {
+      "race": "State Representative - District 42",
+      "position": "Colorado State House",
+      "districtLabel": "District 42"
+    },
+    {
+      "race": "State Representative - District 43",
+      "position": "Colorado State House",
+      "districtLabel": "District 43"
+    },
+    {
+      "race": "State Representative - District 44",
+      "position": "Colorado State House",
+      "districtLabel": "District 44"
+    },
+    {
+      "race": "State Representative - District 45",
+      "position": "Colorado State House",
+      "districtLabel": "District 45"
+    },
+    {
+      "race": "State Representative - District 46",
+      "position": "Colorado State House",
+      "districtLabel": "District 46"
+    },
+    {
+      "race": "State Representative - District 47",
+      "position": "Colorado State House",
+      "districtLabel": "District 47"
+    },
+    {
+      "race": "State Representative - District 48",
+      "position": "Colorado State House",
+      "districtLabel": "District 48"
+    },
+    {
+      "race": "State Representative - District 49",
+      "position": "Colorado State House",
+      "districtLabel": "District 49"
+    },
+    {
+      "race": "State Representative - District 50",
+      "position": "Colorado State House",
+      "districtLabel": "District 50"
+    },
+    {
+      "race": "State Representative - District 51",
+      "position": "Colorado State House",
+      "districtLabel": "District 51"
+    },
+    {
+      "race": "State Representative - District 52",
+      "position": "Colorado State House",
+      "districtLabel": "District 52"
+    },
+    {
+      "race": "State Representative - District 53",
+      "position": "Colorado State House",
+      "districtLabel": "District 53"
+    },
+    {
+      "race": "State Representative - District 54",
+      "position": "Colorado State House",
+      "districtLabel": "District 54"
+    },
+    {
+      "race": "State Representative - District 55",
+      "position": "Colorado State House",
+      "districtLabel": "District 55"
+    },
+    {
+      "race": "State Representative - District 56",
+      "position": "Colorado State House",
+      "districtLabel": "District 56"
+    },
+    {
+      "race": "State Representative - District 57",
+      "position": "Colorado State House",
+      "districtLabel": "District 57"
+    },
+    {
+      "race": "State Representative - District 58",
+      "position": "Colorado State House",
+      "districtLabel": "District 58"
+    },
+    {
+      "race": "State Representative - District 59",
+      "position": "Colorado State House",
+      "districtLabel": "District 59"
+    },
+    {
+      "race": "State Representative - District 60",
+      "position": "Colorado State House",
+      "districtLabel": "District 60"
+    },
+    {
+      "race": "State Representative - District 61",
+      "position": "Colorado State House",
+      "districtLabel": "District 61"
+    },
+    {
+      "race": "State Representative - District 62",
+      "position": "Colorado State House",
+      "districtLabel": "District 62"
+    },
+    {
+      "race": "State Representative - District 63",
+      "position": "Colorado State House",
+      "districtLabel": "District 63"
+    },
+    {
+      "race": "State Representative - District 64",
+      "position": "Colorado State House",
+      "districtLabel": "District 64"
+    },
+    {
+      "race": "State Representative - District 65",
+      "position": "Colorado State House",
+      "districtLabel": "District 65"
+    }
+  ],
+  "records": [
+    {
+      "candidate": "Guillermo Diaz",
+      "county": "Statewide total",
+      "district": "District 1",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 1",
+      "votes": 8981
+    },
+    {
+      "candidate": "Javier Mabrey",
+      "county": "Statewide total",
+      "district": "District 1",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 1",
+      "votes": 17903
+    },
+    {
+      "candidate": "Kyle Furey",
+      "county": "Statewide total",
+      "district": "District 1",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 1",
+      "votes": 743
+    },
+    {
+      "candidate": "Steven Woodrow",
+      "county": "Statewide total",
+      "district": "District 2",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 2",
+      "votes": 34213
+    },
+    {
+      "candidate": "Stephanie Wheeler",
+      "county": "Statewide total",
+      "district": "District 2",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 2",
+      "votes": 10476
+    },
+    {
+      "candidate": "Justin Savoy",
+      "county": "Statewide total",
+      "district": "District 2",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 2",
+      "votes": 689
+    },
+    {
+      "candidate": "Marla Fernandez",
+      "county": "Statewide total",
+      "district": "District 3",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 3",
+      "votes": 10570
+    },
+    {
+      "candidate": "Meg Froelich",
+      "county": "Statewide total",
+      "district": "District 3",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 3",
+      "votes": 21957
+    },
+    {
+      "candidate": "Clayton Casciato",
+      "county": "Statewide total",
+      "district": "District 3",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 3",
+      "votes": 757
+    },
+    {
+      "candidate": "Jack Daus",
+      "county": "Statewide total",
+      "district": "District 4",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 4",
+      "votes": 5687
+    },
+    {
+      "candidate": "Serena Gonzales- Gutierrez",
+      "county": "Statewide total",
+      "district": "District 4",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 4",
+      "votes": 27116
+    },
+    {
+      "candidate": "Johnnie Johnson",
+      "county": "Statewide total",
+      "district": "District 5",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 5",
+      "votes": 4502
+    },
+    {
+      "candidate": "Alex Valdez",
+      "county": "Statewide total",
+      "district": "District 5",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 5",
+      "votes": 24306
+    },
+    {
+      "candidate": "Troy Brekke",
+      "county": "Statewide total",
+      "district": "District 5",
+      "party": "UPA",
+      "position": "Colorado State House",
+      "race": "State Representative - District 5",
+      "votes": 539
+    },
+    {
+      "candidate": "Elisabeth Epps",
+      "county": "Statewide total",
+      "district": "District 6",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 6",
+      "votes": 32951
+    },
+    {
+      "candidate": "Donald D. Howell",
+      "county": "Statewide total",
+      "district": "District 6",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 6",
+      "votes": 5448
+    },
+    {
+      "candidate": "Jordan Friedman (UNA)",
+      "county": "Statewide total",
+      "district": "District 6",
+      "party": "Write-in",
+      "position": "Colorado State House",
+      "race": "State Representative - District 6",
+      "votes": 20
+    },
+    {
+      "candidate": "Jennifer Bacon",
+      "county": "Statewide total",
+      "district": "District 7",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 7",
+      "votes": 16765
+    },
+    {
+      "candidate": "Hilleary Waters",
+      "county": "Statewide total",
+      "district": "District 8",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 8",
+      "votes": 4833
+    },
+    {
+      "candidate": "Leslie Herod",
+      "county": "Statewide total",
+      "district": "District 8",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 8",
+      "votes": 35015
+    },
+    {
+      "candidate": "Emily Sirota",
+      "county": "Statewide total",
+      "district": "District 9",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 9",
+      "votes": 25925
+    },
+    {
+      "candidate": "Tom Cowhick",
+      "county": "Statewide total",
+      "district": "District 9",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 9",
+      "votes": 7802
+    },
+    {
+      "candidate": "Junie Joseph",
+      "county": "Statewide total",
+      "district": "District 10",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 10",
+      "votes": 30894
+    },
+    {
+      "candidate": "William B. DeOreo",
+      "county": "Statewide total",
+      "district": "District 10",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 10",
+      "votes": 4182
+    },
+    {
+      "candidate": "Karen McCormick",
+      "county": "Statewide total",
+      "district": "District 11",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 11",
+      "votes": 26855
+    },
+    {
+      "candidate": "Tara Menza",
+      "county": "Statewide total",
+      "district": "District 11",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 11",
+      "votes": 11657
+    },
+    {
+      "candidate": "Anya Kirvan",
+      "county": "Statewide total",
+      "district": "District 12",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 12",
+      "votes": 10356
+    },
+    {
+      "candidate": "Tracey Bernett",
+      "county": "Statewide total",
+      "district": "District 12",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 12",
+      "votes": 35127
+    },
+    {
+      "candidate": "David Buckley",
+      "county": "Statewide total",
+      "district": "District 13",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 13",
+      "votes": 19956
+    },
+    {
+      "candidate": "Julie McCluskie",
+      "county": "Statewide total",
+      "district": "District 13",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 13",
+      "votes": 25428
+    },
+    {
+      "candidate": "Rob Rogers",
+      "county": "Statewide total",
+      "district": "District 14",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 14",
+      "votes": 17665
+    },
+    {
+      "candidate": "Rose Pugliese",
+      "county": "Statewide total",
+      "district": "District 14",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 14",
+      "votes": 27250
+    },
+    {
+      "candidate": "Scott T. Bottoms",
+      "county": "Statewide total",
+      "district": "District 15",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 15",
+      "votes": 17708
+    },
+    {
+      "candidate": "Alvin Sexton",
+      "county": "Statewide total",
+      "district": "District 15",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 15",
+      "votes": 12200
+    },
+    {
+      "candidate": "John Kaufman",
+      "county": "Statewide total",
+      "district": "District 15",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 15",
+      "votes": 1291
+    },
+    {
+      "candidate": "Stephanie Vigil",
+      "county": "Statewide total",
+      "district": "District 16",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 16",
+      "votes": 16243
+    },
+    {
+      "candidate": "Dave Donelson",
+      "county": "Statewide total",
+      "district": "District 16",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 16",
+      "votes": 15533
+    },
+    {
+      "candidate": "John Hjersman",
+      "county": "Statewide total",
+      "district": "District 16",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 16",
+      "votes": 870
+    },
+    {
+      "candidate": "Regina English",
+      "county": "Statewide total",
+      "district": "District 17",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 17",
+      "votes": 10313
+    },
+    {
+      "candidate": "Rachel Inez Stovall",
+      "county": "Statewide total",
+      "district": "District 17",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 17",
+      "votes": 7693
+    },
+    {
+      "candidate": "Shana Black",
+      "county": "Statewide total",
+      "district": "District 18",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 18",
+      "votes": 16826
+    },
+    {
+      "candidate": "Marc Snyder",
+      "county": "Statewide total",
+      "district": "District 18",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 18",
+      "votes": 20057
+    },
+    {
+      "candidate": "Greg Lauer",
+      "county": "Statewide total",
+      "district": "District 18",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 18",
+      "votes": 1101
+    },
+    {
+      "candidate": "Dan Woog",
+      "county": "Statewide total",
+      "district": "District 19",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 19",
+      "votes": 20450
+    },
+    {
+      "candidate": "Jennifer Lea Parenti",
+      "county": "Statewide total",
+      "district": "District 19",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 19",
+      "votes": 21917
+    },
+    {
+      "candidate": "Joe Johnson",
+      "county": "Statewide total",
+      "district": "District 19",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 19",
+      "votes": 1168
+    },
+    {
+      "candidate": "Don Wilson",
+      "county": "Statewide total",
+      "district": "District 20",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 20",
+      "votes": 35500
+    },
+    {
+      "candidate": "Kolten Montgomery",
+      "county": "Statewide total",
+      "district": "District 21",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 21",
+      "votes": 8277
+    },
+    {
+      "candidate": "Mary Bradfield",
+      "county": "Statewide total",
+      "district": "District 21",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 21",
+      "votes": 11612
+    },
+    {
+      "candidate": "Kenneth G DeGraaf",
+      "county": "Statewide total",
+      "district": "District 22",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 22",
+      "votes": 20763
+    },
+    {
+      "candidate": "Blake Garner",
+      "county": "Statewide total",
+      "district": "District 22",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 22",
+      "votes": 14080
+    },
+    {
+      "candidate": "Michael Giallombardo",
+      "county": "Statewide total",
+      "district": "District 22",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 22",
+      "votes": 1167
+    },
+    {
+      "candidate": "Monica Irasema Duran",
+      "county": "Statewide total",
+      "district": "District 23",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 23",
+      "votes": 26962
+    },
+    {
+      "candidate": "Fred Clifford",
+      "county": "Statewide total",
+      "district": "District 23",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 23",
+      "votes": 14723
+    },
+    {
+      "candidate": "Lindsey N. Daugherty",
+      "county": "Statewide total",
+      "district": "District 24",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 24",
+      "votes": 26093
+    },
+    {
+      "candidate": "Bill Patterson",
+      "county": "Statewide total",
+      "district": "District 24",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 24",
+      "votes": 19281
+    },
+    {
+      "candidate": "Colin Larson",
+      "county": "Statewide total",
+      "district": "District 25",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 25",
+      "votes": 24959
+    },
+    {
+      "candidate": "Tammy Story",
+      "county": "Statewide total",
+      "district": "District 25",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 25",
+      "votes": 25678
+    },
+    {
+      "candidate": "Todd Dennison",
+      "county": "Statewide total",
+      "district": "District 25",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 25",
+      "votes": 1060
+    },
+    {
+      "candidate": "Savannah Wolfson",
+      "county": "Statewide total",
+      "district": "District 26",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 26",
+      "votes": 18376
+    },
+    {
+      "candidate": "Meghan Lukens",
+      "county": "Statewide total",
+      "district": "District 26",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 26",
+      "votes": 21212
+    },
+    {
+      "candidate": "Lynn Emrick",
+      "county": "Statewide total",
+      "district": "District 27",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 27",
+      "votes": 18169
+    },
+    {
+      "candidate": "Brianna Titone",
+      "county": "Statewide total",
+      "district": "District 27",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 27",
+      "votes": 26380
+    },
+    {
+      "candidate": "Jacob Luria",
+      "county": "Statewide total",
+      "district": "District 27",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 27",
+      "votes": 1136
+    },
+    {
+      "candidate": "Sheila Lieder",
+      "county": "Statewide total",
+      "district": "District 28",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 28",
+      "votes": 22064
+    },
+    {
+      "candidate": "Dan Montoya",
+      "county": "Statewide total",
+      "district": "District 28",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 28",
+      "votes": 19821
+    },
+    {
+      "candidate": "Brian Bakkum",
+      "county": "Statewide total",
+      "district": "District 28",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 28",
+      "votes": 898
+    },
+    {
+      "candidate": "Shannon Bird",
+      "county": "Statewide total",
+      "district": "District 29",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 29",
+      "votes": 24632
+    },
+    {
+      "candidate": "Vanessa DeMott",
+      "county": "Statewide total",
+      "district": "District 29",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 29",
+      "votes": 15796
+    },
+    {
+      "candidate": "Russ Carter",
+      "county": "Statewide total",
+      "district": "District 30",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 30",
+      "votes": 11665
+    },
+    {
+      "candidate": "Chris Kennedy",
+      "county": "Statewide total",
+      "district": "District 30",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 30",
+      "votes": 22504
+    },
+    {
+      "candidate": "Said Sharbini",
+      "county": "Statewide total",
+      "district": "District 31",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 31",
+      "votes": 13461
+    },
+    {
+      "candidate": "Heidi Pitchforth",
+      "county": "Statewide total",
+      "district": "District 31",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 31",
+      "votes": 9517
+    },
+    {
+      "candidate": "Dafna Michaelson Jenet",
+      "county": "Statewide total",
+      "district": "District 32",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 32",
+      "votes": 12637
+    },
+    {
+      "candidate": "Justin Brown",
+      "county": "Statewide total",
+      "district": "District 32",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 32",
+      "votes": 9897
+    },
+    {
+      "candidate": "Stacie Dougherty",
+      "county": "Statewide total",
+      "district": "District 33",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 33",
+      "votes": 17884
+    },
+    {
+      "candidate": "William Lindstedt",
+      "county": "Statewide total",
+      "district": "District 33",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 33",
+      "votes": 25549
+    },
+    {
+      "candidate": "Jenny Willford",
+      "county": "Statewide total",
+      "district": "District 34",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 34",
+      "votes": 17601
+    },
+    {
+      "candidate": "Kevin Allen",
+      "county": "Statewide total",
+      "district": "District 34",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 34",
+      "votes": 14029
+    },
+    {
+      "candidate": "Rob Stutz",
+      "county": "Statewide total",
+      "district": "District 34",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 34",
+      "votes": 908
+    },
+    {
+      "candidate": "Craig Jones",
+      "county": "Statewide total",
+      "district": "District 35",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 35",
+      "votes": 7779
+    },
+    {
+      "candidate": "Adrienne Benavidez",
+      "county": "Statewide total",
+      "district": "District 35",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 35",
+      "votes": 15077
+    },
+    {
+      "candidate": "William Walters",
+      "county": "Statewide total",
+      "district": "District 36",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 36",
+      "votes": 7058
+    },
+    {
+      "candidate": "Mike Weissman",
+      "county": "Statewide total",
+      "district": "District 36",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 36",
+      "votes": 13736
+    },
+    {
+      "candidate": "Andrew Gibson",
+      "county": "Statewide total",
+      "district": "District 36",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 36",
+      "votes": 653
+    },
+    {
+      "candidate": "Paul Archer",
+      "county": "Statewide total",
+      "district": "District 37",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 37",
+      "votes": 18324
+    },
+    {
+      "candidate": "Ruby Dickson",
+      "county": "Statewide total",
+      "district": "District 37",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 37",
+      "votes": 23307
+    },
+    {
+      "candidate": "Jaylen Mosqueira",
+      "county": "Statewide total",
+      "district": "District 38",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 38",
+      "votes": 20394
+    },
+    {
+      "candidate": "David Ortiz",
+      "county": "Statewide total",
+      "district": "District 38",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 38",
+      "votes": 25765
+    },
+    {
+      "candidate": "Brandon L. McDowell",
+      "county": "Statewide total",
+      "district": "District 38",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 38",
+      "votes": 1103
+    },
+    {
+      "candidate": "Eric Brody",
+      "county": "Statewide total",
+      "district": "District 39",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 39",
+      "votes": 20475
+    },
+    {
+      "candidate": "Brandi Bradley",
+      "county": "Statewide total",
+      "district": "District 39",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 39",
+      "votes": 28347
+    },
+    {
+      "candidate": "Naquetta Ricks",
+      "county": "Statewide total",
+      "district": "District 40",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 40",
+      "votes": 20116
+    },
+    {
+      "candidate": "Le Sellers",
+      "county": "Statewide total",
+      "district": "District 40",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 40",
+      "votes": 12801
+    },
+    {
+      "candidate": "Iman M. Jodeh",
+      "county": "Statewide total",
+      "district": "District 41",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 41",
+      "votes": 18544
+    },
+    {
+      "candidate": "Stephanie Hancock",
+      "county": "Statewide total",
+      "district": "District 41",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 41",
+      "votes": 10426
+    },
+    {
+      "candidate": "Cory Parella",
+      "county": "Statewide total",
+      "district": "District 42",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 42",
+      "votes": 4703
+    },
+    {
+      "candidate": "Mandy Lindsay",
+      "county": "Statewide total",
+      "district": "District 42",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 42",
+      "votes": 12441
+    },
+    {
+      "candidate": "Kurt Huffman",
+      "county": "Statewide total",
+      "district": "District 43",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 43",
+      "votes": 22471
+    },
+    {
+      "candidate": "Robert \"Bob\" Marshall",
+      "county": "Statewide total",
+      "district": "District 43",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 43",
+      "votes": 22876
+    },
+    {
+      "candidate": "Bob Henry",
+      "county": "Statewide total",
+      "district": "District 44",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 44",
+      "votes": 16333
+    },
+    {
+      "candidate": "Anthony Hartsook",
+      "county": "Statewide total",
+      "district": "District 44",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 44",
+      "votes": 23362
+    },
+    {
+      "candidate": "John Sutton",
+      "county": "Statewide total",
+      "district": "District 44",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 44",
+      "votes": 1147
+    },
+    {
+      "candidate": "Lisa Frizell",
+      "county": "Statewide total",
+      "district": "District 45",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 45",
+      "votes": 27884
+    },
+    {
+      "candidate": "Ruby Martinez",
+      "county": "Statewide total",
+      "district": "District 45",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 45",
+      "votes": 17180
+    },
+    {
+      "candidate": "Jonathan Ambler",
+      "county": "Statewide total",
+      "district": "District 46",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 46",
+      "votes": 17214
+    },
+    {
+      "candidate": "Tisha Lyn Mauro",
+      "county": "Statewide total",
+      "district": "District 46",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 46",
+      "votes": 20197
+    },
+    {
+      "candidate": "Edwin Dean Ormiston",
+      "county": "Statewide total",
+      "district": "District 47",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 47",
+      "votes": 12874
+    },
+    {
+      "candidate": "Ty Winter",
+      "county": "Statewide total",
+      "district": "District 47",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 47",
+      "votes": 23722
+    },
+    {
+      "candidate": "Gabe Evans",
+      "county": "Statewide total",
+      "district": "District 48",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 48",
+      "votes": 20011
+    },
+    {
+      "candidate": "Spring Erickson",
+      "county": "Statewide total",
+      "district": "District 48",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 48",
+      "votes": 10730
+    },
+    {
+      "candidate": "Eric E. Joss",
+      "county": "Statewide total",
+      "district": "District 48",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 48",
+      "votes": 866
+    },
+    {
+      "candidate": "Judy Amabile",
+      "county": "Statewide total",
+      "district": "District 49",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 49",
+      "votes": 33326
+    },
+    {
+      "candidate": "Kathryn Lehr",
+      "county": "Statewide total",
+      "district": "District 49",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 49",
+      "votes": 17186
+    },
+    {
+      "candidate": "Daniel Lutz",
+      "county": "Statewide total",
+      "district": "District 49",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 49",
+      "votes": 1306
+    },
+    {
+      "candidate": "Ryan Gonzalez",
+      "county": "Statewide total",
+      "district": "District 50",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 50",
+      "votes": 8286
+    },
+    {
+      "candidate": "Mary Young",
+      "county": "Statewide total",
+      "district": "District 50",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 50",
+      "votes": 8616
+    },
+    {
+      "candidate": "Kyle Moore",
+      "county": "Statewide total",
+      "district": "District 50",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 50",
+      "votes": 615
+    },
+    {
+      "candidate": "Hugh McKean",
+      "county": "Statewide total",
+      "district": "District 51",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 51",
+      "votes": 26542
+    },
+    {
+      "candidate": "Cathy Kipp",
+      "county": "Statewide total",
+      "district": "District 52",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 52",
+      "votes": 28183
+    },
+    {
+      "candidate": "Deborah \"Dee Dee\" Vicino",
+      "county": "Statewide total",
+      "district": "District 52",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 52",
+      "votes": 15282
+    },
+    {
+      "candidate": "Andrew Boesenecker",
+      "county": "Statewide total",
+      "district": "District 53",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 53",
+      "votes": 25934
+    },
+    {
+      "candidate": "Donna Walter",
+      "county": "Statewide total",
+      "district": "District 53",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 53",
+      "votes": 8224
+    },
+    {
+      "candidate": "AliceMarie Slaven-Emond",
+      "county": "Statewide total",
+      "district": "District 54",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 54",
+      "votes": 11013
+    },
+    {
+      "candidate": "Matt Soper",
+      "county": "Statewide total",
+      "district": "District 54",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 54",
+      "votes": 31026
+    },
+    {
+      "candidate": "Damon Davis",
+      "county": "Statewide total",
+      "district": "District 55",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 55",
+      "votes": 14536
+    },
+    {
+      "candidate": "Rick Taggart",
+      "county": "Statewide total",
+      "district": "District 55",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 55",
+      "votes": 25411
+    },
+    {
+      "candidate": "Rod Bockenfeld",
+      "county": "Statewide total",
+      "district": "District 56",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 56",
+      "votes": 33608
+    },
+    {
+      "candidate": "Kathleen J. Conway",
+      "county": "Statewide total",
+      "district": "District 56",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 56",
+      "votes": 9495
+    },
+    {
+      "candidate": "Amy Lunde",
+      "county": "Statewide total",
+      "district": "District 56",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 56",
+      "votes": 1218
+    },
+    {
+      "candidate": "Perry Will",
+      "county": "Statewide total",
+      "district": "District 57",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 57",
+      "votes": 17033
+    },
+    {
+      "candidate": "Elizabeth Velasco",
+      "county": "Statewide total",
+      "district": "District 57",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 57",
+      "votes": 19885
+    },
+    {
+      "candidate": "Kevin Stanley Kuns",
+      "county": "Statewide total",
+      "district": "District 58",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 58",
+      "votes": 19996
+    },
+    {
+      "candidate": "Marc Catlin",
+      "county": "Statewide total",
+      "district": "District 58",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 58",
+      "votes": 26289
+    },
+    {
+      "candidate": "Shelli Shaw",
+      "county": "Statewide total",
+      "district": "District 59",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 59",
+      "votes": 20139
+    },
+    {
+      "candidate": "Barbara McLachlan",
+      "county": "Statewide total",
+      "district": "District 59",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 59",
+      "votes": 26436
+    },
+    {
+      "candidate": "Kathryn Green",
+      "county": "Statewide total",
+      "district": "District 60",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 60",
+      "votes": 13526
+    },
+    {
+      "candidate": "Stephanie Luck",
+      "county": "Statewide total",
+      "district": "District 60",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 60",
+      "votes": 29800
+    },
+    {
+      "candidate": "Dave Woolever",
+      "county": "Statewide total",
+      "district": "District 61",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 61",
+      "votes": 19775
+    },
+    {
+      "candidate": "Eliza Hamrick",
+      "county": "Statewide total",
+      "district": "District 61",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 61",
+      "votes": 20947
+    },
+    {
+      "candidate": "Kevin Gulbranson",
+      "county": "Statewide total",
+      "district": "District 61",
+      "party": "LIB",
+      "position": "Colorado State House",
+      "race": "State Representative - District 61",
+      "votes": 876
+    },
+    {
+      "candidate": "Matthew Martinez",
+      "county": "Statewide total",
+      "district": "District 62",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 62",
+      "votes": 17304
+    },
+    {
+      "candidate": "Carol Riggenbach",
+      "county": "Statewide total",
+      "district": "District 62",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 62",
+      "votes": 13812
+    },
+    {
+      "candidate": "Richard Holtorf",
+      "county": "Statewide total",
+      "district": "District 63",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 63",
+      "votes": 29793
+    },
+    {
+      "candidate": "Richard Webster",
+      "county": "Statewide total",
+      "district": "District 64",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 64",
+      "votes": 15033
+    },
+    {
+      "candidate": "Ryan Armagost",
+      "county": "Statewide total",
+      "district": "District 64",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 64",
+      "votes": 25216
+    },
+    {
+      "candidate": "Lisa Chollet",
+      "county": "Statewide total",
+      "district": "District 65",
+      "party": "DEM",
+      "position": "Colorado State House",
+      "race": "State Representative - District 65",
+      "votes": 17664
+    },
+    {
+      "candidate": "Mike Lynch",
+      "county": "Statewide total",
+      "district": "District 65",
+      "party": "REP",
+      "position": "Colorado State House",
+      "race": "State Representative - District 65",
+      "votes": 29328
+    }
+  ]
+}

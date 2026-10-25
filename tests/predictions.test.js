@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline} from '../src/predictions.js';
+import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline, testFundraisingHypothesis} from '../src/predictions.js';
 
 test('unavailable prediction carries no estimate', () => {
   const p = predictionUnavailable({contestId:'co-2022-general:us-house:8', reason:'No implemented model.'});
@@ -32,4 +32,15 @@ test('historical baseline refuses missing history', () => {
   const p=historicalBaseline({contestId:'co:house:8',target:'DEM final share'});
   assert.equal(p.unavailable,true);
   validatePrediction(p);
+});
+
+test('fundraising hypothesis reports positive association without claiming causation', () => {
+  const result=testFundraisingHypothesis([{fundingAdvantage:-1,outcomeShare:.42},{fundingAdvantage:0,outcomeShare:.5},{fundingAdvantage:1,outcomeShare:.58}]);
+  assert.equal(result.status,'evaluated');
+  assert.ok(result.correlation>0);
+  assert.match(result.conclusion,/does not establish causation/);
+});
+
+test('fundraising hypothesis refuses a thin sample', () => {
+  assert.equal(testFundraisingHypothesis([{fundingAdvantage:1,outcomeShare:.6}]).status,'insufficient-data');
 });

@@ -33,6 +33,19 @@ export function historicalBaseline({contestId, target, histories = [], weights =
   return {schemaVersion: 1, kind: 'modeled', status: 'evaluated', contestId, target, model: 'historical-baseline', unavailable: false, estimate, interval: [Math.max(0, estimate - 1.96 * spread), Math.min(1, estimate + 1.96 * spread)], probability: null, sampleSize: selected.length, assumptions: ['Explicitly comparable position/district history only', 'Weights are supplied by the caller', 'Interval reflects historical spread, not full forecast uncertainty']};
 }
 
+// Tests the fundraising-performance assumption without treating correlation as causation.
+// Each observation must be a comparable contest/party outcome measured at the same cutoff.
+export function testFundraisingHypothesis(observations = []) {
+  const rows=observations.filter(r=>Number.isFinite(r.fundingAdvantage) && Number.isFinite(r.outcomeShare) && r.outcomeShare>=0 && r.outcomeShare<=1);
+  if(rows.length<3) return {status:'insufficient-data',sampleSize:rows.length,correlation:null,slope:null,conclusion:'Need at least three comparable observations.'};
+  const xm=rows.reduce((s,r)=>s+r.fundingAdvantage,0)/rows.length, ym=rows.reduce((s,r)=>s+r.outcomeShare,0)/rows.length;
+  const cov=rows.reduce((s,r)=>s+(r.fundingAdvantage-xm)*(r.outcomeShare-ym),0);
+  const vx=rows.reduce((s,r)=>s+(r.fundingAdvantage-xm)**2,0), vy=rows.reduce((s,r)=>s+(r.outcomeShare-ym)**2,0);
+  if(vx===0||vy===0) return {status:'inconclusive',sampleSize:rows.length,correlation:null,slope:0,conclusion:'The supplied sample has no measurable variation.'};
+  const correlation=cov/Math.sqrt(vx*vy), slope=cov/vx;
+  return {status:'evaluated',sampleSize:rows.length,correlation,slope,conclusion:correlation>0?'Positive association observed; this does not establish causation.':correlation<0?'Negative association observed; the assumption is not supported by this sample.':'No linear association observed.'};
+}
+
 export const plannedPredictionCatalog = [
   {model: 'historical-baseline', label: 'Historical baseline', status: 'planned', requirement: 'Comparable prior contests by position, district and geography vintage.'},
   {model: 'remaining-vote-beta', label: 'Remaining-vote beta model', status: 'blocked', requirement: 'Timestamped snapshots plus a separately estimated remaining-vote distribution.'},

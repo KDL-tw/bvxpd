@@ -169,3 +169,9 @@ Before a forecast is exposed, implement and test the pipeline, define an uncerta
 7. Add forecast-specific UI and exports that keep observed, demo and modeled values visibly separate.
 
 There is no scheduled model execution, model registry, forecast API, production forecast or winner-call functionality at this stage.
+
+## Campaign-finance baseline inputs
+
+TRACER campaign-finance exports belong to a separate `finance` namespace. Normalize each filing period by candidate, position, district or seat, committee, period dates, receipts, spending, cash on hand, outside spending, donor-size buckets, source URL, and source cutoff. Finance records never become vote counts and are never merged into day-of SOS drops.
+
+The framework derives net cash change, daily burn rate, cash runway, fundraising acceleration versus the prior filing, and small- and large-dollar receipt shares. It requires a source and filing period so a days-out baseline can be replayed using only information available at the declared cutoff. No vote effect is assumed until comparable historical contests are assembled and evaluated.

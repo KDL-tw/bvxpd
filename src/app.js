@@ -99,6 +99,7 @@ async function loadArchives(){
     const legislative=await fetch('data/historical/co-2024-legislative.json'); if(legislative.ok) archives.push(await legislative.json());
     const senate2020=await fetch('data/historical/co-2020-state-senate.json'); if(senate2020.ok) archives.push(await senate2020.json());
     const house2020=await fetch('data/historical/co-2020-state-house.json'); if(house2020.ok) archives.push(await house2020.json());
+    const senate2022=await fetch('data/historical/co-2022-state-senate.json'); if(senate2022.ok) archives.push(await senate2022.json());
     const turnout2020=await fetch('data/historical/co-2020-turnout.json'); if(turnout2020.ok) turnoutArchive=await turnout2020.json();
     const turnout2022=await fetch('data/historical/co-2022-turnout.json'); if(turnout2022.ok) turnoutArchive2022=await turnout2022.json();
     render();renderHistory();

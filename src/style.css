@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 :root{color-scheme:dark;--bg:#192333;--panel:#253246;--line:#3b4b63;--muted:#b5c0d0;--blue:#83b6ff;--red:#ed6d83;--gold:#f3d18a}
+#file-warning{position:fixed;z-index:200;inset:24px 24px auto;padding:20px 24px;border:1px solid #e0a95a;border-left:4px solid var(--gold);border-radius:8px;background:#2b3545;color:#f4f7fb;box-shadow:0 12px 34px #07101dcc}#file-warning p{margin:7px 0;color:#d2dbea}#file-warning code{color:#f3d18a}
 body{background:var(--bg)}
 button{background:#304057;color:#f1f5fb;border-color:#52647d}
 button:hover{background:#3b4e69;border-color:#7d9bc4}

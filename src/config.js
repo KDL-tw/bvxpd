@@ -1,2 +1,2 @@
-// Set to 'assets/splash.png' once the final approved artwork is added.
-export const splashUrl = null;
+// User-approved Bullvixen introduction artwork.
+export const splashUrl = 'assets/splash.png';

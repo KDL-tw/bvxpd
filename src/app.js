@@ -54,9 +54,10 @@ $('export').onclick=()=>{const s=active();if(s){const {records,...meta}=s;downlo
 function renderHistory(){$('history-list').innerHTML=snapshots.length?snapshots.map(s=>`<article class="panel history-row"><div><span class="badge">${s.kind.toUpperCase()}</span><h2>${esc(s.election)}</h2><p>${esc(time(s.asOf))} · ${esc(s.filename)}<br>${s.records.length} rows · ${new Set(s.records.map(r=>r.race)).size} races · ${s.stage==='certified'?'Certified (source label)':'Unofficial'}</p></div><div class="actions"><button data-open="${esc(s.id)}">Inspect</button><button data-delete="${esc(s.id)}">Delete</button></div></article>`).join(''):'<div class="empty"><h2>No saved snapshots yet.</h2><p>Validated imports will appear here with source timestamps and classification.</p></div>';$('history-list').querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{const s=snapshots.find(s=>s.id===b.dataset.open);mode=s.kind;selectedId=s.id;race='';render();page('overview');});$('history-list').querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{if(confirm('Delete this snapshot from this browser? Export it first if you need a backup.')){if(save(snapshots.filter(s=>s.id!==b.dataset.delete))){render();renderHistory();}}});}
 $('models').innerHTML=['Historical baseline','Bayesian hierarchical','Kalman filter','Markov regimes','Spatial analysis'].map(n=>`<label class="check"><input type="checkbox"> ${n} <small>Planned</small></label>`).join('');$('advanced').onchange=e=>$('advanced-panel').hidden=!e.target.checked;
 $('today').textContent=new Intl.DateTimeFormat('en-US',{dateStyle:'long',timeZone:'America/Denver'}).format(new Date());
-function enter(){$('intro').hidden=true;$('workspace').hidden=false;try{localStorage.setItem('bullvixen.skipIntro',String($('remember').checked));}catch{} }
-$('enter').onclick=enter;$('show-intro').onclick=()=>{$('intro').hidden=false;$('workspace').hidden=true;};
-// Optional approved artwork: absent files leave the designed gradient intact.
-if(splashUrl){const splash=new Image();splash.onload=()=>{$('intro').style.backgroundImage=`linear-gradient(#08111b55,#08111bdd),url("${splashUrl}")`;};splash.src=splashUrl;}
+function enter(){$('intro').hidden=true;$('workspace').hidden=false;$('main').focus();try{localStorage.setItem('bullvixen.skipIntro',String($('remember').checked));}catch{} }
+$('enter').onclick=$('skip-intro').onclick=enter;$('show-intro').onclick=()=>{$('intro').hidden=false;$('workspace').hidden=true;};
+// Keep the supplied artwork intact; accessible controls align with its painted controls.
+$('splash-art').onerror=()=>{$('intro').classList.add('art-unavailable');};
+$('splash-art').src=splashUrl;
 try{if(localStorage.getItem('bullvixen.skipIntro')==='true')$('remember').checked=true;else if(!location.hash){$('intro').hidden=false;$('workspace').hidden=true;}}catch{}
 render();page(location.hash.slice(1)||'overview');

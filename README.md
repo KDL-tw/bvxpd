@@ -47,7 +47,7 @@ Quoted CSV fields, comma-formatted integer votes, UTF-8 BOM, CRLF, TSV, flat JSO
 
 ## Approved splash artwork
 
-The repository and accessible continuation contained no final approved splash image. Only a marked-up revision reference was available, and it is not used as approved art. The introduction currently uses Colorado blue/crimson typography over a gradient. Place the final image at `assets/splash.png` and set `splashUrl` in `src/config.js` to `assets/splash.png` to activate the image hook. Open it via “Open introduction”; its preference checkbox can skip the intro on later visits. Do not substitute the annotated draft for the approved artwork.
+The supplied final artwork is included unchanged at `assets/splash.png`, configured in `src/config.js`. The introduction preserves the entire composition and uses accessible live buttons aligned with the painted Enter dashboard and Skip intro controls. On narrow screens, full-size controls move below the image. Remember my preference skips the introduction on future root-page visits; Open introduction in the sidebar reopens it.
 
 ## Data boundaries and next work
 

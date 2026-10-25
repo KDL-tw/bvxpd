@@ -146,3 +146,8 @@ The dashboard can refresh current results through the Vercel function at `/api/l
 ## Contest identity
 
 Federal offices, Colorado legislative offices, judicial retention, and ballot measures share a structured contest identity. Candidate names and committee names are attributes; they are never used as the cross-election key. Ballot measures use Yes/No choices under a measure identifier, separate from candidate races.
+
+
+## Current-year scope
+
+Campaign finance and ballot committee data are current-cycle inputs for the days-out baseline. Historical election archives supply comparable position and district outcomes. Day-of drops are manually entered snapshots; no historical ballot-measure archive is treated as a prediction input.

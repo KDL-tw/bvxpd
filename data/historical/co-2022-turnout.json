@@ -1,0 +1,920 @@
+{
+  "id": "co-2022-turnout",
+  "label": "Colorado 2022 General Election Turnout",
+  "year": 2022,
+  "electionDate": "2022-11-08",
+  "classification": "Observed - historical final abstract",
+  "sourceUrl": "https://www.coloradosos.gov/pubs/elections/Results/Abstract/2022/general/turnout.html",
+  "records": [
+    {
+      "ballotsCast": 169626,
+      "county": "Adams",
+      "turnoutPct": 57.16,
+      "voterBasis": "active",
+      "voters": 296776
+    },
+    {
+      "ballotsCast": 6020,
+      "county": "Alamosa",
+      "turnoutPct": 60.93,
+      "voterBasis": "active",
+      "voters": 9880
+    },
+    {
+      "ballotsCast": 260210,
+      "county": "Arapahoe",
+      "turnoutPct": 63.46,
+      "voterBasis": "active",
+      "voters": 410008
+    },
+    {
+      "ballotsCast": 7952,
+      "county": "Archuleta",
+      "turnoutPct": 71.36,
+      "voterBasis": "active",
+      "voters": 11143
+    },
+    {
+      "ballotsCast": 1785,
+      "county": "Baca",
+      "turnoutPct": 68.47,
+      "voterBasis": "active",
+      "voters": 2607
+    },
+    {
+      "ballotsCast": 1866,
+      "county": "Bent",
+      "turnoutPct": 66.24,
+      "voterBasis": "active",
+      "voters": 2817
+    },
+    {
+      "ballotsCast": 167208,
+      "county": "Boulder",
+      "turnoutPct": 74.47,
+      "voterBasis": "active",
+      "voters": 224533
+    },
+    {
+      "ballotsCast": 37882,
+      "county": "Broomfield",
+      "turnoutPct": 72.09,
+      "voterBasis": "active",
+      "voters": 52551
+    },
+    {
+      "ballotsCast": 11947,
+      "county": "Chaffee",
+      "turnoutPct": 75.32,
+      "voterBasis": "active",
+      "voters": 15862
+    },
+    {
+      "ballotsCast": 925,
+      "county": "Cheyenne",
+      "turnoutPct": 74.42,
+      "voterBasis": "active",
+      "voters": 1243
+    },
+    {
+      "ballotsCast": 5265,
+      "county": "Clear Creek",
+      "turnoutPct": 69.86,
+      "voterBasis": "active",
+      "voters": 7537
+    },
+    {
+      "ballotsCast": 3488,
+      "county": "Conejos",
+      "turnoutPct": 67.47,
+      "voterBasis": "active",
+      "voters": 5170
+    },
+    {
+      "ballotsCast": 1750,
+      "county": "Costilla",
+      "turnoutPct": 61.1,
+      "voterBasis": "active",
+      "voters": 2864
+    },
+    {
+      "ballotsCast": 1398,
+      "county": "Crowley",
+      "turnoutPct": 64.69,
+      "voterBasis": "active",
+      "voters": 2161
+    },
+    {
+      "ballotsCast": 3385,
+      "county": "Custer",
+      "turnoutPct": 75.76,
+      "voterBasis": "active",
+      "voters": 4468
+    },
+    {
+      "ballotsCast": 16123,
+      "county": "Delta",
+      "turnoutPct": 71.17,
+      "voterBasis": "active",
+      "voters": 22654
+    },
+    {
+      "ballotsCast": 287846,
+      "county": "Denver",
+      "turnoutPct": 62.92,
+      "voterBasis": "active",
+      "voters": 457501
+    },
+    {
+      "ballotsCast": 1332,
+      "county": "Dolores",
+      "turnoutPct": 78.31,
+      "voterBasis": "active",
+      "voters": 1701
+    },
+    {
+      "ballotsCast": 193202,
+      "county": "Douglas",
+      "turnoutPct": 71.79,
+      "voterBasis": "active",
+      "voters": 269103
+    },
+    {
+      "ballotsCast": 22513,
+      "county": "Eagle",
+      "turnoutPct": 66.94,
+      "voterBasis": "active",
+      "voters": 33633
+    },
+    {
+      "ballotsCast": 288059,
+      "county": "El Paso",
+      "turnoutPct": 61.37,
+      "voterBasis": "active",
+      "voters": 469368
+    },
+    {
+      "ballotsCast": 16439,
+      "county": "Elbert",
+      "turnoutPct": 74.16,
+      "voterBasis": "active",
+      "voters": 22168
+    },
+    {
+      "ballotsCast": 20234,
+      "county": "Fremont",
+      "turnoutPct": 65.93,
+      "voterBasis": "active",
+      "voters": 30691
+    },
+    {
+      "ballotsCast": 24829,
+      "county": "Garfield",
+      "turnoutPct": 66.76,
+      "voterBasis": "active",
+      "voters": 37189
+    },
+    {
+      "ballotsCast": 3454,
+      "county": "Gilpin",
+      "turnoutPct": 71.16,
+      "voterBasis": "active",
+      "voters": 4854
+    },
+    {
+      "ballotsCast": 8093,
+      "county": "Grand",
+      "turnoutPct": 69.36,
+      "voterBasis": "active",
+      "voters": 11668
+    },
+    {
+      "ballotsCast": 9392,
+      "county": "Gunnison",
+      "turnoutPct": 75.76,
+      "voterBasis": "active",
+      "voters": 12397
+    },
+    {
+      "ballotsCast": 523,
+      "county": "Hinsdale",
+      "turnoutPct": 73.87,
+      "voterBasis": "active",
+      "voters": 708
+    },
+    {
+      "ballotsCast": 3898,
+      "county": "Huerfano",
+      "turnoutPct": 71.42,
+      "voterBasis": "active",
+      "voters": 5458
+    },
+    {
+      "ballotsCast": 700,
+      "county": "Jackson",
+      "turnoutPct": 70.07,
+      "voterBasis": "active",
+      "voters": 999
+    },
+    {
+      "ballotsCast": 303604,
+      "county": "Jefferson",
+      "turnoutPct": 71.68,
+      "voterBasis": "active",
+      "voters": 423575
+    },
+    {
+      "ballotsCast": 777,
+      "county": "Kiowa",
+      "turnoutPct": 78.56,
+      "voterBasis": "active",
+      "voters": 989
+    },
+    {
+      "ballotsCast": 3072,
+      "county": "Kit Carson",
+      "turnoutPct": 66.68,
+      "voterBasis": "active",
+      "voters": 4607
+    },
+    {
+      "ballotsCast": 30132,
+      "county": "La Plata",
+      "turnoutPct": 73.06,
+      "voterBasis": "active",
+      "voters": 41242
+    },
+    {
+      "ballotsCast": 3040,
+      "county": "Lake",
+      "turnoutPct": 62.21,
+      "voterBasis": "active",
+      "voters": 4887
+    },
+    {
+      "ballotsCast": 180424,
+      "county": "Larimer",
+      "turnoutPct": 70.54,
+      "voterBasis": "active",
+      "voters": 255784
+    },
+    {
+      "ballotsCast": 6796,
+      "county": "Las Animas",
+      "turnoutPct": 65.71,
+      "voterBasis": "active",
+      "voters": 10342
+    },
+    {
+      "ballotsCast": 2139,
+      "county": "Lincoln",
+      "turnoutPct": 69.63,
+      "voterBasis": "active",
+      "voters": 3072
+    },
+    {
+      "ballotsCast": 8755,
+      "county": "Logan",
+      "turnoutPct": 72,
+      "voterBasis": "active",
+      "voters": 12160
+    },
+    {
+      "ballotsCast": 74421,
+      "county": "Mesa",
+      "turnoutPct": 69.26,
+      "voterBasis": "active",
+      "voters": 107447
+    },
+    {
+      "ballotsCast": 726,
+      "county": "Mineral",
+      "turnoutPct": 83.93,
+      "voterBasis": "active",
+      "voters": 865
+    },
+    {
+      "ballotsCast": 5468,
+      "county": "Moffat",
+      "turnoutPct": 63.7,
+      "voterBasis": "active",
+      "voters": 8584
+    },
+    {
+      "ballotsCast": 12672,
+      "county": "Montezuma",
+      "turnoutPct": 66.73,
+      "voterBasis": "active",
+      "voters": 18991
+    },
+    {
+      "ballotsCast": 21114,
+      "county": "Montrose",
+      "turnoutPct": 70.72,
+      "voterBasis": "active",
+      "voters": 29855
+    },
+    {
+      "ballotsCast": 10280,
+      "county": "Morgan",
+      "turnoutPct": 58.59,
+      "voterBasis": "active",
+      "voters": 17545
+    },
+    {
+      "ballotsCast": 7335,
+      "county": "Otero",
+      "turnoutPct": 60.51,
+      "voterBasis": "active",
+      "voters": 12121
+    },
+    {
+      "ballotsCast": 3612,
+      "county": "Ouray",
+      "turnoutPct": 79.81,
+      "voterBasis": "active",
+      "voters": 4526
+    },
+    {
+      "ballotsCast": 10325,
+      "county": "Park",
+      "turnoutPct": 71.3,
+      "voterBasis": "active",
+      "voters": 14482
+    },
+    {
+      "ballotsCast": 2005,
+      "county": "Phillips",
+      "turnoutPct": 71.5,
+      "voterBasis": "active",
+      "voters": 2804
+    },
+    {
+      "ballotsCast": 9725,
+      "county": "Pitkin",
+      "turnoutPct": 70.8,
+      "voterBasis": "active",
+      "voters": 13735
+    },
+    {
+      "ballotsCast": 4340,
+      "county": "Prowers",
+      "turnoutPct": 62.72,
+      "voterBasis": "active",
+      "voters": 6920
+    },
+    {
+      "ballotsCast": 68110,
+      "county": "Pueblo",
+      "turnoutPct": 61.42,
+      "voterBasis": "active",
+      "voters": 110891
+    },
+    {
+      "ballotsCast": 3115,
+      "county": "Rio Blanco",
+      "turnoutPct": 73.62,
+      "voterBasis": "active",
+      "voters": 4231
+    },
+    {
+      "ballotsCast": 5013,
+      "county": "Rio Grande",
+      "turnoutPct": 62.8,
+      "voterBasis": "active",
+      "voters": 7982
+    },
+    {
+      "ballotsCast": 14055,
+      "county": "Routt",
+      "turnoutPct": 71.96,
+      "voterBasis": "active",
+      "voters": 19533
+    },
+    {
+      "ballotsCast": 2818,
+      "county": "Saguache",
+      "turnoutPct": 63.93,
+      "voterBasis": "active",
+      "voters": 4408
+    },
+    {
+      "ballotsCast": 566,
+      "county": "San Juan",
+      "turnoutPct": 75.87,
+      "voterBasis": "active",
+      "voters": 746
+    },
+    {
+      "ballotsCast": 4117,
+      "county": "San Miguel",
+      "turnoutPct": 68.79,
+      "voterBasis": "active",
+      "voters": 5985
+    },
+    {
+      "ballotsCast": 1186,
+      "county": "Sedgwick",
+      "turnoutPct": 71.02,
+      "voterBasis": "active",
+      "voters": 1670
+    },
+    {
+      "ballotsCast": 14416,
+      "county": "Summit",
+      "turnoutPct": 67.52,
+      "voterBasis": "active",
+      "voters": 21352
+    },
+    {
+      "ballotsCast": 13710,
+      "county": "Teller",
+      "turnoutPct": 72.07,
+      "voterBasis": "active",
+      "voters": 19024
+    },
+    {
+      "ballotsCast": 2429,
+      "county": "Washington",
+      "turnoutPct": 73.76,
+      "voterBasis": "active",
+      "voters": 3293
+    },
+    {
+      "ballotsCast": 130363,
+      "county": "Weld",
+      "turnoutPct": 61.87,
+      "voterBasis": "active",
+      "voters": 210704
+    },
+    {
+      "ballotsCast": 5312,
+      "county": "Yuma",
+      "turnoutPct": 92.38,
+      "voterBasis": "active",
+      "voters": 5750
+    },
+    {
+      "ballotsCast": 2543316,
+      "county": "Total",
+      "turnoutPct": 66.24,
+      "voterBasis": "active",
+      "voters": 3839814
+    },
+    {
+      "ballotsCast": 169626,
+      "county": "Adams",
+      "turnoutPct": 50.61,
+      "voterBasis": "registered",
+      "voters": 335157
+    },
+    {
+      "ballotsCast": 6020,
+      "county": "Alamosa",
+      "turnoutPct": 53,
+      "voterBasis": "registered",
+      "voters": 11359
+    },
+    {
+      "ballotsCast": 260210,
+      "county": "Arapahoe",
+      "turnoutPct": 55.51,
+      "voterBasis": "registered",
+      "voters": 468760
+    },
+    {
+      "ballotsCast": 7952,
+      "county": "Archuleta",
+      "turnoutPct": 61.27,
+      "voterBasis": "registered",
+      "voters": 12978
+    },
+    {
+      "ballotsCast": 1785,
+      "county": "Baca",
+      "turnoutPct": 62.59,
+      "voterBasis": "registered",
+      "voters": 2852
+    },
+    {
+      "ballotsCast": 1866,
+      "county": "Bent",
+      "turnoutPct": 57.7,
+      "voterBasis": "registered",
+      "voters": 3234
+    },
+    {
+      "ballotsCast": 167208,
+      "county": "Boulder",
+      "turnoutPct": 65.64,
+      "voterBasis": "registered",
+      "voters": 254734
+    },
+    {
+      "ballotsCast": 37882,
+      "county": "Broomfield",
+      "turnoutPct": 64.11,
+      "voterBasis": "registered",
+      "voters": 59085
+    },
+    {
+      "ballotsCast": 11947,
+      "county": "Chaffee",
+      "turnoutPct": 66.02,
+      "voterBasis": "registered",
+      "voters": 18096
+    },
+    {
+      "ballotsCast": 925,
+      "county": "Cheyenne",
+      "turnoutPct": 67.37,
+      "voterBasis": "registered",
+      "voters": 1373
+    },
+    {
+      "ballotsCast": 5265,
+      "county": "Clear Creek",
+      "turnoutPct": 61.11,
+      "voterBasis": "registered",
+      "voters": 8615
+    },
+    {
+      "ballotsCast": 3488,
+      "county": "Conejos",
+      "turnoutPct": 61.19,
+      "voterBasis": "registered",
+      "voters": 5700
+    },
+    {
+      "ballotsCast": 1750,
+      "county": "Costilla",
+      "turnoutPct": 54.69,
+      "voterBasis": "registered",
+      "voters": 3200
+    },
+    {
+      "ballotsCast": 1398,
+      "county": "Crowley",
+      "turnoutPct": 56.95,
+      "voterBasis": "registered",
+      "voters": 2455
+    },
+    {
+      "ballotsCast": 3385,
+      "county": "Custer",
+      "turnoutPct": 68.14,
+      "voterBasis": "registered",
+      "voters": 4968
+    },
+    {
+      "ballotsCast": 16123,
+      "county": "Delta",
+      "turnoutPct": 64.86,
+      "voterBasis": "registered",
+      "voters": 24858
+    },
+    {
+      "ballotsCast": 287846,
+      "county": "Denver",
+      "turnoutPct": 53.98,
+      "voterBasis": "registered",
+      "voters": 533244
+    },
+    {
+      "ballotsCast": 1332,
+      "county": "Dolores",
+      "turnoutPct": 72.12,
+      "voterBasis": "registered",
+      "voters": 1847
+    },
+    {
+      "ballotsCast": 193202,
+      "county": "Douglas",
+      "turnoutPct": 65.82,
+      "voterBasis": "registered",
+      "voters": 293538
+    },
+    {
+      "ballotsCast": 22513,
+      "county": "Eagle",
+      "turnoutPct": 58.31,
+      "voterBasis": "registered",
+      "voters": 38612
+    },
+    {
+      "ballotsCast": 288059,
+      "county": "El Paso",
+      "turnoutPct": 52.85,
+      "voterBasis": "registered",
+      "voters": 545049
+    },
+    {
+      "ballotsCast": 16439,
+      "county": "Elbert",
+      "turnoutPct": 67.51,
+      "voterBasis": "registered",
+      "voters": 24350
+    },
+    {
+      "ballotsCast": 20234,
+      "county": "Fremont",
+      "turnoutPct": 59.21,
+      "voterBasis": "registered",
+      "voters": 34175
+    },
+    {
+      "ballotsCast": 24829,
+      "county": "Garfield",
+      "turnoutPct": 59.16,
+      "voterBasis": "registered",
+      "voters": 41968
+    },
+    {
+      "ballotsCast": 3454,
+      "county": "Gilpin",
+      "turnoutPct": 58.32,
+      "voterBasis": "registered",
+      "voters": 5922
+    },
+    {
+      "ballotsCast": 8093,
+      "county": "Grand",
+      "turnoutPct": 60.06,
+      "voterBasis": "registered",
+      "voters": 13475
+    },
+    {
+      "ballotsCast": 9392,
+      "county": "Gunnison",
+      "turnoutPct": 63.49,
+      "voterBasis": "registered",
+      "voters": 14792
+    },
+    {
+      "ballotsCast": 523,
+      "county": "Hinsdale",
+      "turnoutPct": 71.45,
+      "voterBasis": "registered",
+      "voters": 732
+    },
+    {
+      "ballotsCast": 3898,
+      "county": "Huerfano",
+      "turnoutPct": 63.5,
+      "voterBasis": "registered",
+      "voters": 6139
+    },
+    {
+      "ballotsCast": 700,
+      "county": "Jackson",
+      "turnoutPct": 62.06,
+      "voterBasis": "registered",
+      "voters": 1128
+    },
+    {
+      "ballotsCast": 303604,
+      "county": "Jefferson",
+      "turnoutPct": 65.26,
+      "voterBasis": "registered",
+      "voters": 465217
+    },
+    {
+      "ballotsCast": 777,
+      "county": "Kiowa",
+      "turnoutPct": 72.01,
+      "voterBasis": "registered",
+      "voters": 1079
+    },
+    {
+      "ballotsCast": 3072,
+      "county": "Kit Carson",
+      "turnoutPct": 59.1,
+      "voterBasis": "registered",
+      "voters": 5198
+    },
+    {
+      "ballotsCast": 30132,
+      "county": "La Plata",
+      "turnoutPct": 59.78,
+      "voterBasis": "registered",
+      "voters": 50403
+    },
+    {
+      "ballotsCast": 3040,
+      "county": "Lake",
+      "turnoutPct": 49.41,
+      "voterBasis": "registered",
+      "voters": 6152
+    },
+    {
+      "ballotsCast": 180424,
+      "county": "Larimer",
+      "turnoutPct": 62.35,
+      "voterBasis": "registered",
+      "voters": 289374
+    },
+    {
+      "ballotsCast": 6796,
+      "county": "Las Animas",
+      "turnoutPct": 55.27,
+      "voterBasis": "registered",
+      "voters": 12295
+    },
+    {
+      "ballotsCast": 2139,
+      "county": "Lincoln",
+      "turnoutPct": 60.29,
+      "voterBasis": "registered",
+      "voters": 3548
+    },
+    {
+      "ballotsCast": 8755,
+      "county": "Logan",
+      "turnoutPct": 64.96,
+      "voterBasis": "registered",
+      "voters": 13477
+    },
+    {
+      "ballotsCast": 74421,
+      "county": "Mesa",
+      "turnoutPct": 60.47,
+      "voterBasis": "registered",
+      "voters": 123072
+    },
+    {
+      "ballotsCast": 726,
+      "county": "Mineral",
+      "turnoutPct": 72.17,
+      "voterBasis": "registered",
+      "voters": 1006
+    },
+    {
+      "ballotsCast": 5468,
+      "county": "Moffat",
+      "turnoutPct": 54.9,
+      "voterBasis": "registered",
+      "voters": 9960
+    },
+    {
+      "ballotsCast": 12672,
+      "county": "Montezuma",
+      "turnoutPct": 57.48,
+      "voterBasis": "registered",
+      "voters": 22045
+    },
+    {
+      "ballotsCast": 21114,
+      "county": "Montrose",
+      "turnoutPct": 63.83,
+      "voterBasis": "registered",
+      "voters": 33080
+    },
+    {
+      "ballotsCast": 10280,
+      "county": "Morgan",
+      "turnoutPct": 53.62,
+      "voterBasis": "registered",
+      "voters": 19172
+    },
+    {
+      "ballotsCast": 7335,
+      "county": "Otero",
+      "turnoutPct": 54.12,
+      "voterBasis": "registered",
+      "voters": 13553
+    },
+    {
+      "ballotsCast": 3612,
+      "county": "Ouray",
+      "turnoutPct": 72.52,
+      "voterBasis": "registered",
+      "voters": 4981
+    },
+    {
+      "ballotsCast": 10325,
+      "county": "Park",
+      "turnoutPct": 61.33,
+      "voterBasis": "registered",
+      "voters": 16835
+    },
+    {
+      "ballotsCast": 2005,
+      "county": "Phillips",
+      "turnoutPct": 65.42,
+      "voterBasis": "registered",
+      "voters": 3065
+    },
+    {
+      "ballotsCast": 9725,
+      "county": "Pitkin",
+      "turnoutPct": 63.5,
+      "voterBasis": "registered",
+      "voters": 15314
+    },
+    {
+      "ballotsCast": 4340,
+      "county": "Prowers",
+      "turnoutPct": 55.33,
+      "voterBasis": "registered",
+      "voters": 7844
+    },
+    {
+      "ballotsCast": 68110,
+      "county": "Pueblo",
+      "turnoutPct": 55.33,
+      "voterBasis": "registered",
+      "voters": 123087
+    },
+    {
+      "ballotsCast": 3115,
+      "county": "Rio Blanco",
+      "turnoutPct": 62.8,
+      "voterBasis": "registered",
+      "voters": 4960
+    },
+    {
+      "ballotsCast": 5013,
+      "county": "Rio Grande",
+      "turnoutPct": 55.25,
+      "voterBasis": "registered",
+      "voters": 9073
+    },
+    {
+      "ballotsCast": 14055,
+      "county": "Routt",
+      "turnoutPct": 63.48,
+      "voterBasis": "registered",
+      "voters": 22142
+    },
+    {
+      "ballotsCast": 2818,
+      "county": "Saguache",
+      "turnoutPct": 56,
+      "voterBasis": "registered",
+      "voters": 5032
+    },
+    {
+      "ballotsCast": 566,
+      "county": "San Juan",
+      "turnoutPct": 68.28,
+      "voterBasis": "registered",
+      "voters": 829
+    },
+    {
+      "ballotsCast": 4117,
+      "county": "San Miguel",
+      "turnoutPct": 60.87,
+      "voterBasis": "registered",
+      "voters": 6764
+    },
+    {
+      "ballotsCast": 1186,
+      "county": "Sedgwick",
+      "turnoutPct": 61.93,
+      "voterBasis": "registered",
+      "voters": 1915
+    },
+    {
+      "ballotsCast": 14416,
+      "county": "Summit",
+      "turnoutPct": 56.13,
+      "voterBasis": "registered",
+      "voters": 25681
+    },
+    {
+      "ballotsCast": 13710,
+      "county": "Teller",
+      "turnoutPct": 61.56,
+      "voterBasis": "registered",
+      "voters": 22270
+    },
+    {
+      "ballotsCast": 2429,
+      "county": "Washington",
+      "turnoutPct": 67.83,
+      "voterBasis": "registered",
+      "voters": 3581
+    },
+    {
+      "ballotsCast": 130363,
+      "county": "Weld",
+      "turnoutPct": 55.43,
+      "voterBasis": "registered",
+      "voters": 235173
+    },
+    {
+      "ballotsCast": 5312,
+      "county": "Yuma",
+      "turnoutPct": 85.59,
+      "voterBasis": "registered",
+      "voters": 6206
+    },
+    {
+      "ballotsCast": 2543316,
+      "county": "Total",
+      "turnoutPct": 58.39,
+      "voterBasis": "registered",
+      "voters": 4355778
+    }
+  ]
+}

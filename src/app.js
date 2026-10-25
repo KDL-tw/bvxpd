@@ -97,6 +97,7 @@ async function loadArchives(){
     if(!response.ok)throw Error('Archive unavailable');
     archives=[validateArchive(await response.json())];
     const legislative=await fetch('data/historical/co-2024-legislative.json'); if(legislative.ok) archives.push(await legislative.json());
+    const senate2020=await fetch('data/historical/co-2020-state-senate.json'); if(senate2020.ok) archives.push(await senate2020.json());
     render();renderHistory();
   }catch{toast('Historical archive could not be loaded or validated. Manual imports and demo remain available.');}
 }

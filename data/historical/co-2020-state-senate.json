@@ -1,0 +1,472 @@
+{
+  "id": "co-2020-state-senate",
+  "label": "Colorado 2020 State Senate",
+  "year": 2020,
+  "electionDate": "2020-11-03",
+  "classification": "Observed · historical final abstract",
+  "sourceUrl": "https://www.coloradosos.gov/pubs/elections/Results/Abstract/2020/general/stateSenate.html",
+  "positionScope": "Colorado State Senate",
+  "contests": [
+    {
+      "race": "State Senator - District 4",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 4"
+    },
+    {
+      "race": "State Senator - District 8",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 8"
+    },
+    {
+      "race": "State Senator - District 10",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 10"
+    },
+    {
+      "race": "State Senator - District 12",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 12"
+    },
+    {
+      "race": "State Senator - District 14",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 14"
+    },
+    {
+      "race": "State Senator - District 17",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 17"
+    },
+    {
+      "race": "State Senator - District 18",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 18"
+    },
+    {
+      "race": "State Senator - District 19",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 19"
+    },
+    {
+      "race": "State Senator - District 21",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 21"
+    },
+    {
+      "race": "State Senator - District 23",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 23"
+    },
+    {
+      "race": "State Senator - District 25",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 25"
+    },
+    {
+      "race": "State Senator - District 26",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 26"
+    },
+    {
+      "race": "State Senator - District 27",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 27"
+    },
+    {
+      "race": "State Senator - District 28",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 28"
+    },
+    {
+      "race": "State Senator - District 29",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 29"
+    },
+    {
+      "race": "State Senator - District 31",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 31"
+    },
+    {
+      "race": "State Senator - District 33",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 33"
+    },
+    {
+      "race": "State Senator - District 35",
+      "position": "Colorado State Senate",
+      "districtLabel": "District 35"
+    }
+  ],
+  "records": [
+    {
+      "candidate": "Jim Smallwood",
+      "party": "REP",
+      "district": "District 4",
+      "votes": 73832,
+      "race": "State Senator - District 4",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Elissa Flaumenhaft",
+      "party": "DEM",
+      "district": "District 4",
+      "votes": 41526,
+      "race": "State Senator - District 4",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Wayne Harlos",
+      "party": "LIB",
+      "district": "District 4",
+      "votes": 3208,
+      "race": "State Senator - District 4",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Karl Hanlon",
+      "party": "DEM",
+      "district": "District 8",
+      "votes": 41717,
+      "race": "State Senator - District 8",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Bob Rankin",
+      "party": "REP",
+      "district": "District 8",
+      "votes": 42701,
+      "race": "State Senator - District 8",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Larry G. Liston",
+      "party": "REP",
+      "district": "District 10",
+      "votes": 47463,
+      "race": "State Senator - District 10",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Randi McCallian",
+      "party": "DEM",
+      "district": "District 10",
+      "votes": 32114,
+      "race": "State Senator - District 10",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Heather Johnson",
+      "party": "LIB",
+      "district": "District 10",
+      "votes": 4620,
+      "race": "State Senator - District 10",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Bob Gardner",
+      "party": "REP",
+      "district": "District 12",
+      "votes": 45808,
+      "race": "State Senator - District 12",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Electra Johnson",
+      "party": "DEM",
+      "district": "District 12",
+      "votes": 29656,
+      "race": "State Senator - District 12",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Zechariah L. Harris",
+      "party": "LIB",
+      "district": "District 12",
+      "votes": 3048,
+      "race": "State Senator - District 12",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Hans D. Hochheimer",
+      "party": "REP",
+      "district": "District 14",
+      "votes": 31724,
+      "race": "State Senator - District 14",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Joann Ginal",
+      "party": "DEM",
+      "district": "District 14",
+      "votes": 63409,
+      "race": "State Senator - District 14",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Sonya Jaquez Lewis",
+      "party": "DEM",
+      "district": "District 17",
+      "votes": 65226,
+      "race": "State Senator - District 17",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Matthew D. Menza",
+      "party": "REP",
+      "district": "District 17",
+      "votes": 30848,
+      "race": "State Senator - District 17",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Andrew J. O'Connor (UNA)",
+      "party": "Write-In",
+      "district": "District 17",
+      "votes": 19,
+      "race": "State Senator - District 17",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Steve Fenberg",
+      "party": "DEM",
+      "district": "District 18",
+      "votes": 75261,
+      "race": "State Senator - District 18",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Peg Cage",
+      "party": "REP",
+      "district": "District 18",
+      "votes": 15524,
+      "race": "State Senator - District 18",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Rachel Zenzinger",
+      "party": "DEM",
+      "district": "District 19",
+      "votes": 54694,
+      "race": "State Senator - District 19",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Lynn Gerber",
+      "party": "REP",
+      "district": "District 19",
+      "votes": 37740,
+      "race": "State Senator - District 19",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Dominick Moreno",
+      "party": "DEM",
+      "district": "District 21",
+      "votes": 41438,
+      "race": "State Senator - District 21",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Martín Mendez",
+      "party": "REP",
+      "district": "District 21",
+      "votes": 23769,
+      "race": "State Senator - District 21",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Barbara Kirkmeyer",
+      "party": "REP",
+      "district": "District 23",
+      "votes": 71570,
+      "race": "State Senator - District 23",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Sally Boccella",
+      "party": "DEM",
+      "district": "District 23",
+      "votes": 58227,
+      "race": "State Senator - District 23",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Kevin Priola",
+      "party": "REP",
+      "district": "District 25",
+      "votes": 37195,
+      "race": "State Senator - District 25",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Paula Dickerson",
+      "party": "DEM",
+      "district": "District 25",
+      "votes": 35968,
+      "race": "State Senator - District 25",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Jeff Bridges",
+      "party": "DEM",
+      "district": "District 26",
+      "votes": 54275,
+      "race": "State Senator - District 26",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Bob Roth",
+      "party": "REP",
+      "district": "District 26",
+      "votes": 32984,
+      "race": "State Senator - District 26",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Marc Solomon",
+      "party": "LIB",
+      "district": "District 26",
+      "votes": 2366,
+      "race": "State Senator - District 26",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Chris Kolker",
+      "party": "DEM",
+      "district": "District 27",
+      "votes": 51005,
+      "race": "State Senator - District 27",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Suzanne Staiert",
+      "party": "REP",
+      "district": "District 27",
+      "votes": 41222,
+      "race": "State Senator - District 27",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Karl Stecher",
+      "party": "REP",
+      "district": "District 28",
+      "votes": 31387,
+      "race": "State Senator - District 28",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Janet Buckner",
+      "party": "DEM",
+      "district": "District 28",
+      "votes": 51028,
+      "race": "State Senator - District 28",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Rhonda Fields",
+      "party": "DEM",
+      "district": "District 29",
+      "votes": 45828,
+      "race": "State Senator - District 29",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Michele Poague",
+      "party": "LIB",
+      "district": "District 29",
+      "votes": 20914,
+      "race": "State Senator - District 29",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Chris Hansen",
+      "party": "DEM",
+      "district": "District 31",
+      "votes": 74288,
+      "race": "State Senator - District 31",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Doug Townsend",
+      "party": "REP",
+      "district": "District 31",
+      "votes": 22562,
+      "race": "State Senator - District 31",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "James Rashad Coleman",
+      "party": "DEM",
+      "district": "District 33",
+      "votes": 75702,
+      "race": "State Senator - District 33",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Jerry Burton",
+      "party": "UPA",
+      "district": "District 33",
+      "votes": 7482,
+      "race": "State Senator - District 33",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Cleave Simpson",
+      "party": "REP",
+      "district": "District 35",
+      "votes": 43970,
+      "race": "State Senator - District 35",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    },
+    {
+      "candidate": "Carlos R. Lopez",
+      "party": "DEM",
+      "district": "District 35",
+      "votes": 29163,
+      "race": "State Senator - District 35",
+      "position": "Colorado State Senate",
+      "county": "Statewide total"
+    }
+  ]
+}

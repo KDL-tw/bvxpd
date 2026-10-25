@@ -1,0 +1,54 @@
+{
+  "id": "co-2022-attorney-general",
+  "label": "Colorado 2022 Attorney General",
+  "year": 2022,
+  "electionDate": "2022-11-08",
+  "classification": "Observed - historical final abstract",
+  "sourceUrl": "https://www.coloradosos.gov/pubs/elections/Results/Abstract/2022/general/attorneyGeneral.html",
+  "positionScope": "Colorado Attorney General",
+  "contests": [
+    {
+      "race": "Attorney General",
+      "position": "Colorado Attorney General",
+      "districtLabel": "Statewide"
+    }
+  ],
+  "records": [
+    {
+      "candidate": "John Kellner",
+      "county": "Statewide total",
+      "district": "Statewide",
+      "party": "REP",
+      "position": "Colorado Attorney General",
+      "race": "Attorney General",
+      "votes": 1060866
+    },
+    {
+      "candidate": "Phil Weiser",
+      "county": "Statewide total",
+      "district": "Statewide",
+      "party": "DEM",
+      "position": "Colorado Attorney General",
+      "race": "Attorney General",
+      "votes": 1349133
+    },
+    {
+      "candidate": "William F. Robinson III",
+      "county": "Statewide total",
+      "district": "Statewide",
+      "party": "LIB",
+      "position": "Colorado Attorney General",
+      "race": "Attorney General",
+      "votes": 54557
+    },
+    {
+      "candidate": "Stanley Thorne (UNA)",
+      "county": "Statewide total",
+      "district": "Statewide",
+      "party": "Write-in",
+      "position": "Colorado Attorney General",
+      "race": "Attorney General",
+      "votes": 1772
+    }
+  ]
+}

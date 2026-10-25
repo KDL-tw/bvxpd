@@ -1,0 +1,1 @@
+Place the final approved Bullvixen splash image here as `splash.png`. Set `splashUrl` in `src/config.js` to `assets/splash.png`; the app then loads it on the introduction. The marked-up revision image is not the final approved asset and is intentionally excluded.

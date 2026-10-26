@@ -243,3 +243,4 @@ button.scenario-card:hover{border-color:#0757a6;background:#f3f8fd}
 .research-advanced>summary small{color:#3d5168;font-size:13px;font-weight:500}
 @media(max-width:1100px){.research-bench{grid-template-columns:1fr}.research-side{position:static;max-height:none}.research-charts{grid-template-columns:1fr}}
 @media(max-width:760px){.form-grid{grid-template-columns:1fr}.history-row{flex-direction:column;align-items:stretch}.history-row .actions{justify-content:flex-start}.calc,.calc-line{grid-template-columns:1fr}}
+\n.ballot-toggle{display:flex;gap:6px;margin:10px 0}.ballot-toggle button{padding:6px 10px;font-size:12px}.ballot-toggle button[aria-pressed=true]{background:#3b5272;border-color:#83b6ff}.ballot-toggle button:disabled{opacity:.5;cursor:not-allowed}\n

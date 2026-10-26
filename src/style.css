@@ -269,3 +269,8 @@ body.cyberpunk .sidebar-watermark{filter:drop-shadow(0 0 14px rgba(255,62,165,.1
 .sidebar-logo-cyber{display:none}
 body.cyberpunk .sidebar-logo-light{display:none}
 body.cyberpunk .sidebar-watermark .sidebar-logo-cyber{display:block;width:min(220px,100%);opacity:.92;filter:none;mix-blend-mode:normal;}
+
+/* Theme-specific sidebar art: the generated vignette never appears in light mode. */
+.sidebar-watermark .sidebar-logo-cyber{display:none!important}
+body.cyberpunk .sidebar-watermark .sidebar-logo-light{display:none!important}
+body.cyberpunk .sidebar-watermark .sidebar-logo-cyber{display:block!important;opacity:1;filter:none;mix-blend-mode:normal}

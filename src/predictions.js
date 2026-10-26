@@ -203,10 +203,10 @@ export function spatialAssociation({contestId, target, places = [], pairs = []} 
 }
 
 export const plannedPredictionCatalog = [
-  {model: 'historical-baseline', label: 'Historical baseline', status: 'planned', requirement: 'Comparable prior contests by position, district and geography vintage.'},
-  {model: 'remaining-vote-beta', label: 'Remaining-vote beta model', status: 'blocked', requirement: 'Timestamped snapshots plus a separately estimated remaining-vote distribution.'},
-  {model: 'dirichlet-multinomial', label: 'All-choice count model', status: 'blocked', requirement: 'All-choice observations and a validated remaining-valid-vote estimate.'},
-  {model: 'kalman', label: 'Kalman time series', status: 'planned', requirement: 'A defined latent state and timestamped observation process.'},
-  {model: 'markov-regime', label: 'Markov regimes', status: 'planned', requirement: 'Evidence for regimes and an evaluated transition model.'},
-  {model: 'spatial', label: 'Spatial model', status: 'planned', requirement: 'Boundary-versioned geographic relationships and assumptions.'}
+  {model: 'historical-baseline', label: 'Historical baseline', status: 'planned', requirement: 'Comparable prior contests by position, district and geography vintage.', help: 'Start here. Compare this contest with compatible past contests and get a baseline range.'},
+  {model: 'remaining-vote-beta', label: 'Remaining-vote beta model', status: 'blocked', requirement: 'Timestamped snapshots plus a separately estimated remaining-vote distribution.', help: 'Use during reporting when you have a defensible estimate of how many votes remain.'},
+  {model: 'dirichlet-multinomial', label: 'All-choice count model', status: 'blocked', requirement: 'All-choice observations and a validated remaining-valid-vote estimate.', help: 'Use when you have every choice in the contest and the remaining vote pool.'},
+  {model: 'kalman', label: 'Kalman time series', status: 'planned', requirement: 'A defined latent state and timestamped observation process.', help: 'Smooths a time series of observed shares. Enter one share per reporting drop.'},
+  {model: 'markov-regime', label: 'Markov regimes', status: 'planned', requirement: 'Evidence for regimes and an evaluated transition model.', help: 'Explores movement between named states such as tight and wide.'},
+  {model: 'spatial', label: 'Spatial model', status: 'planned', requirement: 'Boundary-versioned geographic relationships and assumptions.', help: 'Compares geographic areas when you can provide their neighbor relationships.'}
 ];

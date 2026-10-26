@@ -6,7 +6,7 @@
   "scripts": {
     "start": "python3 -m http.server 4173 --bind 127.0.0.1",
     "test": "node --test",
-    "check": "node --check src/app.js && node --check src/data.js && node --check src/archive.js && node --check src/vote-averages.js",
+    "check": "node --check src/app.js && node --check src/data.js && node --check src/archive.js && node --check src/vote-averages.js && node --check src/scenarios.js",
     "ingest:historical": "python3 scripts/ingest-co-2022.py",
     "check:historical": "python3 scripts/ingest-co-2022.py --check"
   }

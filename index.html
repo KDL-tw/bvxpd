@@ -16,5 +16,106 @@
 <div class="panel"><div class="panel-heading"><h2>Local file</h2><button id="template">Demo CSV ↓</button></div><p class="muted">CSV, TSV, or JSON · 10 MB · 100,000 rows · stays on this machine</p><input type="file" id="file" accept=".csv,.tsv,.json"><div id="mapping" class="form-grid"></div></div>
 <div class="panel"><h2>Campaign money (TRACER)</h2><p class="muted">A TRACER CSV stays in this browser. Donor rows are not sent anywhere.</p><input type="file" id="finance-file" accept=".csv"><p id="finance-status" role="status" class="muted">No finance file yet.</p></div><form id="import-form" class="panel"><h2>What is this file?</h2><div class="form-grid"><label>Kind of file<select id="kind"><option value="observed" selected>Observed (I downloaded this)</option><option value="demo">Demo (made up)</option></select></label><label>Election<input id="election" value="2026 General" placeholder="2026 General" maxlength="150" required></label><label>When the source reported it<input id="as-of" placeholder="2026-11-03T19:00:00-07:00" required><small>ISO time with Z or ±HH:MM, copied from the source.</small></label><label>How finished it was<select id="stage"><option value="unofficial">Unofficial</option><option value="certified">Certified (the source says so)</option></select></label><label class="wide">Source page<input type="url" id="source-url" placeholder="https://www.sos.state.co.us/…"><small>Required for observed files. Link the SOS page you actually downloaded.</small></label><label class="wide check"><input id="attest" type="checkbox"> I checked the election, the timestamp, the totals, and the reporting level. One snapshot, no double-counted rows.</label></div><button class="primary" type="submit">Check and preview</button><p id="import-status" role="status" aria-live="polite">Pick a file to start.</p><div id="preview" hidden><h3>First look</h3><div class="table-scroll"><table><thead><tr><th>Race</th><th>Candidate / choice</th><th>County / area</th><th>Party</th><th>Votes</th></tr></thead><tbody id="preview-body"></tbody></table></div><p id="preview-summary"></p><p class="muted">First 10 rows only. Saving this starts a new snapshot. It does not add onto an older one.</p><button type="button" id="commit" class="primary">Save snapshot</button></div></form></section>
 <section id="history" class="page" hidden><h1>Past Data</h1><div id="history-list"></div><p class="muted">Bundled history comes with the app. Files you import stay in this browser, on this device. Clear the browser data and those imports are gone, so download a JSON backup first. A backup is the rows plus the notes, not the original file.</p></section>
-<section id="research" class="page" hidden><h1>Experimental Analytics</h1><div class="panel"><h2>Add a prediction</h2><form id="research-drop" class="calc"><label>File<select name="file"></select></label><label>Contest<select name="contest"></select></label><label>Expected votes<input name="votes" type="number" min="0" step="1" required></label><label class="vote-auto" hidden>Auto<select name="auto"></select></label><p id="vote-auto-note" class="calc-file wide" hidden></p><label>Note<input name="note" maxlength="240" required></label><div class="wide"><button class="primary" type="submit">Save prediction</button></div></form><div id="research-drops"></div></div><div class="panel"><h2>Calculators</h2><p>The result stays on this page. It is not written into the vote count.</p><div id="models"></div></div></section>
+<section id="research" class="page" hidden>
+  <h1>Experimental Analytics</h1>
+  <div class="research-bench" id="research-bench">
+    <aside class="panel research-side" aria-label="Contest and history">
+      <h2>Contest</h2>
+      <form id="research-pick" class="calc">
+        <label>File<select name="file"></select></label>
+        <label>Contest<select name="contest"></select></label>
+        <label>Focus<select name="focus"></select></label>
+      </form>
+      <div id="research-count" class="research-count" aria-live="polite"></div>
+      <h2>Calculator</h2>
+      <div class="pad-calc" id="pad-calc" role="group" aria-label="Calculator">
+        <output id="pad-display" class="pad-display" aria-live="polite">0</output>
+        <div class="pad-keys">
+          <button type="button" data-pad="clear">C</button>
+          <button type="button" data-pad="back">⌫</button>
+          <button type="button" data-pad="op" data-op="/">÷</button>
+          <button type="button" data-pad="op" data-op="*">×</button>
+          <button type="button" data-pad="digit">7</button>
+          <button type="button" data-pad="digit">8</button>
+          <button type="button" data-pad="digit">9</button>
+          <button type="button" data-pad="op" data-op="-">−</button>
+          <button type="button" data-pad="digit">4</button>
+          <button type="button" data-pad="digit">5</button>
+          <button type="button" data-pad="digit">6</button>
+          <button type="button" data-pad="op" data-op="+">+</button>
+          <button type="button" data-pad="digit">1</button>
+          <button type="button" data-pad="digit">2</button>
+          <button type="button" data-pad="digit">3</button>
+          <button type="button" data-pad="eq" class="pad-eq">=</button>
+          <button type="button" data-pad="digit" class="pad-zero">0</button>
+          <button type="button" data-pad="dot">.</button>
+        </div>
+        <p class="muted pad-hint">For margins, shares, and leftover totals while you work.</p>
+      </div>
+      <h2>Compatible history</h2>
+      <p class="muted" id="research-history-note">Same office and district on the current map. Check the ones to use.</p>
+      <div id="research-history" class="research-history"></div>
+      <h2>Reporting drop</h2>
+      <form id="research-drop" class="calc">
+        <input type="hidden" name="file">
+        <input type="hidden" name="contest">
+        <label>Votes reported in this drop<input name="votes" type="number" min="0" step="1" required></label>
+        <label>Source timestamp<input name="asOf" type="datetime-local"></label>
+        <label class="wide">Source note<input name="note" maxlength="240" required placeholder="SOS page, feed, or who reported it"></label>
+        <div class="wide"><button class="primary" type="submit">Save drop</button></div>
+      </form>
+      <div id="research-drops" class="research-drop-list"></div>
+    </aside>
+    <div class="research-main">
+      <article class="panel" id="research-path">
+        <div class="panel-heading"><div><span class="eyebrow">FROM HERE</span><h2>Path to victory</h2></div><span id="research-kind" class="badge">SCENARIO</span></div>
+        <p id="research-path-summary" class="research-summary" role="status" aria-live="polite">Pick a contest to begin.</p>
+        <div id="research-path-metrics" class="research-metrics"></div>
+      </article>
+      <article class="panel">
+        <h2>Turnout and remaining votes</h2>
+        <form id="research-scenario" class="calc">
+          <label>Estimated final vote total<input name="finalTotal" type="number" min="0" step="1"></label>
+          <label class="vote-auto" hidden>Past average<select name="auto"></select></label>
+          <p id="vote-auto-note" class="calc-file wide" hidden></p>
+          <label>Votes remaining<input name="remaining" type="number" min="0" step="1"></label>
+          <label>Focus share of remaining (%)<input name="share" type="number" min="0" max="100" step="0.1" value="50"></label>
+          <p class="calc-file wide" id="research-reported">Reported votes stay beside these knobs. Nothing here is written into the count.</p>
+        </form>
+        <div id="research-turnout" class="scenario-grid" aria-label="Turnout scenarios"></div>
+        <div id="research-cases" class="scenario-grid" aria-label="Best base and worst cases"></div>
+      </article>
+      <article class="panel">
+        <h2>What it looks like</h2>
+        <div class="research-charts">
+          <figure class="research-chart">
+            <figcaption>Past results and baseline</figcaption>
+            <div id="chart-baseline" class="chart-frame" role="img" aria-label="Historical baseline chart"></div>
+            <p id="chart-baseline-text" class="chart-text"></p>
+          </figure>
+          <figure class="research-chart">
+            <figcaption>Margin as remaining votes change</figcaption>
+            <div id="chart-fan" class="chart-frame" role="img" aria-label="Remaining vote fan chart"></div>
+            <p id="chart-fan-text" class="chart-text"></p>
+          </figure>
+          <figure class="research-chart">
+            <figcaption>Reported versus expected remaining</figcaption>
+            <div id="chart-stack" class="chart-frame" role="img" aria-label="Stacked final vote chart"></div>
+            <p id="chart-stack-text" class="chart-text"></p>
+          </figure>
+          <figure class="research-chart">
+            <figcaption>Saved drops</figcaption>
+            <div id="chart-drops" class="chart-frame" role="img" aria-label="Drop trend chart"></div>
+            <p id="chart-drops-text" class="chart-text"></p>
+          </figure>
+        </div>
+      </article>
+      <details class="panel research-advanced">
+        <summary><span><strong>Technical details</strong><small>Formulas, priors, and the six research models. Depth stays here.</small></span></summary>
+        <p class="muted">These tools use the same archives. Results stay on this page and are not written into the vote count.</p>
+        <div id="models"></div>
+      </details>
+    </div>
+  </div>
+</section>
 <footer><span>BULLVIXEN / RENHORNE POLICY INSTITUTE</span></footer></main></div></div><div id="toast" role="status" aria-live="polite"></div><script type="module" src="src/app.js"></script></body></html>

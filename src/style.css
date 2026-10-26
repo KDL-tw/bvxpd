@@ -79,16 +79,22 @@ nav button.active{background:#304968;border-color:#5479a8}
 .history-facts dt{color:#3d5168;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 .history-facts dd{margin:3px 0 0;overflow-wrap:anywhere}
 .history-row .actions{display:flex;gap:8px;flex-shrink:0}
-.race-card{display:flex;flex-direction:column;padding:0;border-radius:8px;overflow:hidden}
-.race-card button[data-race]{display:grid;gap:6px;width:100%;text-align:left;background:transparent;border:0;color:inherit;padding:14px 14px 12px}
+.race-card{position:relative;display:flex;flex-direction:column;padding:0;border-radius:8px;overflow:hidden}
+.race-card button[data-race]{display:grid;gap:6px;width:100%;text-align:left;background:transparent;border:0;color:inherit;padding:14px 48px 12px 14px}
+.watch-eye{position:absolute;top:8px;right:8px;z-index:1;width:32px;height:32px;padding:0;display:grid;place-items:center;border-radius:50%;background:#fff;color:#536579}
+.watch-eye[aria-pressed=true]{color:#0757a6;background:#e7f1fb;border-color:#0757a6}
+.race-card .card-drop{display:grid;grid-template-columns:1fr;gap:8px;margin:0;padding:10px 12px 12px;border-top:1px solid #b7c9da;background:#eef4f9}
+.race-card .card-drop>span{color:#3d5168;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.race-card .card-drop label{flex:none;display:grid;gap:4px;color:#172536;font-size:12px;font-weight:700}
+.race-card .card-drop input{width:100%;background:#fff;border:1px solid #6d87a3;border-radius:5px;padding:8px 10px;font-size:14px;font-weight:500}
+.race-card .card-drop input:focus{outline:2px solid #0757a6;border-color:#0757a6}
+.race-card .card-drop button{width:auto;justify-self:start;background:#0757a6;color:#fff;border-color:#0757a6;font-weight:700}
+.race-card .card-drop button:hover{background:#0a4d86}
+.race-card .card-drop small{color:#3d5168;font-size:11px}
 .race-card.selected{background:#f3f8fd;color:#172536;border-color:#0757a6;box-shadow:inset 0 0 0 1px #0757a6}
 .race-lead{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .race-lead strong{font-weight:600;min-width:0}
 .race-card .pct{flex:none;font:600 15px "Space Grotesk",sans-serif}
-.drop-box{border-top:1px solid var(--line);padding:0 14px 12px}
-.drop-box summary{cursor:pointer;padding:10px 0 4px;color:#3d5168;font-size:12px;font-weight:700}
-.race-card .prediction-entry{display:grid;grid-template-columns:1fr;margin-top:8px}
-.race-card .prediction-entry button{width:auto;justify-self:start}
 .section-note{margin:-2px 0 12px;color:#3d5168;font-size:13px}
 .now-layout h2{margin-bottom:6px}
 .forward-grid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}

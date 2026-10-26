@@ -60,11 +60,12 @@
       <p class="muted" id="research-models-note">Toggle models onto the charts for this contest. They use the file, checked history, and scenario knobs — they do not write into the vote count.</p>
       <div id="research-models" class="research-models" role="group" aria-label="Projection model toggles"></div>
       <h2>Scenario drops</h2>
-      <p class="muted" id="research-drop-note">Sandbox focus votes for this page — they update path, turnout, and charts on the right. They never write into Overview or the file.</p>
+      <p class="muted" id="research-drop-note">Attribute each scenario drop to the candidate who receives it. Drops update path, turnout, and charts here only.</p>
       <form id="research-drop" class="calc">
         <input type="hidden" name="file">
         <input type="hidden" name="contest">
-        <label title="Added to the focus choice in this sandbox only. Path to victory and the charts use the new total.">Focus votes in this drop<input name="votes" type="number" min="0" step="1" required></label>
+        <label title="The candidate receiving this scenario drop.">Candidate<select name="candidate" required></select></label>
+        <label title="Added to the selected candidate in this sandbox only. Path to victory and the charts use the new total.">Votes in this drop<input name="votes" type="number" min="0" step="1" required></label>
         <label>Source timestamp<input name="asOf" type="datetime-local"></label>
         <label class="wide">Note<input name="note" maxlength="240" required placeholder="What-if, trial count, or scratch pad"></label>
         <div class="wide"><button class="primary" type="submit">Save scenario drop</button></div>

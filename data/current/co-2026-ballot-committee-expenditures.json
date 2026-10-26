@@ -1,0 +1,236 @@
+{
+  "id": "co-2026-ballot-committee-expenditures",
+  "label": "Colorado 2026 ballot committee expenditures",
+  "basis": "Reported 2026 TRACER expenditures matched to ballot committees by normalized legal name. These are committee totals; issue-level allocation remains an explicit shared-committee allocation in the dashboard.",
+  "sourceFile": "2026_ExpenditureData.csv",
+  "sourceArchive": "2026_ExpenditureData.csv.zip",
+  "sourceUrl": "https://tracer.sos.colorado.gov/PublicSite/Reports/Reports.aspx",
+  "sourceAsOf": "2026-10-26",
+  "records": [
+    {
+      "committee": "AMERICANS FOR PROSPERITY COLORADO ISSUE COMMITTEE",
+      "legalCommitteeName": "AMERICANS FOR PROSPERITY COLORADO ISSUE COMMITTEE",
+      "expenditures": 350222.84,
+      "reportRows": 15,
+      "periodStart": "2026-08-01",
+      "periodEnd": "2026-10-07",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "BRIGHTER COLORADO",
+      "legalCommitteeName": "BRIGHTER COLORADO",
+      "expenditures": 2760498.8,
+      "reportRows": 26,
+      "periodStart": "2026-08-10",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "COLORADANS FOR COCO",
+      "legalCommitteeName": "COLORADANS FOR COCO",
+      "expenditures": 581244.38,
+      "reportRows": 31,
+      "periodStart": "2026-09-13",
+      "periodEnd": "2026-10-13",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "COLORADANS FOR REAL SAFETY SOLUTIONS",
+      "legalCommitteeName": "COLORADANS FOR REAL SAFETY SOLUTIONS",
+      "expenditures": 1053533.94,
+      "reportRows": 169,
+      "periodStart": "2026-02-17",
+      "periodEnd": "2026-10-13",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "COLORADO COMMUNITIES FIRST",
+      "legalCommitteeName": "COLORADO COMMUNITIES FIRST",
+      "expenditures": 150259.21,
+      "reportRows": 21,
+      "periodStart": "2026-08-10",
+      "periodEnd": "2026-10-13",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "COLORADO HUNTERS AND ANGLERS FOR SENSIBLE WILDLIFE CONSERVATION",
+      "legalCommitteeName": "COLORADO HUNTERS AND ANGLERS FOR SENSIBLE WILDLIFE CONSERVATION",
+      "expenditures": 132161.37,
+      "reportRows": 15,
+      "periodStart": "2026-08-25",
+      "periodEnd": "2026-10-09",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "COLORADO VOTER TRUST INITIATIVE",
+      "legalCommitteeName": "COLORADO VOTER TRUST INITIATIVE",
+      "expenditures": 5750055.0,
+      "reportRows": 6,
+      "periodStart": "2026-06-01",
+      "periodEnd": "2026-10-07",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "FAIR REDISTRICTING COLORADO",
+      "legalCommitteeName": "FAIR REDISTRICTING COLORADO",
+      "expenditures": 250010.0,
+      "reportRows": 2,
+      "periodStart": "2026-08-03",
+      "periodEnd": "2026-08-04",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "FAMILIES NOT POLITICS",
+      "legalCommitteeName": "FAMILIES NOT POLITICS",
+      "expenditures": 2009617.2,
+      "reportRows": 166,
+      "periodStart": "2026-03-09",
+      "periodEnd": "2026-10-13",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "KEEP COLORADO AFFORDABLE",
+      "legalCommitteeName": "KEEP COLORADO AFFORDABLE",
+      "expenditures": 20.0,
+      "reportRows": 2,
+      "periodStart": "2026-10-08",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "LET'S GO COLORADO",
+      "legalCommitteeName": "LET'S GO COLORADO",
+      "expenditures": 484744.0,
+      "reportRows": 3,
+      "periodStart": "2026-10-09",
+      "periodEnd": "2026-10-13",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "NO ON 109 AND 110",
+      "legalCommitteeName": "NO ON 109 AND 110",
+      "expenditures": 3873.96,
+      "reportRows": 13,
+      "periodStart": "2026-07-26",
+      "periodEnd": "2026-09-01",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "NO ON 134 AND 135",
+      "legalCommitteeName": "NO ON 134 AND 135",
+      "expenditures": 3414.25,
+      "reportRows": 16,
+      "periodStart": "2026-09-01",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "NO POLLUTION IN THE CONSTITUTION",
+      "legalCommitteeName": "NO POLLUTION IN THE CONSTITUTION",
+      "expenditures": 3076874.17,
+      "reportRows": 22,
+      "periodStart": "2026-08-14",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "PROTECT COLORADO'S CONSTITUTION",
+      "legalCommitteeName": "PROTECT COLORADO'S CONSTITUTION",
+      "expenditures": 8164.01,
+      "reportRows": 64,
+      "periodStart": "2026-07-21",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "PROTECT COLORADO'S FUTURE COALITION",
+      "legalCommitteeName": "PROTECT COLORADO\u0092S FUTURE COALITION",
+      "expenditures": 1943654.9,
+      "reportRows": 260,
+      "periodStart": "2026-02-10",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "PROTECT COLORADO'S LAND AND WATER, PREVENT WILDFIRES",
+      "legalCommitteeName": "PROTECT COLORADO\u0092S LAND AND WATER, PREVENT WILDFIRES",
+      "expenditures": 5080876.14,
+      "reportRows": 94,
+      "periodStart": "2026-02-01",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "PROTECT KIDS COLORADO",
+      "legalCommitteeName": "PROTECT KIDS COLORADO - ISSUE COMMITTEE",
+      "expenditures": 344867.39,
+      "reportRows": 84,
+      "periodStart": "2026-01-02",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "STOP THE CONSTITUTIONAL POWER GRAB",
+      "legalCommitteeName": "STOP THE CONSTITUTIONAL POWER GRAB",
+      "expenditures": 2459.74,
+      "reportRows": 8,
+      "periodStart": "2026-10-01",
+      "periodEnd": "2026-10-13",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "T. ROOSEVELT CONSERVATION ALLIANCE",
+      "legalCommitteeName": "T. ROOSEVELT CONSERVATION ALLIANCE",
+      "expenditures": 1500000.0,
+      "reportRows": 5,
+      "periodStart": "2026-05-12",
+      "periodEnd": "2026-07-16",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "THE PEOPLE'S NO",
+      "legalCommitteeName": "THE PEOPLE'S NO",
+      "expenditures": 300000.0,
+      "reportRows": 3,
+      "periodStart": "2026-09-22",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "VOTE COMMON SENSE",
+      "legalCommitteeName": "VOTE COMMON SENSE",
+      "expenditures": 130112.0,
+      "reportRows": 15,
+      "periodStart": "2026-05-29",
+      "periodEnd": "2026-10-13",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "VOTE YES ON 83",
+      "legalCommitteeName": "VOTE YES ON 83",
+      "expenditures": 841135.29,
+      "reportRows": 16,
+      "periodStart": "2026-07-16",
+      "periodEnd": "2026-10-09",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "YES FOR COLORADO KIDS",
+      "legalCommitteeName": "YES FOR COLORADO KIDS",
+      "expenditures": 6840181.1,
+      "reportRows": 86,
+      "periodStart": "2026-05-29",
+      "periodEnd": "2026-10-14",
+      "electioneeringRows": 0
+    },
+    {
+      "committee": "YOUR FAMILY'S FUTURE ALLIANCE",
+      "legalCommitteeName": "YOUR FAMILY'S FUTURE ALLIANCE",
+      "expenditures": 20692.05,
+      "reportRows": 7,
+      "periodStart": "2026-06-21",
+      "periodEnd": "2026-10-09",
+      "electioneeringRows": 0
+    }
+  ]
+}

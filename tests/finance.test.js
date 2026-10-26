@@ -54,6 +54,18 @@ test('financeForSeat matches Governor across State vs Statewide districts',()=>{
   assert.equal(hit.opponentReceipts,3000);
 });
 
+test('unmapped contribution-report rows remain eligible for candidate matching',()=>{
+  const rows=[
+    {candidate:'Jane Focus',position:'Unmapped position',district:'Statewide',receipts:12000},
+    {candidate:'Omar Opp',position:'Unmapped position',district:'Statewide',receipts:3000}
+  ];
+  const seat=financeForSeat(rows,{position:'Governor',district:'State'});
+  assert.equal(seat.length,2);
+  const hit=contestFundingAdvantage(rows,{focusNames:['Jane Focus'],opponentNames:['Omar Opp'],position:'Governor',district:'State'});
+  assert.equal(hit.focusReceipts,12000);
+  assert.equal(hit.opponentReceipts,3000);
+});
+
 test('contest funding advantage matches TRACER names in a seat',()=>{
   const rows=[
     {candidate:'Ada Focus',position:'State House',district:'8',receipts:9000},

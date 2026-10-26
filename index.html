@@ -2,22 +2,22 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bullvixen, a Colorado election dashboard. Real files stay labeled, and the demo is fake on purpose."><title>Bullvixen</title><link rel="stylesheet" href="src/style.css"></head>
 <body><div id="file-warning" role="alert"><strong>Start the local preview first.</strong><p>This page uses JavaScript modules, so a <code>file://</code> link will just sit there.</p><p>From the project folder, run <code>npm start</code>, then open <a href="http://127.0.0.1:4173/#now">http://127.0.0.1:4173/#now</a>.</p></div><a class="skip" href="#main">Skip to content</a>
 <div id="intro" hidden><div class="splash-stage"><img id="splash-art" alt="Bullvixen Public Election Dashboard by Renhorne Policy Institute. A neon Colorado landscape with a fox, bison, blue unicorn and flying ballot carriers." width="1672" height="941"><div class="splash-controls"><button id="enter" aria-label="Enter dashboard">Enter dashboard</button><button id="skip-intro" aria-label="Skip intro">Skip intro</button><label class="remember-control"><input id="remember" type="checkbox"> <span>Skip the splash next time</span></label></div></div></div>
-<div id="workspace"><aside class="sidebar"><a class="brand" href="#now"><span>BULL</span><em>VIXEN</em><small>PUBLIC ELECTION DASHBOARD</small></a><div class="state"><span class="co-mark">C</span><div>Colorado</div></div><nav aria-label="Main navigation"><button data-page="now" class="active">◉ <span>Now</span></button><button data-page="overview">◫ <span>Race Summaries</span></button><button data-page="ballots">☑ <span>Ballot Issues</span></button><button data-page="returns">↺ <span>Ballots Returned</span></button><button data-page="imports">⇧ <span>New Data, No Problem</span></button><button data-page="history">◷ <span>Past Data</span></button><button data-page="research">⌁ <span>Experimental Analytics</span></button></nav><div class="sidebar-watermark"><img class="sidebar-logo-light" src="assets/renhorne-policy-institute.png" alt="Renhorne Policy Institute"><img class="sidebar-logo-cyber" src="assets/cyberpunk-dumpster-vignette.png" alt="A cyberpunk bison closes a dumpster with raccoons inside while a laughing fox watches beside the fire"></div><div class="sidebar-bottom"><p>By Renhorne Policy Institute</p><button id="show-intro" class="text-button">Replay the splash ↗</button></div></aside>
-<div class="shell"><header><div><span class="eyebrow">COLORADO ELECTIONS</span><span id="today"></span></div><div class="header-actions"><span id="save-status" class="save-status" role="status" aria-live="polite">Saved locally</span><button id="save-data" type="button" title="Download a backup of your saved drops">⇩ Save data</button><button id="theme-toggle" class="icon-button" type="button" aria-label="Use Cyberpunk theme" title="Use Cyberpunk theme" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg></button><button class="primary" data-page="imports">＋ Import a file</button></div></header><main id="main" tabindex="-1">
+<div id="workspace"><aside class="sidebar"><a class="brand" href="#now"><span>BULL</span><em>VIXEN</em><small>PUBLIC ELECTION DASHBOARD</small></a><div class="state"><span class="co-mark">C</span><div>Colorado</div></div><nav aria-label="Main navigation"><button data-page="now" class="active">◉ <span>Now</span></button><button data-page="overview">◫ <span>Race Summaries</span></button><button data-page="ballots">☑ <span>Ballot Issues</span></button><button data-page="returns">↺ <span>Ballots Returned</span></button><button data-page="imports">⇧ <span>Import</span></button><button data-page="history">◷ <span>History</span></button><button data-page="research">⌁ <span>Experimental Analytics</span></button></nav><div class="sidebar-watermark"><img class="sidebar-logo-light" src="assets/renhorne-policy-institute.png" alt="Renhorne Policy Institute"><img class="sidebar-logo-cyber" src="assets/cyberpunk-dumpster-vignette.png" alt=""></div><div class="sidebar-bottom"><p>By Renhorne Policy Institute</p><button id="show-intro" class="text-button">Show splash</button></div></aside>
+<div class="shell"><header><div><span class="eyebrow">COLORADO ELECTIONS</span><span id="today"></span></div><div class="header-actions"><span id="save-status" class="save-status" role="status" aria-live="polite">Saved locally</span><button id="save-data" type="button">⇩ Save data</button><button id="theme-toggle" class="icon-button" type="button" aria-label="Use Cyberpunk theme" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg></button><button class="primary" data-page="imports">＋ Import a file</button></div></header><main id="main" tabindex="-1">
 <section id="now" class="page"><div class="page-title"><h1>Now</h1><button type="button" id="now-refresh">Refresh live results</button></div>
 <div class="now-layout" id="now-layout"><div id="watched-cards" class="forward-grid"></div><aside id="race-detail" class="race-detail" hidden></aside></div></section>
 <section id="overview" class="page" hidden><div class="page-title"><h1>Race Summaries</h1><div class="segmented" aria-label="Data mode"><button id="observed-mode" aria-pressed="true">Observed</button><button id="demo-mode" aria-pressed="false">Demo</button></div></div>
 <div id="data-banner" class="notice"></div><div class="live-toolbar"><span id="live-status" class="muted">No live feed yet</span><button id="refresh-live">Refresh live results</button></div><div class="toolbar"><label>Snapshot<select id="snapshot"></select></label><label>Office<select id="position-select"></select></label><label>Contest<select id="race-select"></select></label><label>Place<select id="county-select"></select></label></div>
-<div id="empty" class="empty" hidden><div class="empty-symbol">⇧</div><h2>No races loaded.</h2><p>No observed file is open. Bring a Colorado SOS export,<br>or open the demo if you just want to click around.</p><button class="primary" data-page="imports">Import a file</button><button id="explore-demo">Open the demo</button></div>
+<div id="empty" class="empty" hidden><div class="empty-symbol">⇧</div><h2>No races loaded</h2><p>Import a Colorado SOS export, or open the demo.</p><button class="primary" data-page="imports">Import a file</button><button id="explore-demo">Open the demo</button></div>
 <div id="results"><div class="metrics"><article><span>Candidate votes here</span><strong id="vote-total">—</strong></article><article><span>Races in this file</span><strong id="race-total">—</strong></article><article><span>Places in view</span><strong id="area-total">—</strong></article><article><span>Top-two margin</span><strong id="margin">—</strong></article></div>
-<div class="results-grid"><article class="panel"><div class="panel-heading"><div><span class="eyebrow">THE COUNT</span><h2 id="race-heading"></h2></div><span id="result-badge" class="badge"></span></div><div id="candidates"></div></article><article class="panel source-panel"><span class="eyebrow">THE RECEIPT</span><h2>Where this came from</h2><dl id="source-details"></dl><button id="export" class="full-width">Download JSON ↓</button><p id="storage-note" class="muted">Imports stay in this browser. Nobody else sees them.</p></article></div>
-</div><section class="analytics-grid"><article class="panel"><span class="eyebrow">THE SPLIT</span><h2>Who has what</h2><div id="share-chart" class="chart" aria-label="Candidate share chart"></div></article><article class="panel" id="drop-panel"><span class="eyebrow">MANUAL DROPS</span><h2>Drops by name</h2><div id="drop-chart" class="chart" aria-label="Manual drops by candidate"></div></article></section><article class="panel watch"><div class="panel-heading"><div><span class="eyebrow">SAME FILE</span><h2>Other races</h2></div></div><div id="race-cards" class="race-cards"></div><p id="prediction-status" class="muted" role="status" aria-live="polite"></p><div class="panel-heading watch-head"><h2>Watched in this file</h2><button type="button" id="watch-current">Watch this race</button></div><div id="watchlist"></div></article></section>
-<section id="imports" class="page" hidden><h1>New Data, No Problem</h1><div class="steps"><article><b>1. Get the file</b><p>Open <a href="https://www.sos.state.co.us/pubs/elections/resultsData.html" target="_blank" rel="noopener">Colorado SOS results & data ↗</a> or the <a href="https://historicalelectiondata.coloradosos.gov/" target="_blank" rel="noopener">historical election database ↗</a>. Pick one election and one reporting moment.</p></article><article><b>2. One row, one candidate</b><p>CSV, TSV, or flat JSON. One row per race, candidate, and county, or a statewide total. Pull out grand totals, precincts, and voting-method splits.</p></article><article><b>3. Check it</b><p>Map the columns and compare totals to the source. Search summaries, ballot-return files, PDFs, and spreadsheets have to become candidate rows first.</p></article></div>
-<div class="panel"><div class="panel-heading"><h2>Local file</h2><button id="template">Demo CSV ↓</button></div><p class="muted">CSV, TSV, or JSON · 10 MB · 100,000 rows · stays on this machine</p><input type="file" id="file" accept=".csv,.tsv,.json"><div id="mapping" class="form-grid"></div></div>
-<div class="panel"><h2>Campaign money (TRACER)</h2><p class="muted">A TRACER CSV stays in this browser. Donor rows are not sent anywhere.</p><input type="file" id="finance-file" accept=".csv"><p id="finance-status" role="status" class="muted">No finance file yet.</p></div><form id="import-form" class="panel"><h2>What is this file?</h2><div class="form-grid"><label>Kind of file<select id="kind"><option value="observed" selected>Observed (I downloaded this)</option><option value="demo">Demo (made up)</option></select></label><label>Election<input id="election" value="2026 General" placeholder="2026 General" maxlength="150" required></label><label>When the source reported it<input id="as-of" placeholder="2026-11-03T19:00:00-07:00" required><small>ISO time with Z or ±HH:MM, copied from the source.</small></label><label>How finished it was<select id="stage"><option value="unofficial">Unofficial</option><option value="certified">Certified (the source says so)</option></select></label><label class="wide">Source page<input type="url" id="source-url" placeholder="https://www.sos.state.co.us/…"><small>Required for observed files. Link the SOS page you actually downloaded.</small></label><label class="wide check"><input id="attest" type="checkbox"> I checked the election, the timestamp, the totals, and the reporting level. One snapshot, no double-counted rows.</label></div><button class="primary" type="submit">Check and preview</button><p id="import-status" role="status" aria-live="polite">Pick a file to start.</p><div id="preview" hidden><h3>First look</h3><div class="table-scroll"><table><thead><tr><th>Race</th><th>Candidate / choice</th><th>County / area</th><th>Party</th><th>Votes</th></tr></thead><tbody id="preview-body"></tbody></table></div><p id="preview-summary"></p><p class="muted">First 10 rows only. Saving this starts a new snapshot. It does not add onto an older one.</p><button type="button" id="commit" class="primary">Save snapshot</button></div></form></section>
-<section id="ballots" class="page" hidden><div class="page-title"><div><span class="eyebrow">2026 GENERAL</span><h1>Ballot Issues</h1></div><a id="ballot-source" href="https://content.leg.colorado.gov/sites/default/files/2026-blue-book-en-accessible.pdf" target="_blank" rel="noopener">Open Blue Book ↗</a></div><div class="notice observed">Progress bars show Yes votes toward the passage threshold. Enter each drop from the SOS result page; constitutional amendments require 55%, while the other listed measures require a majority.</div><div id="ballot-list" class="ballot-list"></div></section>
-<section id="returns" class="page" hidden><div class="page-title"><div><span class="eyebrow">2026 GENERAL</span><h1>Ballots Returned</h1></div><span class="badge">Observed</span></div><div id="returns-content"></div></section>
-<section id="history" class="page" hidden><h1>Past Data</h1><div id="history-list"></div><p class="muted">Bundled history comes with the app. Files you import stay in this browser, on this device. Clear the browser data and those imports are gone, so download a JSON backup first. A backup is the rows plus the notes, not the original file.</p></section>
+<div class="results-grid"><article class="panel"><div class="panel-heading"><div><h2 id="race-heading"></h2></div><span id="result-badge" class="badge"></span></div><div id="candidates"></div></article><article class="panel source-panel"><h2>Source</h2><dl id="source-details"></dl><button id="export" class="full-width">Download JSON ↓</button></div>
+</div><section class="analytics-grid"><article class="panel"><h2>Vote share</h2><div id="share-chart" class="chart" aria-label="Candidate share chart"></div></article><article class="panel" id="drop-panel"><h2>Manual drops</h2><div id="drop-chart" class="chart" aria-label="Manual drops by candidate"></div></article></section><article class="panel watch"><div class="panel-heading"><div><h2>Other races</h2></div></div><div id="race-cards" class="race-cards"></div><div class="panel-heading watch-head"><h2>Watched in this file</h2><button type="button" id="watch-current">Watch this race</button></div><div id="watchlist"></div></article></section>
+<section id="imports" class="page" hidden><h1>Import</h1>
+<div class="panel"><div class="panel-heading"><h2>Local file</h2><button id="template">Demo CSV ↓</button></div><input type="file" id="file" accept=".csv,.tsv,.json"><div id="mapping" class="form-grid"></div></div>
+<div class="panel"><h2>Campaign money (TRACER)</h2><input type="file" id="finance-file" accept=".csv"><p id="finance-status" role="status" class="muted">No finance file yet.</p></div><form id="import-form" class="panel"><h2>File metadata</h2><div class="form-grid"><label>Kind<select id="kind"><option value="observed" selected>Observed</option><option value="demo">Demo</option></select></label><label>Election<input id="election" value="2026 General" placeholder="2026 General" maxlength="150" required></label><label>Source reported at<input id="as-of" placeholder="2026-11-03T19:00:00-07:00" required></label><label>Stage<select id="stage"><option value="unofficial">Unofficial</option><option value="certified">Certified</option></select></label><label class="wide">Source URL<input type="url" id="source-url" placeholder="https://www.sos.state.co.us/…"></label><label class="wide check"><input id="attest" type="checkbox"> Checked election, timestamp, totals, and reporting level</label></div><button class="primary" type="submit">Check and preview</button><p id="import-status" role="status" aria-live="polite">Pick a file to start.</p><div id="preview" hidden><h3>Preview</h3><div class="table-scroll"><table><thead><tr><th>Race</th><th>Candidate / choice</th><th>County / area</th><th>Party</th><th>Votes</th></tr></thead><tbody id="preview-body"></tbody></table></div><p id="preview-summary"></p><button type="button" id="commit" class="primary">Save snapshot</button></div></form></section>
+<section id="ballots" class="page" hidden><div class="page-title"><div><h1>Ballot Issues</h1></div><a id="ballot-source" href="https://content.leg.colorado.gov/sites/default/files/2026-blue-book-en-accessible.pdf" target="_blank" rel="noopener">Blue Book ↗</a></div><div id="ballot-list" class="ballot-list"></div></section>
+<section id="returns" class="page" hidden><div class="page-title"><div><h1>Ballots Returned</h1></div></div><div id="returns-content"></div></section>
+<section id="history" class="page" hidden><h1>History</h1><div id="history-list"></div></section>
 <section id="research" class="page" hidden>
   <h1>Experimental Analytics</h1>
   <div class="research-bench" id="research-bench">
@@ -26,7 +26,7 @@
       <form id="research-pick" class="calc">
         <label>File<select name="file"></select></label>
         <label>Contest<select name="contest"></select></label>
-        <label title="The choice this page tracks: path-to-victory, share of remaining, and charts use this side.">Focus<select name="focus"></select></label>
+        <label>Focus<select name="focus"></select></label>
       </form>
       <div id="research-count" class="research-count" aria-live="polite"></div>
       <h2>Calculator</h2>
@@ -52,23 +52,19 @@
           <button type="button" data-pad="digit" class="pad-zero">0</button>
           <button type="button" data-pad="dot">.</button>
         </div>
-        <p class="muted pad-hint">For margins, shares, and leftover totals while you work.</p>
       </div>
       <h2>Compatible history</h2>
-      <p class="muted" id="research-history-note">Same office and district on the current map. Check the ones to use.</p>
       <div id="research-history" class="research-history"></div>
       <h2>Projection models</h2>
-      <p class="muted" id="research-models-note">Toggle models onto the charts for this contest. They use the file, checked history, and scenario knobs — they do not write into the vote count.</p>
       <div id="research-models" class="research-models" role="group" aria-label="Projection model toggles"></div>
       <h2>Scenario drops</h2>
-      <p class="muted" id="research-drop-note">Attribute each scenario drop to the candidate who receives it. Drops update path, turnout, and charts here only.</p>
       <form id="research-drop" class="calc">
         <input type="hidden" name="file">
         <input type="hidden" name="contest">
-        <label title="The candidate receiving this scenario drop.">Candidate<select name="candidate" required></select></label>
-        <label title="Added to the selected candidate in this sandbox only. Path to victory and the charts use the new total.">Votes in this drop<input name="votes" type="number" min="0" step="1" required></label>
+        <label>Candidate<select name="candidate" required></select></label>
+        <label>Votes in this drop<input name="votes" type="number" min="0" step="1" required></label>
         <label>Source timestamp<input name="asOf" type="datetime-local"></label>
-        <label class="wide">Note<input name="note" maxlength="240" required placeholder="What-if, trial count, or scratch pad"></label>
+        <label class="wide">Note<input name="note" maxlength="240" required></label>
         <div class="wide"><button class="primary" type="submit">Save scenario drop</button></div>
       </form>
       <div id="research-drops" class="research-drop-list"></div>
@@ -78,77 +74,67 @@
     </aside>
     <div class="research-main">
       <article class="panel" id="research-path">
-        <div class="panel-heading"><div><span class="eyebrow">FROM HERE</span><h2>Path to victory</h2></div><span id="research-kind" class="badge">SCENARIO</span></div>
-        <p id="research-path-summary" class="research-summary" role="status" aria-live="polite">Pick a contest to begin.</p>
+        <div class="panel-heading"><div><h2>Path to victory</h2></div><span id="research-kind" class="badge">SCENARIO</span></div>
+        <p id="research-path-summary" class="research-summary" role="status" aria-live="polite"></p>
         <div id="research-path-metrics" class="research-metrics"></div>
       </article>
       <article class="panel">
         <h2>Turnout and remaining votes</h2>
         <form id="research-scenario" class="calc">
-          <label title="Your guess for the contest’s final vote total when counting ends.">Estimated final vote total<input name="finalTotal" type="number" min="0" step="1"></label>
-          <label class="vote-auto" hidden title="Average of compatible past vote totals for this seat.">Past average<select name="auto"></select></label>
-          <p id="vote-auto-note" class="calc-file wide" hidden></p>
-          <label title="Final vote total minus votes already reported. You enter this; the file never invents it.">Votes remaining<input name="remaining" type="number" min="0" step="1"></label>
-          <label title="Percent of the still-uncounted votes you assume the focus choice gets. 50 means an even split of what is left.">Focus share of remaining (%)<input name="share" type="number" min="0" max="100" step="0.1" value="50"></label>
-          <label class="check wide" title="Off = vote history only. On = nudge remaining share from a funding advantage. Association is not proof funding caused the result.">
+          <label>Estimated final vote total<input name="finalTotal" type="number" min="0" step="1"></label>
+          <label class="vote-auto" hidden>Past average<select name="auto"></select></label>
+          <label>Votes remaining<input name="remaining" type="number" min="0" step="1"></label>
+          <label>Focus share of remaining (%)<input name="share" type="number" min="0" max="100" step="0.1" value="50"></label>
+          <label class="check wide">
             <input type="checkbox" name="useFunding"> Funding what-if
           </label>
-          <label class="funding-opts" title="Opponent: raised more than the other side in this seat. Category: raised more than the average candidate for this office type (House, Senate, …).">
+          <label class="funding-opts">
             Funding baseline
             <select name="fundBaseline">
               <option value="opponent">Vs opponent</option>
               <option value="category">Vs office-category average</option>
             </select>
           </label>
-          <label class="funding-opts" title="0% ignores funding. 100% uses the full historical or assumed slope. Raise or lower to try stronger/weaker money effects.">
+          <label class="funding-opts">
             Funding influence (%)
             <input name="fundInfluence" type="number" min="0" max="300" step="5" value="100">
           </label>
-          <p class="calc-file wide" id="research-funding-note" hidden></p>
-          <p class="calc-file wide" id="research-reported">Reported votes stay beside these knobs. Nothing here is written into the count.</p>
         </form>
         <div id="research-turnout" class="scenario-grid" aria-label="Turnout scenarios"></div>
         <div id="research-cases" class="scenario-grid" aria-label="Best base and worst cases"></div>
       </article>
       <article class="panel" id="research-model-panel">
-        <div class="panel-heading"><div><span class="eyebrow">TOGGLED MODELS</span><h2>Model readouts</h2></div></div>
-        <p class="muted" id="research-model-empty">Turn on models in the left pane to project this contest with them.</p>
+        <div class="panel-heading"><div><h2>Model readouts</h2></div></div>
         <div id="research-model-viz" class="research-model-viz" aria-live="polite"></div>
       </article>
       <article class="panel">
-        <h2>What it looks like</h2>
+        <h2>Charts</h2>
         <div class="research-charts">
           <figure class="research-chart research-chart-wide">
-            <figcaption title="Focus share: reported so far versus vote-history, funding-adjusted, and scenario projections. Funding bars use the baseline and influence settings above even when the what-if toggle is off.">Projections vs reported</figcaption>
+            <figcaption>Projections vs reported</figcaption>
             <div id="chart-compare" class="chart-frame" role="img" aria-label="Projection comparison chart"></div>
-            <p id="chart-compare-text" class="chart-text"></p>
             <div id="chart-compare-legend" class="chart-legend" aria-hidden="true"></div>
           </figure>
           <figure class="research-chart">
-            <figcaption title="Past focus share in checked compatible contests, plus the weighted baseline those rows imply.">Past results and baseline</figcaption>
+            <figcaption>Past results and baseline</figcaption>
             <div id="chart-baseline" class="chart-frame" role="img" aria-label="Historical baseline chart"></div>
-            <p id="chart-baseline-text" class="chart-text"></p>
           </figure>
           <figure class="research-chart">
-            <figcaption title="Projected lead in percentage points (pp) as more of the remaining vote is counted. Band is ±10 points of remaining share.">Margin as remaining votes change</figcaption>
+            <figcaption>Margin as remaining votes change</figcaption>
             <div id="chart-fan" class="chart-frame" role="img" aria-label="Remaining vote fan chart"></div>
-            <p id="chart-fan-text" class="chart-text"></p>
           </figure>
           <figure class="research-chart research-chart-wide">
-            <figcaption title="Solid: votes already reported. Hatched: expected remaining under your focus share of remaining.">Reported versus expected remaining</figcaption>
+            <figcaption>Reported versus expected remaining</figcaption>
             <div id="chart-stack" class="chart-frame" role="img" aria-label="Stacked final vote chart"></div>
-            <p id="chart-stack-text" class="chart-text"></p>
           </figure>
           <figure class="research-chart">
-            <figcaption title="Sandbox focus-vote drops for this contest. They feed path and charts here; Overview predictions stay separate.">Scenario drops</figcaption>
+            <figcaption>Scenario drops</figcaption>
             <div id="chart-drops" class="chart-frame" role="img" aria-label="Scenario drop trend chart"></div>
-            <p id="chart-drops-text" class="chart-text"></p>
           </figure>
         </div>
       </article>
       <details class="panel research-advanced">
-        <summary><span><strong>Technical details</strong><small>Manual inputs and formulas. Toggle models onto charts from the left pane.</small></span></summary>
-        <p class="muted">Same archives as the left-pane toggles. Use this section to override priors and inspect formulas. Results stay on this page and are not written into the vote count.</p>
+        <summary><strong>Technical details</strong></summary>
         <div id="models"></div>
       </details>
     </div>

@@ -76,10 +76,12 @@ export function financeForSeat(records = [], {position = '', district = ''} = {}
   const wantDist = financeDistrictKey(district);
   if (!wantPos && !wantDist) return records;
   return records.filter(r => {
+    const rPosition = nameKey(r.position);
     const rCat = officeCategory(r.position);
-    const okPos = !wantPos || (wantCat !== 'other' && rCat === wantCat) || nameKey(r.position).includes(wantPos) || wantPos.includes(nameKey(r.position));
+    const unmapped = !rPosition || (rCat === 'other' && rPosition === 'unmapped position');
+    const okPos = !wantPos || unmapped || (wantCat !== 'other' && rCat === wantCat) || rPosition.includes(wantPos) || wantPos.includes(rPosition);
     const rDist = financeDistrictKey(r.district);
-    const okDist = !wantDist || rDist === wantDist;
+    const okDist = !wantDist || unmapped || rDist === wantDist;
     return okPos && okDist;
   });
 }

@@ -1,0 +1,25 @@
+{
+  "id": "co-2026-ballot-issues",
+  "election": "2026 General",
+  "electionDate": "2026-11-03",
+  "kind": "observed",
+  "sourceUrl": "https://content.leg.colorado.gov/sites/default/files/2026-blue-book-en-accessible.pdf",
+  "sourceLabel": "Colorado 2026 State Ballot Information Booklet",
+  "issues": [
+    {"id":"amendment-81","label":"Amendment 81","title":"Law Enforcement Communication with Federal Immigration Authorities","type":"Constitutional amendment","threshold":0.55},
+    {"id":"amendment-82","label":"Amendment 82","title":"Constitutional Right to Purchase and Sell Natural Gas","type":"Constitutional amendment","threshold":0.55},
+    {"id":"amendment-83","label":"Amendment 83","title":"Constitutional Right to Hunt and Fish","type":"Constitutional amendment","threshold":0.55},
+    {"id":"amendment-84","label":"Amendment 84","title":"Mail Ballot Voter Identification","type":"Constitutional amendment","threshold":0.55},
+    {"id":"amendment-85","label":"Amendment 85","title":"Plain Language Ballot Titles","type":"Constitutional amendment","threshold":0.55},
+    {"id":"amendment-86","label":"Amendment 86","title":"Requirements for Off-Cycle Congressional Redistricting","type":"Constitutional amendment","threshold":0.55},
+    {"id":"amendment-87","label":"Amendment 87","title":"Graduated Income Tax","type":"Constitution and statutes","threshold":0.5},
+    {"id":"proposition-nn","label":"Proposition NN","title":"Keep and Spend Money for Education and Other Purposes","type":"Statutory measure","threshold":0.5},
+    {"id":"proposition-132","label":"Proposition 132","title":"Increase Penalties for Fentanyl Crimes","type":"Statutory measure","threshold":0.5},
+    {"id":"proposition-133","label":"Proposition 133","title":"Penalties for Human Trafficking of a Minor","type":"Statutory measure","threshold":0.5},
+    {"id":"proposition-134","label":"Proposition 134","title":"Male and Female Participation in School and Collegiate Sports","type":"Statutory measure","threshold":0.5},
+    {"id":"proposition-135","label":"Proposition 135","title":"Prohibit Surgery on Minors in Response to Perception of Sex or Gender","type":"Statutory measure","threshold":0.5},
+    {"id":"proposition-136","label":"Proposition 136","title":"Income Tax Rate Limit","type":"Statutory measure","threshold":0.5},
+    {"id":"proposition-137","label":"Proposition 137","title":"Direct Sporting Goods Sales Tax Revenue for Conservation","type":"Statutory measure","threshold":0.5},
+    {"id":"issue-7a","label":"Front Range Passenger Rail District Ballot Issue 7A","title":"Colorado Connector passenger rail tax and debt","type":"Local district referred measure","threshold":0.5,"scope":"Front Range Passenger Rail District"}
+  ]
+}

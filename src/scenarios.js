@@ -83,17 +83,19 @@ export function projectOutcome({focusVotes, otherVotes, remaining, focusShare} =
   };
 }
 
-export function turnoutScenarios(totals = []) {
+export function turnoutScenarios(totals = [], currentReturned = 0) {
   const usable = [...new Set(totals.filter(n => Number.isSafeInteger(n) && n > 0))].sort((a, b) => a - b);
   if (!usable.length) return {ok: false, reason: 'No past vote totals are selected yet.', rows: []};
   const sum = usable.reduce((n, v) => n + v, 0);
   const avg = Math.round(sum / usable.length);
+  const returned = Number.isSafeInteger(currentReturned) && currentReturned > 0 ? currentReturned : 0;
   const rows = [
     {id: 'low', label: 'Low', finalTotal: usable[0], kind: 'historical'},
-    {id: 'base', label: 'Historical average', finalTotal: avg, kind: 'historical'},
-    {id: 'high', label: 'High', finalTotal: usable[usable.length - 1], kind: 'historical'}
+    {id: 'base', label: returned > avg ? '2026 floor (returns above average)' : 'Historical average', finalTotal: Math.max(avg, returned), kind: returned > avg ? 'current-floor' : 'historical'},
+    {id: 'high', label: 'High', finalTotal: Math.max(usable[usable.length - 1], returned), kind: 'historical'}
   ];
-  return {ok: true, rows, sampleSize: usable.length, min: usable[0], max: usable[usable.length - 1], average: avg};
+  if (returned) rows.splice(1, 0, {id: 'returned', label: '2026 returned so far', finalTotal: returned, kind: 'current'});
+  return {ok: true, rows, sampleSize: usable.length, min: usable[0], max: usable[usable.length - 1], average: Math.max(avg, returned), historicalAverage: avg, currentReturned: returned, projectionRaised: returned > avg};
 }
 
 export function remainingFromFinal(reported, estimatedFinal) {

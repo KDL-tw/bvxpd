@@ -23,11 +23,22 @@ function nameKey(value) {
 export function officeCategory(position = '') {
   const p = nameKey(position);
   if (!p) return 'other';
-  if (/\bgovernor\b/.test(p)) return 'governor';
+  // Joint tickets and plain Governor both count as governor; standalone Lt. Governor does not.
+  if (/^governor\b/.test(p)) return 'governor';
+  if (/\blieutenant governor\b|\blt governor\b/.test(p)) return 'lt-governor';
   if (/\bsenate\b/.test(p) && !/\bhouse\b/.test(p)) return 'senate';
   if (/\bhouse\b|\brepresentative\b|\bhd\b|\brep\b/.test(p)) return 'house';
-  if (/\bsecretary\b|\battorney\b|\btreasurer\b|\bcontroller\b|\bregent\b|\bstatewide\b/.test(p)) return 'statewide';
+  if (/\bsecretary\b|\battorney\b|\btreasurer\b|\bcontroller\b|\bregent\b/.test(p)) return 'statewide';
   return 'other';
+}
+
+// Align State / Statewide / District N with vote-seat district keys.
+export function financeDistrictKey(value = '') {
+  const name = String(value || '').trim().toLowerCase().replace(/\./g, '');
+  if (!name) return '';
+  if (name === 'state' || name === 'statewide') return 'state';
+  const match = name.match(/^(?:district\s+)?(\d+)$/);
+  return match ? String(Number(match[1])) : nameKey(value);
 }
 
 // Mean candidate-level receipts in the same office category across the TRACER set.
@@ -60,14 +71,17 @@ export function receiptsForNames(records = [], names = []) {
 }
 
 export function financeForSeat(records = [], {position = '', district = ''} = {}) {
-  const pos = nameKey(position), dist = String(district || '').trim().toLowerCase();
-  if (!pos && !dist) return records;
-  const scoped = records.filter(r => {
-    const okPos = !pos || nameKey(r.position).includes(pos) || pos.includes(nameKey(r.position));
-    const okDist = !dist || dist === 'statewide' || String(r.district || '').trim().toLowerCase() === dist || nameKey(r.district) === nameKey(district);
+  const wantCat = position ? officeCategory(position) : '';
+  const wantPos = nameKey(position);
+  const wantDist = financeDistrictKey(district);
+  if (!wantPos && !wantDist) return records;
+  return records.filter(r => {
+    const rCat = officeCategory(r.position);
+    const okPos = !wantPos || (wantCat !== 'other' && rCat === wantCat) || nameKey(r.position).includes(wantPos) || wantPos.includes(nameKey(r.position));
+    const rDist = financeDistrictKey(r.district);
+    const okDist = !wantDist || rDist === wantDist;
     return okPos && okDist;
   });
-  return scoped.length ? scoped : records;
 }
 
 // mode 'opponent': focus vs opponent receipts in the seat.

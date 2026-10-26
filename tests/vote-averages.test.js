@@ -27,7 +27,8 @@ test('office and district labels line up across files', () => {
   assert.equal(officeKey('State Senate'), officeKey('Colorado State Senate'));
   assert.equal(officeKey('Attorney General'), officeKey('Colorado Attorney General'));
   assert.equal(officeKey('District Court'), '');
-  assert.equal(officeKey('Governor / Lieutenant Governor'), '');
+  assert.equal(officeKey('Governor / Lieutenant Governor'), 'governor');
+  assert.equal(officeKey('Governor'), 'governor');
   assert.equal(districtKey('1'), '1');
   assert.equal(districtKey('District 1'), '1');
   assert.equal(districtKey('District 10'), '10');
@@ -61,6 +62,19 @@ test('statewide offices can use earlier years', () => {
   assert.equal(options.length, 1);
   assert.equal(options[0].votes, 2479141);
   assert.deepEqual(options[0].rows.map(row => row.year), [2022, 2018]);
+});
+
+test('governor matches the 2022 joint-ticket abstract', () => {
+  const general = load('../data/historical/co-2022-general.json');
+  const seats = rowsFrom(general).filter(row => row.office === 'governor');
+  assert.equal(seats.length, 1);
+  assert.equal(seats[0].district, 'state');
+  assert.ok(seats[0].total > 0);
+  const now = subject('Governor', 'State', 'Governor - State');
+  assert.equal(now.office, 'governor');
+  assert.equal(now.district, 'state');
+  // Only one prior governor year is bundled, so no multi-year average yet.
+  assert.deepEqual(pastVoteAverages(now, seats), []);
 });
 
 test('past 3 is offered only when three contests agree', () => {

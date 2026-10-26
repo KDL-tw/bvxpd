@@ -16,6 +16,11 @@ const OFFICES = new Map([
   ['secretary of state', 'secretary-of-state'],
   ['state treasurer', 'treasurer'],
   ['governor', 'governor'],
+  ['governor / lieutenant governor', 'governor'],
+  ['governor/lieutenant governor', 'governor'],
+  ['governor and lieutenant governor', 'governor'],
+  ['lt governor', 'lt-governor'],
+  ['lieutenant governor', 'lt-governor'],
   ['state board of education', 'state-board'],
   ['university of colorado board of regents', 'cu-regent']
 ]);
@@ -23,7 +28,11 @@ const DISTRICTED = new Set(['us-house', 'state-house', 'state-senate', 'state-bo
 
 export function officeKey(position) {
   const name = String(position || '').toLowerCase().replace(/\./g, '').replace(/\s+/g, ' ').trim();
-  return OFFICES.get(name) || '';
+  if (OFFICES.has(name)) return OFFICES.get(name);
+  // Joint governor tickets and near-labels from SOS abstracts.
+  if (/^governor\b/.test(name) && /lieutenant/.test(name)) return 'governor';
+  if (/^governor\b/.test(name)) return 'governor';
+  return '';
 }
 
 export function districtKey(value) {

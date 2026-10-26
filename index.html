@@ -24,7 +24,7 @@
       <form id="research-pick" class="calc">
         <label>File<select name="file"></select></label>
         <label>Contest<select name="contest"></select></label>
-        <label>Focus<select name="focus"></select></label>
+        <label title="The choice this page tracks: path-to-victory, share of remaining, and charts use this side.">Focus<select name="focus"></select></label>
       </form>
       <div id="research-count" class="research-count" aria-live="polite"></div>
       <h2>Calculator</h2>
@@ -55,16 +55,23 @@
       <h2>Compatible history</h2>
       <p class="muted" id="research-history-note">Same office and district on the current map. Check the ones to use.</p>
       <div id="research-history" class="research-history"></div>
-      <h2>Reporting drop</h2>
+      <h2>Projection models</h2>
+      <p class="muted" id="research-models-note">Toggle models onto the charts for this contest. They use the file, checked history, and scenario knobs — they do not write into the vote count.</p>
+      <div id="research-models" class="research-models" role="group" aria-label="Projection model toggles"></div>
+      <h2>Scenario drops</h2>
+      <p class="muted" id="research-drop-note">Sandbox only — these stay on this page. They never write into Overview predictions or the vote count.</p>
       <form id="research-drop" class="calc">
         <input type="hidden" name="file">
         <input type="hidden" name="contest">
-        <label>Votes reported in this drop<input name="votes" type="number" min="0" step="1" required></label>
+        <label>Votes in this scenario drop<input name="votes" type="number" min="0" step="1" required></label>
         <label>Source timestamp<input name="asOf" type="datetime-local"></label>
-        <label class="wide">Source note<input name="note" maxlength="240" required placeholder="SOS page, feed, or who reported it"></label>
-        <div class="wide"><button class="primary" type="submit">Save drop</button></div>
+        <label class="wide">Note<input name="note" maxlength="240" required placeholder="What-if, trial count, or scratch pad"></label>
+        <div class="wide"><button class="primary" type="submit">Save scenario drop</button></div>
       </form>
       <div id="research-drops" class="research-drop-list"></div>
+      <div class="wide research-drop-actions" id="research-drop-actions" hidden>
+        <button type="button" id="research-drops-clear">Clear drops for this contest</button>
+      </div>
     </aside>
     <div class="research-main">
       <article class="panel" id="research-path">
@@ -75,44 +82,70 @@
       <article class="panel">
         <h2>Turnout and remaining votes</h2>
         <form id="research-scenario" class="calc">
-          <label>Estimated final vote total<input name="finalTotal" type="number" min="0" step="1"></label>
-          <label class="vote-auto" hidden>Past average<select name="auto"></select></label>
+          <label title="Your guess for the contest’s final vote total when counting ends.">Estimated final vote total<input name="finalTotal" type="number" min="0" step="1"></label>
+          <label class="vote-auto" hidden title="Average of compatible past vote totals for this seat.">Past average<select name="auto"></select></label>
           <p id="vote-auto-note" class="calc-file wide" hidden></p>
-          <label>Votes remaining<input name="remaining" type="number" min="0" step="1"></label>
-          <label>Focus share of remaining (%)<input name="share" type="number" min="0" max="100" step="0.1" value="50"></label>
+          <label title="Final vote total minus votes already reported. You enter this; the file never invents it.">Votes remaining<input name="remaining" type="number" min="0" step="1"></label>
+          <label title="Percent of the still-uncounted votes you assume the focus choice gets. 50 means an even split of what is left.">Focus share of remaining (%)<input name="share" type="number" min="0" max="100" step="0.1" value="50"></label>
+          <label class="check wide" title="Off = vote history only. On = nudge remaining share from a funding advantage. Association is not proof funding caused the result.">
+            <input type="checkbox" name="useFunding"> Funding what-if
+          </label>
+          <label class="funding-opts" title="Opponent: raised more than the other side in this seat. Category: raised more than the average candidate for this office type (House, Senate, …).">
+            Funding baseline
+            <select name="fundBaseline">
+              <option value="opponent">Vs opponent</option>
+              <option value="category">Vs office-category average</option>
+            </select>
+          </label>
+          <label class="funding-opts" title="0% ignores funding. 100% uses the full historical or assumed slope. Raise or lower to try stronger/weaker money effects.">
+            Funding influence (%)
+            <input name="fundInfluence" type="number" min="0" max="300" step="5" value="100">
+          </label>
+          <p class="calc-file wide" id="research-funding-note" hidden></p>
           <p class="calc-file wide" id="research-reported">Reported votes stay beside these knobs. Nothing here is written into the count.</p>
         </form>
         <div id="research-turnout" class="scenario-grid" aria-label="Turnout scenarios"></div>
         <div id="research-cases" class="scenario-grid" aria-label="Best base and worst cases"></div>
       </article>
+      <article class="panel" id="research-model-panel">
+        <div class="panel-heading"><div><span class="eyebrow">TOGGLED MODELS</span><h2>Model readouts</h2></div></div>
+        <p class="muted" id="research-model-empty">Turn on models in the left pane to project this contest with them.</p>
+        <div id="research-model-viz" class="research-model-viz" aria-live="polite"></div>
+      </article>
       <article class="panel">
         <h2>What it looks like</h2>
         <div class="research-charts">
+          <figure class="research-chart research-chart-wide">
+            <figcaption title="Focus share: reported so far versus vote-history, funding-adjusted, and scenario projections. Funding bars use the baseline and influence settings above even when the what-if toggle is off.">Projections vs reported</figcaption>
+            <div id="chart-compare" class="chart-frame" role="img" aria-label="Projection comparison chart"></div>
+            <p id="chart-compare-text" class="chart-text"></p>
+            <div id="chart-compare-legend" class="chart-legend" aria-hidden="true"></div>
+          </figure>
           <figure class="research-chart">
-            <figcaption>Past results and baseline</figcaption>
+            <figcaption title="Past focus share in checked compatible contests, plus the weighted baseline those rows imply.">Past results and baseline</figcaption>
             <div id="chart-baseline" class="chart-frame" role="img" aria-label="Historical baseline chart"></div>
             <p id="chart-baseline-text" class="chart-text"></p>
           </figure>
           <figure class="research-chart">
-            <figcaption>Margin as remaining votes change</figcaption>
+            <figcaption title="Projected lead in percentage points (pp) as more of the remaining vote is counted. Band is ±10 points of remaining share.">Margin as remaining votes change</figcaption>
             <div id="chart-fan" class="chart-frame" role="img" aria-label="Remaining vote fan chart"></div>
             <p id="chart-fan-text" class="chart-text"></p>
           </figure>
           <figure class="research-chart">
-            <figcaption>Reported versus expected remaining</figcaption>
+            <figcaption title="Solid: votes already reported. Hatched: expected remaining under your focus share of remaining.">Reported versus expected remaining</figcaption>
             <div id="chart-stack" class="chart-frame" role="img" aria-label="Stacked final vote chart"></div>
             <p id="chart-stack-text" class="chart-text"></p>
           </figure>
           <figure class="research-chart">
-            <figcaption>Saved drops</figcaption>
-            <div id="chart-drops" class="chart-frame" role="img" aria-label="Drop trend chart"></div>
+            <figcaption title="Scenario drops typed on this page only. Separate from Overview predictions.">Scenario drops</figcaption>
+            <div id="chart-drops" class="chart-frame" role="img" aria-label="Scenario drop trend chart"></div>
             <p id="chart-drops-text" class="chart-text"></p>
           </figure>
         </div>
       </article>
       <details class="panel research-advanced">
-        <summary><span><strong>Technical details</strong><small>Formulas, priors, and the six research models. Depth stays here.</small></span></summary>
-        <p class="muted">These tools use the same archives. Results stay on this page and are not written into the vote count.</p>
+        <summary><span><strong>Technical details</strong><small>Manual inputs and formulas. Toggle models onto charts from the left pane.</small></span></summary>
+        <p class="muted">Same archives as the left-pane toggles. Use this section to override priors and inspect formulas. Results stay on this page and are not written into the vote count.</p>
         <div id="models"></div>
       </details>
     </div>

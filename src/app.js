@@ -592,6 +592,11 @@ $('research-drop').onsubmit=e=>{e.preventDefault();const pick=$('research-pick')
 $('research-drops')?.addEventListener('click',e=>{const btn=e.target.closest('[data-drop-remove]'); if(btn) removeResearchDrop(btn.dataset.dropRemove);});
 $('research-drops-clear')?.addEventListener('click',()=>{const pick=$('research-pick'); if(!pick?.file.value||!pick.contest.value) return; if(!confirm('Clear all scenario drops for this contest? Race Summaries drops stay untouched.')) return; clearResearchDrops(pick.file.value,pick.contest.value);});
 $('today').textContent=new Intl.DateTimeFormat('en-US',{dateStyle:'long',timeZone:'America/Denver'}).format(new Date());
+const themeKey='bullvixen.theme.v1';
+function setTheme(cyber){document.body.classList.toggle('cyberpunk',cyber);const toggle=$('theme-toggle');if(toggle){toggle.setAttribute('aria-pressed',String(cyber));toggle.textContent=cyber?'☼ Twilight mode':'◈ Cyberpunk mode';}try{localStorage.setItem(themeKey,cyber?'cyberpunk':'light');}catch{}}
+let cyberTheme=false;try{cyberTheme=localStorage.getItem(themeKey)==='cyberpunk';}catch{}
+setTheme(cyberTheme);
+$('theme-toggle')?.addEventListener('click',()=>setTheme(!document.body.classList.contains('cyberpunk')));
 function enter(){$('intro').hidden=true;$('workspace').hidden=false;$('main').focus();try{localStorage.setItem('bullvixen.skipIntro',String($('remember').checked));}catch{} }
 $('enter').onclick=$('skip-intro').onclick=enter;$('show-intro').onclick=()=>{$('intro').hidden=false;$('workspace').hidden=true;};
 // Keep the supplied artwork intact; accessible controls align with its painted controls.

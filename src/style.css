@@ -248,3 +248,20 @@ button.scenario-card:hover{border-color:#0757a6;background:#f3f8fd}
 .sidebar-watermark{flex:1;display:flex;align-items:center;justify-content:center;min-height:120px;padding:28px 8px;pointer-events:none}
 .sidebar-watermark img{display:block;width:min(190px,100%);height:auto;opacity:.2}
 @media(max-width:760px){.sidebar-watermark{display:none}}
+
+/* Cyberpunk theme: a high-energy splash-inspired alternate palette. */
+body.cyberpunk{--bg:#080b18;--panel:#10172b;--line:#2c3f6b;--muted:#a7b7d5;--blue:#25e4ff;--red:#ff3ea5;--gold:#ffad4d;color:#edf7ff;background:radial-gradient(circle at 80% 0%,#22205a 0,#080b18 42%),#080b18}
+body.cyberpunk .sidebar{background:linear-gradient(180deg,#10132a,#090b17);border-right-color:#30477b;box-shadow:8px 0 30px rgba(37,228,255,.08)}
+body.cyberpunk .brand{color:#edf7ff;text-shadow:0 0 18px rgba(37,228,255,.3)}
+body.cyberpunk .brand span{color:#25e4ff}.cyberpunk .brand em{color:#ff3ea5}.cyberpunk .brand small,.cyberpunk .sidebar-bottom,.cyberpunk .state small{color:#91a5cb}
+body.cyberpunk .sidebar-watermark img{opacity:.28;filter:invert(1) hue-rotate(155deg);mix-blend-mode:screen}
+body.cyberpunk nav button{color:#9fb2d5}body.cyberpunk nav button:hover{background:#17264a;color:#e9fbff}body.cyberpunk nav button.active{color:#e9fbff;background:linear-gradient(90deg,#123b60,#3b174b);border-color:#25e4ff;box-shadow:0 0 16px rgba(37,228,255,.16)}
+body.cyberpunk .co-mark{color:#25e4ff;border-color:#25e4ff;box-shadow:0 0 14px rgba(37,228,255,.25)}
+body.cyberpunk .shell>header{background:rgba(8,11,24,.9);border-color:#2c3f6b}body.cyberpunk h1,body.cyberpunk h2,body.cyberpunk h3{color:#f4f8ff}body.cyberpunk .eyebrow{color:#25e4ff}body.cyberpunk a{color:#25e4ff}
+body.cyberpunk button,body.cyberpunk input,body.cyberpunk select,body.cyberpunk textarea{background:#111a33;color:#edf7ff;border-color:#4f6594}body.cyberpunk button:hover{background:#1b2b50;border-color:#25e4ff;box-shadow:0 0 12px rgba(37,228,255,.16)}body.cyberpunk .primary{background:linear-gradient(100deg,#0757a6,#b3203a 55%,#ff3ea5);border-color:#25e4ff;box-shadow:0 0 20px rgba(255,62,165,.25)}
+body.cyberpunk .panel,body.cyberpunk .steps article,body.cyberpunk .race-detail,body.cyberpunk .forward-card,body.cyberpunk .ballot-card{background:linear-gradient(145deg,#121b34,#0e1428);border-color:#304876;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+body.cyberpunk .notice{background:#172646;border-color:#3e72a8;color:#dff8ff}body.cyberpunk .metrics{background:linear-gradient(120deg,#152f56,#3b1948)}body.cyberpunk .metrics article>span,body.cyberpunk .panel-foot,body.cyberpunk .muted,body.cyberpunk small{color:#a7b7d5}
+body.cyberpunk .bar,body.cyberpunk .chart-row div{background:#263754}body.cyberpunk .bar span,body.cyberpunk .chart-row i{background:#25e4ff}body.cyberpunk .bar span.rep,body.cyberpunk .chart-row i.rep{background:#ff3ea5}body.cyberpunk .bar span.other,body.cyberpunk .chart-row i.other{background:#ffad4d}
+body.cyberpunk .ballot-track{background:#202d49;box-shadow:inset 0 0 10px rgba(0,0,0,.5)}body.cyberpunk .ballot-track .ballot-real{background:linear-gradient(90deg,#25e4ff,#ff3ea5);box-shadow:0 0 12px rgba(37,228,255,.35)}body.cyberpunk .ballot-track .ballot-funding-shadow{background:#ffad4d;border-right-color:#ffad4d;box-shadow:0 0 12px rgba(255,173,77,.55)}body.cyberpunk .ballot-track i{border-color:#ffad4d}
+body.cyberpunk .segmented,body.cyberpunk .pad-calc,body.cyberpunk .research-count{background:#172646;border-color:#3e5d91}body.cyberpunk .segmented button[aria-pressed=true],body.cyberpunk .ballot-toggle button[aria-pressed=true]{background:#1f4671;color:#f4fbff;border-color:#25e4ff}body.cyberpunk .badge{background:#17364f;color:#dff8ff;border-color:#25e4ff}
+body.cyberpunk .sidebar-watermark{filter:drop-shadow(0 0 14px rgba(255,62,165,.16))}

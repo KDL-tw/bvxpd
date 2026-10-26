@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {categoryAverageReceipts, contestFundingAdvantage, fundingAdvantage, normalizeTracerExport, officeCategory} from '../src/finance.js';
+import {categoryAverageReceipts, contestFundingAdvantage, financeDistrictKey, financeForSeat, fundingAdvantage, normalizeTracerExport, officeCategory} from '../src/finance.js';
 
 test('TRACER rows normalize and aggregate by candidate, position, district and committee',()=>{
   const rows=normalizeTracerExport(['CandidateName','Office','District','CommitteeName','ContributionAmount','ReportingPeriodStart','ReportingPeriodEnd'],[
@@ -28,6 +28,30 @@ test('officeCategory buckets house and senate',()=>{
   assert.equal(officeCategory('State House District 8'),'house');
   assert.equal(officeCategory('State Senate District 1'),'senate');
   assert.equal(officeCategory('Governor'),'governor');
+  assert.equal(officeCategory('Governor / Lieutenant Governor'),'governor');
+  assert.equal(officeCategory('Lieutenant Governor'),'lt-governor');
+});
+
+test('financeDistrictKey treats State and Statewide as the same seat',()=>{
+  assert.equal(financeDistrictKey('State'),'state');
+  assert.equal(financeDistrictKey('Statewide'),'state');
+  assert.equal(financeDistrictKey('8'),'8');
+  assert.equal(financeDistrictKey('District 8'),'8');
+});
+
+test('financeForSeat matches Governor across State vs Statewide districts',()=>{
+  const rows=[
+    {candidate:'Jane Focus',position:'Governor',district:'Statewide',receipts:12000},
+    {candidate:'Omar Opp',position:'Governor / Lieutenant Governor',district:'State',receipts:3000},
+    {candidate:'House Cand',position:'State House',district:'8',receipts:5000}
+  ];
+  const seat=financeForSeat(rows,{position:'Governor',district:'State'});
+  assert.equal(seat.length,2);
+  assert.ok(seat.every(r=>officeCategory(r.position)==='governor'));
+  const hit=contestFundingAdvantage(rows,{focusNames:['Jane Focus'],opponentNames:['Omar Opp'],position:'Governor',district:'State'});
+  assert.ok(hit);
+  assert.equal(hit.focusReceipts,12000);
+  assert.equal(hit.opponentReceipts,3000);
 });
 
 test('contest funding advantage matches TRACER names in a seat',()=>{

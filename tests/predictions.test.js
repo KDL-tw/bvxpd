@@ -94,5 +94,19 @@ test('fundraising adjustment applies the fitted comparison effect and preserves 
   assert.equal(p.status,'evaluated');
   assert.ok(p.estimate>.5);
   assert.equal(p.inputs.fundingAdvantage,1);
+  assert.equal(p.inputs.slopeSource,'historical');
   validatePrediction(p);
 });
+
+test('fundraising influence scales the adjustment and assumed slope fills thin history', () => {
+  const training=[{fundingAdvantage:-1,outcomeShare:.42},{fundingAdvantage:0,outcomeShare:.5},{fundingAdvantage:1,outcomeShare:.58}];
+  const full=fundraisingAdjustedBaseline({contestId:'co:house:8',target:'DEM',baselineShare:.5,fundingAdvantage:1,training,influence:1});
+  const half=fundraisingAdjustedBaseline({contestId:'co:house:8',target:'DEM',baselineShare:.5,fundingAdvantage:1,training,influence:.5});
+  const off=fundraisingAdjustedBaseline({contestId:'co:house:8',target:'DEM',baselineShare:.5,fundingAdvantage:1,training,influence:0});
+  assert.ok(Math.abs((full.estimate-.5)-2*(half.estimate-.5))<1e-12);
+  assert.equal(off.estimate,.5);
+  const assumed=fundraisingAdjustedBaseline({contestId:'co:house:8',target:'DEM',baselineShare:.5,fundingAdvantage:1,training:[],influence:1,assumedSlope:.04});
+  assert.equal(assumed.inputs.slopeSource,'assumed');
+  assert.equal(assumed.estimate,.54);
+});
+

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {normalizeTracerExport} from '../src/finance.js';
+import {categoryAverageReceipts, contestFundingAdvantage, fundingAdvantage, normalizeTracerExport, officeCategory} from '../src/finance.js';
 
 test('TRACER rows normalize and aggregate by candidate, position, district and committee',()=>{
   const rows=normalizeTracerExport(['CandidateName','Office','District','CommitteeName','ContributionAmount','ReportingPeriodStart','ReportingPeriodEnd'],[
@@ -15,4 +15,48 @@ test('TRACER rows normalize and aggregate by candidate, position, district and c
 
 test('TRACER normalization requires committee and contribution columns',()=>{
   assert.throws(()=>normalizeTracerExport(['Candidate'],[['A']],'x.csv'),/needs CommitteeName/);
+});
+
+test('funding advantage is log10 focus over baseline receipts',()=>{
+  assert.equal(fundingAdvantage(999,999),0);
+  assert.ok(fundingAdvantage(9999,999)>0);
+  assert.ok(fundingAdvantage(99,9999)<0);
+  assert.equal(fundingAdvantage(-1,10),null);
+});
+
+test('officeCategory buckets house and senate',()=>{
+  assert.equal(officeCategory('State House District 8'),'house');
+  assert.equal(officeCategory('State Senate District 1'),'senate');
+  assert.equal(officeCategory('Governor'),'governor');
+});
+
+test('contest funding advantage matches TRACER names in a seat',()=>{
+  const rows=[
+    {candidate:'Ada Focus',position:'State House',district:'8',receipts:9000},
+    {candidate:'Omar Opp',position:'State House',district:'8',receipts:1000},
+    {candidate:'Other Race',position:'State Senate',district:'1',receipts:50000}
+  ];
+  const hit=contestFundingAdvantage(rows,{focusNames:['Ada Focus'],opponentNames:['Omar Opp'],position:'State House',district:'8'});
+  assert.ok(hit);
+  assert.equal(hit.mode,'opponent');
+  assert.equal(hit.focusReceipts,9000);
+  assert.equal(hit.opponentReceipts,1000);
+  assert.ok(Math.abs(hit.advantage-fundingAdvantage(9000,1000))<1e-12);
+  assert.equal(contestFundingAdvantage(rows,{focusNames:['Nobody'],opponentNames:['Missing'],position:'State House',district:'8'}),null);
+});
+
+test('category funding advantage compares focus to office-type average',()=>{
+  const rows=[
+    {candidate:'Ada Focus',position:'State House',district:'8',receipts:9000},
+    {candidate:'Omar Opp',position:'State House',district:'8',receipts:1000},
+    {candidate:'Pat House',position:'State House',district:'9',receipts:5000},
+    {candidate:'Sen Rich',position:'State Senate',district:'1',receipts:80000}
+  ];
+  const avg=categoryAverageReceipts(rows,'State House');
+  assert.equal(avg,(9000+1000+5000)/3);
+  const hit=contestFundingAdvantage(rows,{focusNames:['Ada Focus'],opponentNames:['Omar Opp'],position:'State House',district:'8',mode:'category'});
+  assert.ok(hit);
+  assert.equal(hit.mode,'category');
+  assert.equal(hit.category,'house');
+  assert.ok(Math.abs(hit.advantage-fundingAdvantage(9000,avg))<1e-12);
 });

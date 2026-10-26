@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {fanPoints, pathToVictory, projectOutcome, remainingFromFinal, scenarioBoard, turnoutScenarios} from '../src/scenarios.js';
+import {fanPoints, pathToVictory, projectOutcome, projectionCompare, remainingFromFinal, scenarioBoard, turnoutScenarios} from '../src/scenarios.js';
 
 test('path to victory names the share of remaining votes needed to lead', () => {
   const result = pathToVictory({focusVotes: 100, otherVotes: 120, remaining: 100});
@@ -55,4 +55,30 @@ test('fan points mark margin as remaining votes change', () => {
   assert.equal(points[0].remaining, 0);
   assert.equal(points[2].remaining, 100);
   assert.ok(points[2].marginPp > 0);
+});
+
+
+test('projectionCompare keeps actual and projection series side by side', () => {
+  const result = projectionCompare({
+    reportedShare: 0.48,
+    voteBaseline: 0.51,
+    fundingShare: 0.54,
+    scenarioShare: 0.52,
+    bestShare: 0.62,
+    worstShare: 0.42
+  });
+  assert.equal(result.ok, true);
+  assert.deepEqual(result.rows.map(r => r.id), ['actual', 'vote', 'funding', 'scenario', 'best', 'worst']);
+  assert.equal(result.rows[0].pct, 48);
+  assert.equal(projectionCompare({}).ok, false);
+});
+
+test('projectionCompare accepts toggled technical-model rows', () => {
+  const result = projectionCompare({
+    reportedShare: 0.5,
+    extra: [{id: 'kalman', label: 'Kalman', value: 0.53, tone: 'model'}]
+  });
+  assert.equal(result.ok, true);
+  assert.equal(result.rows.at(-1).id, 'kalman');
+  assert.equal(result.rows.at(-1).tone, 'model');
 });

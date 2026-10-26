@@ -143,3 +143,27 @@ export function fanPoints({focusVotes, otherVotes, maxRemaining, focusShare, ste
   }
   return out;
 }
+
+// Side-by-side focus-share series for charts: actual vs projection types.
+// `extra` holds toggled technical-model rows: [{id,label,value,tone?}].
+export function projectionCompare({
+  reportedShare = null,
+  voteBaseline = null,
+  fundingShare = null,
+  scenarioShare = null,
+  bestShare = null,
+  worstShare = null,
+  extra = []
+} = {}) {
+  const rows = [
+    {id: 'actual', label: 'Reported now', value: reportedShare, tone: 'actual'},
+    {id: 'vote', label: 'Vote history', value: voteBaseline, tone: 'vote'},
+    {id: 'funding', label: 'Funding-adjusted', value: fundingShare, tone: 'funding'},
+    {id: 'scenario', label: 'Scenario base', value: scenarioShare, tone: 'scenario'},
+    {id: 'best', label: 'Best case', value: bestShare, tone: 'band'},
+    {id: 'worst', label: 'Worst case', value: worstShare, tone: 'band'},
+    ...extra.map(row => ({tone: 'model', ...row}))
+  ].filter(row => Number.isFinite(row.value) && row.value >= 0 && row.value <= 1)
+    .map(row => ({...row, pct: row.value * 100}));
+  return {ok: rows.length > 0, rows};
+}

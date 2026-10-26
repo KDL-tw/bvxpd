@@ -46,12 +46,19 @@ export function testFundraisingHypothesis(observations = []) {
   return {status:'evaluated',sampleSize:rows.length,correlation,slope,conclusion:correlation>0?'Positive association observed; this does not establish causation.':correlation<0?'Negative association observed; the assumption is not supported by this sample.':'No linear association observed.'};
 }
 
-export function fundraisingAdjustedBaseline({contestId, target, baselineShare, fundingAdvantage, training = []} = {}) {
+// Default slope when history cannot estimate one: +4pp of vote share per log10 funding advantage unit.
+export const ASSUMED_FUNDING_SLOPE = 0.04;
+
+export function fundraisingAdjustedBaseline({contestId, target, baselineShare, fundingAdvantage, training = [], influence = 1, assumedSlope = ASSUMED_FUNDING_SLOPE} = {}) {
   if (!contestId || !target || !Number.isFinite(baselineShare) || !Number.isFinite(fundingAdvantage)) throw Error('A fundraising-adjusted baseline needs contest, target, baseline share and funding advantage.');
   const test=testFundraisingHypothesis(training);
-  if(test.status!=='evaluated') return predictionUnavailable({contestId,target,model:'historical-baseline',reason:`Fundraising comparison unavailable: ${test.conclusion}`});
-  const estimate=Math.max(0,Math.min(1,baselineShare+test.slope*fundingAdvantage));
-  return {schemaVersion:1,kind:'modeled',status:'evaluated',contestId,target,model:'historical-baseline',unavailable:false,estimate,interval:[Math.max(0,estimate-.10),Math.min(1,estimate+.10)],probability:null,sampleSize:test.sampleSize,inputs:{baselineShare,fundingAdvantage},assumptions:['Funding effect is estimated from matched historical observations','The adjustment is clipped to [0,1]','Interval is a comparison band, not a calibrated probability interval']};
+  const weight=Number.isFinite(influence)?Math.max(0,influence):1;
+  let slope=null, slopeSource='none', conclusion=test.conclusion;
+  if(test.status==='evaluated'){slope=test.slope; slopeSource='historical';}
+  else if(Number.isFinite(assumedSlope)){slope=assumedSlope; slopeSource='assumed'; conclusion=`Using assumed slope ${assumedSlope} (greater funding → higher share). ${test.conclusion}`;}
+  else return predictionUnavailable({contestId,target,model:'historical-baseline',reason:`Fundraising comparison unavailable: ${test.conclusion}`});
+  const estimate=Math.max(0,Math.min(1,baselineShare+weight*slope*fundingAdvantage));
+  return {schemaVersion:1,kind:'modeled',status:'evaluated',contestId,target,model:'historical-baseline',unavailable:false,estimate,interval:[Math.max(0,estimate-.10),Math.min(1,estimate+.10)],probability:null,sampleSize:test.sampleSize,inputs:{baselineShare,fundingAdvantage,influence:weight,slope,slopeSource},assumptions:['Greater funding than the chosen baseline is treated as a positive advantage','Influence scales how strongly that advantage moves the share (0 = off, 1 = full)','Historical slope is preferred when at least three comparable observations exist; otherwise an assumed positive slope is used','The adjustment is clipped to [0,1]','Association is not causation']};
 }
 
 function logGamma(z) {

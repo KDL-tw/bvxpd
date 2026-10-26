@@ -126,7 +126,7 @@ nav button.active{background:#304968;border-color:#5479a8}
 .detail-hero small{display:block}
 .detail-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 .race-detail h2{margin-bottom:4px}
-.model-block{padding:16px 0;border-top:1px solid var(--line)}.model-block h3{margin:0 0 10px;font:600 18px "Space Grotesk",sans-serif}.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;margin:0 0 14px}
+.model-block{padding:16px 0;border-top:1px solid var(--line)}.model-block summary{display:flex;justify-content:space-between;gap:16px;align-items:center;cursor:pointer;list-style:none}.model-block summary::-webkit-details-marker{display:none}.model-block summary strong{display:block;font:600 18px "Space Grotesk",sans-serif;color:var(--ink)}.model-block summary small{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:500}.model-block summary em{font-style:normal;color:var(--blue);font-size:12px;font-weight:700;white-space:nowrap}.model-purpose{color:var(--muted);font-size:13px;margin:12px 0}.calc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;margin:0 0 14px}
 .calc[hidden]{display:none}
 .calc .wide,.calc-rows{grid-column:1 / -1}
 .calc label{display:grid;gap:4px;font-size:12px;font-weight:700;color:#3d5168}

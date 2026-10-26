@@ -286,3 +286,10 @@ body.cyberpunk .race-card{background:linear-gradient(145deg,#121b34,#0e1428);col
 body.cyberpunk .race-card.selected{background:#17365b;color:#f4fbff;border-color:#25e4ff}
 body.cyberpunk .watch-eye{background:#111a33;color:#a7b7d5}
 body.cyberpunk .watch-eye[aria-pressed=true]{background:#17365b;color:#25e4ff;border-color:#25e4ff}
+
+.header-actions{display:flex;align-items:center;gap:8px}
+.icon-button{width:38px;height:38px;display:grid;place-items:center;padding:8px;border-radius:50%}
+.icon-button svg{width:20px;height:20px}
+.save-status{color:var(--muted);font-size:11px;white-space:nowrap}
+body.cyberpunk .save-status{color:#9fefff}
+@media(max-width:760px){.header-actions{gap:5px}.save-status{display:none}.header-actions .primary{padding:9px 8px}.icon-button{width:36px;height:36px}}

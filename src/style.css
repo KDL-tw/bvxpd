@@ -265,3 +265,7 @@ body.cyberpunk .bar,body.cyberpunk .chart-row div{background:#263754}body.cyberp
 body.cyberpunk .ballot-track{background:#202d49;box-shadow:inset 0 0 10px rgba(0,0,0,.5)}body.cyberpunk .ballot-track .ballot-real{background:linear-gradient(90deg,#25e4ff,#ff3ea5);box-shadow:0 0 12px rgba(37,228,255,.35)}body.cyberpunk .ballot-track .ballot-funding-shadow{background:#ffad4d;border-right-color:#ffad4d;box-shadow:0 0 12px rgba(255,173,77,.55)}body.cyberpunk .ballot-track i{border-color:#ffad4d}
 body.cyberpunk .segmented,body.cyberpunk .pad-calc,body.cyberpunk .research-count{background:#172646;border-color:#3e5d91}body.cyberpunk .segmented button[aria-pressed=true],body.cyberpunk .ballot-toggle button[aria-pressed=true]{background:#1f4671;color:#f4fbff;border-color:#25e4ff}body.cyberpunk .badge{background:#17364f;color:#dff8ff;border-color:#25e4ff}
 body.cyberpunk .sidebar-watermark{filter:drop-shadow(0 0 14px rgba(255,62,165,.16))}
+
+.sidebar-logo-cyber{display:none}
+body.cyberpunk .sidebar-logo-light{display:none}
+body.cyberpunk .sidebar-watermark .sidebar-logo-cyber{display:block;width:min(220px,100%);opacity:.92;filter:none;mix-blend-mode:normal;}

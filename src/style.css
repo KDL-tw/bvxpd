@@ -138,5 +138,6 @@ nav button.active{background:#304968;border-color:#5479a8}
 .calc-out dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:8px 0 0}
 .calc-out dt{color:#3d5168;font-size:12px;font-weight:700}
 .calc-out dd{margin:0;font:600 18px "Space Grotesk",sans-serif}
+.calc label.vote-auto[hidden],#vote-auto-note[hidden]{display:none}
 .calc button{justify-self:start}
 @media(max-width:760px){.form-grid{grid-template-columns:1fr}.history-row{flex-direction:column;align-items:stretch}.history-row .actions{justify-content:flex-start}.calc,.calc-line{grid-template-columns:1fr}}

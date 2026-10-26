@@ -274,3 +274,15 @@ body.cyberpunk .sidebar-watermark .sidebar-logo-cyber{display:block;width:min(22
 .sidebar-watermark .sidebar-logo-cyber{display:none!important}
 body.cyberpunk .sidebar-watermark .sidebar-logo-light{display:none!important}
 body.cyberpunk .sidebar-watermark .sidebar-logo-cyber{display:block!important;opacity:1;filter:none;mix-blend-mode:normal}
+
+/* Keep light-theme hover fills from producing white-on-white cyberpunk controls. */
+body.cyberpunk button:hover{color:#edf7ff}
+body.cyberpunk .forward-card .card-open:hover,
+body.cyberpunk .race-card button[data-race]:hover,
+body.cyberpunk button.scenario-card:hover,
+body.cyberpunk .pad-keys button:hover,
+body.cyberpunk .full-width:hover{background:#1b2b50;color:#edf7ff;border-color:#25e4ff}
+body.cyberpunk .race-card{background:linear-gradient(145deg,#121b34,#0e1428);color:#edf7ff;border-color:#304876}
+body.cyberpunk .race-card.selected{background:#17365b;color:#f4fbff;border-color:#25e4ff}
+body.cyberpunk .watch-eye{background:#111a33;color:#a7b7d5}
+body.cyberpunk .watch-eye[aria-pressed=true]{background:#17365b;color:#25e4ff;border-color:#25e4ff}

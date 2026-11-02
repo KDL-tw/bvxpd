@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {cuContestEstimate,cuMeasureEstimate,cuContestKey} from '../src/cu-model.js';
+const model={sample:{likelyVoterN:710,likelyVoterCredibleInterval:.0448},contests:{'us-senate':{candidates:{'John Hickenlooper':.57,'Mark Baisley':.39},uncertainty:.0448},'generic-congressional-ballot':{dem:.56,rep:.40,uncertainty:.0448}},measures:{'proposition-nn':{yes:.42,no:.44,unsure:.14,uncertainty:.0448}}};
+test('CU maps statewide offices and direct candidate estimate',()=>{assert.equal(cuContestKey({position:'U.S. Senate'}),'us-senate'); const e=cuContestEstimate(model,{position:'U.S. Senate'},{name:'John Hickenlooper'}); assert.equal(e.share,.57); assert.ok(Math.abs(e.interval[0]-.5252)<1e-9); assert.ok(Math.abs(e.interval[1]-.6148)<1e-9);});
+test('CU generic congressional estimate is party context',()=>{const e=cuContestEstimate(model,{position:'U.S. House',districtLabel:'CD 1'},{party:'DEM',name:'Any candidate'}); assert.equal(e.share,.56); assert.equal(e.kind,'generic');});
+test('CU does not invent district-specific estimates',()=>{assert.equal(cuContestEstimate(model,{position:'State House',districtLabel:'HD 1'},{party:'DEM',name:'Any'}),null);});
+test('CU ballot measure keeps yes/no/unsure and interval',()=>{const e=cuMeasureEstimate(model,'proposition-nn'); assert.equal(e.yes,.42); assert.equal(e.no,.44); assert.equal(e.unsure,.14); assert.ok(Math.abs(e.interval[0]-.3752)<1e-9);});

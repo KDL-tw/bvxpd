@@ -27,8 +27,10 @@
         <label>File<select name="file"></select></label>
         <label>Contest<select name="contest"></select></label>
         <label>Focus<select name="focus"></select></label>
+        <label>Model source<select name="source"><option value="historical">Historical baseline</option><option value="cu">CU predictive model</option></select></label>
       </form>
       <div id="research-count" class="research-count" aria-live="polite"></div>
+      <p id="research-model-source-note" class="muted" aria-live="polite"></p>
       <h2>Calculator</h2>
       <div class="pad-calc" id="pad-calc" role="group" aria-label="Calculator">
         <output id="pad-display" class="pad-display" aria-live="polite">0</output>

@@ -19,7 +19,7 @@ export function cuContestEstimate(model, contest, focus){
   if(!candidate && key==='generic-congressional-ballot' && (party==='dem'||party==='rep')) { const share=data[party]; if(Number.isFinite(Number(share))) { candidate={name:party.toUpperCase(),share}; kind='generic'; } }
   if(!candidate) return null;
   const share=Number(candidate.share); const uncertainty=Number(data.uncertainty??model.sample?.likelyVoterCredibleInterval); if(!Number.isFinite(share)) return null;
-  const u=Number.isFinite(uncertainty)?uncertainty:0;
-  return {key,share,uncertainty:u,interval:[Math.max(0,share-u),Math.min(1,share+u)],label:kind==='generic'?'Generic congressional ballot context':'CU statewide estimate',kind,observations:data.observations||null, sampleN:model.sample?.likelyVoterN||null};
+  const u=Number.isFinite(uncertainty)?uncertainty:0; const marginUncertainty=Number(data.marginUncertainty??model.sample?.likelyVoterMarginCredibleInterval??u*2);
+  return {key,share,uncertainty:u,marginUncertainty:Number.isFinite(marginUncertainty)?marginUncertainty:u*2,interval:[Math.max(0,share-u),Math.min(1,share+u)],label:kind==='generic'?'Generic congressional ballot context':'CU statewide estimate',kind,observations:data.observations||null, sampleN:model.sample?.likelyVoterN||null};
 }
 export function cuMeasureEstimate(model, issueId){const data=model?.measures?.[issueId]; if(!data) return null; const uncertainty=Number(data.uncertainty??model.sample?.likelyVoterCredibleInterval); return {...data,uncertainty:Number.isFinite(uncertainty)?uncertainty:0,interval:[Math.max(0,Number(data.yes)-uncertainty),Math.min(1,Number(data.yes)+uncertainty)]};}

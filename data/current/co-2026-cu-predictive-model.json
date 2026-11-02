@@ -10,9 +10,13 @@
   "sample": {
     "populationN": 800,
     "likelyVoterN": 710,
-    "likelyVoterWeight": 0.8875,
     "likelyVoterCredibleInterval": 0.0448,
-    "generalPopulationCredibleInterval": 0.0423
+    "generalPopulationCredibleInterval": 0.0423,
+    "likelyVoterSampleFraction": 0.8875,
+    "likelyVoterWeightedObservations": 699,
+    "generalPopulationWeightedObservations": 773,
+    "likelyVoterMarginCredibleInterval": 0.0896,
+    "weightingNote": "YouGov likely-voter weights are already applied to the published contest and measure estimates; partisan composition is descriptive of the weighted sample and is not applied a second time."
   },
   "composition": {
     "dem": 0.49,
@@ -24,7 +28,7 @@
     "nationalElectionFair": 0.56,
     "coloradoElectionFair": 0.71,
     "electionViolenceNationalConcern": 0.57,
-    "electionViolenceColoradoConcern": 0.40,
+    "electionViolenceColoradoConcern": 0.4,
     "ballotOverloadConcern": 0.53,
     "ballotPrivacyConcern": 0.35,
     "ballotLossConcern": 0.39,
@@ -36,54 +40,173 @@
       "kind": "generic",
       "office": "U.S. House",
       "dem": 0.56,
-      "rep": 0.40,
+      "rep": 0.4,
       "other": 0.02,
       "wouldNotVote": 0.02,
       "uncertainty": 0.0448,
-      "observations": 710
+      "observations": 710,
+      "marginUncertainty": 0.0896
     },
     "us-senate": {
       "office": "U.S. Senate",
-      "candidates": {"John Hickenlooper": 0.57, "Mark Baisley": 0.39},
+      "candidates": {
+        "John Hickenlooper": 0.57,
+        "Mark Baisley": 0.39
+      },
       "other": 0.01,
       "wouldNotVote": 0.03,
       "uncertainty": 0.0448,
-      "observations": 710
+      "observations": 710,
+      "marginUncertainty": 0.0896
     },
     "governor": {
       "office": "Governor",
-      "candidates": {"Phil Weiser": 0.57, "Victor Marx": 0.37},
+      "candidates": {
+        "Phil Weiser": 0.57,
+        "Victor Marx": 0.37
+      },
       "other": 0.03,
       "wouldNotVote": 0.04,
       "uncertainty": 0.0448,
-      "observations": 710
+      "observations": 710,
+      "marginUncertainty": 0.0896
     },
     "secretary-of-state": {
       "office": "Secretary of State",
-      "candidates": {"Amanda Gonzalez": 0.56, "James Wiley": 0.38},
+      "candidates": {
+        "Amanda Gonzalez": 0.56,
+        "James Wiley": 0.38
+      },
       "other": 0.01,
       "wouldNotVote": 0.05,
       "uncertainty": 0.0448,
-      "observations": 710
+      "observations": 710,
+      "marginUncertainty": 0.0896
     },
     "attorney-general": {
       "office": "Attorney General",
-      "candidates": {"Jena Griswold": 0.55, "Michael Allen": 0.40},
+      "candidates": {
+        "Jena Griswold": 0.55,
+        "Michael Allen": 0.4
+      },
       "other": 0.01,
       "wouldNotVote": 0.04,
       "uncertainty": 0.0448,
-      "observations": 710
+      "observations": 710,
+      "marginUncertainty": 0.0896
     }
   },
   "measures": {
-    "amendment-81": {"yes": 0.49, "no": 0.39, "unsure": 0.12, "uncertainty": 0.0448, "observations": 710},
-    "amendment-83": {"yes": 0.48, "no": 0.33, "unsure": 0.19, "uncertainty": 0.0448, "observations": 710},
-    "amendment-84": {"yes": 0.48, "no": 0.42, "unsure": 0.10, "uncertainty": 0.0448, "observations": 710},
-    "amendment-85": {"yes": 0.59, "no": 0.23, "unsure": 0.18, "uncertainty": 0.0448, "observations": 710, "versions": {"plain-language": {"yes": 0.67, "no": 0.19, "unsure": 0.15, "observations": 340}, "eighth-grade": {"yes": 0.52, "no": 0.27, "unsure": 0.21, "observations": 370}}},
-    "amendment-86": {"yes": 0.37, "no": 0.28, "unsure": 0.34, "uncertainty": 0.0448, "observations": 710},
-    "proposition-134": {"yes": 0.55, "no": 0.34, "unsure": 0.10, "uncertainty": 0.0448, "observations": 710},
-    "proposition-135": {"yes": 0.58, "no": 0.31, "unsure": 0.11, "uncertainty": 0.0448, "observations": 710, "versions": {"surgery-first": {"yes": 0.63, "no": 0.29, "unsure": 0.08, "observations": 327}, "funding-first": {"yes": 0.54, "no": 0.32, "unsure": 0.14, "observations": 383}}},
-    "proposition-nn": {"yes": 0.42, "no": 0.44, "unsure": 0.14, "uncertainty": 0.0448, "observations": 710, "versions": {"revenue-first-no-tabor": {"yes": 0.46, "no": 0.43, "unsure": 0.11, "observations": 191}, "revenue-first-tabor": {"yes": 0.35, "no": 0.54, "unsure": 0.11, "observations": 183}, "education-first-tabor": {"yes": 0.43, "no": 0.37, "unsure": 0.20, "observations": 166}, "education-first-no-tabor": {"yes": 0.46, "no": 0.40, "unsure": 0.14, "observations": 170}}}
+    "amendment-81": {
+      "yes": 0.49,
+      "no": 0.39,
+      "unsure": 0.12,
+      "uncertainty": 0.0448,
+      "observations": 710
+    },
+    "amendment-83": {
+      "yes": 0.48,
+      "no": 0.33,
+      "unsure": 0.19,
+      "uncertainty": 0.0448,
+      "observations": 710
+    },
+    "amendment-84": {
+      "yes": 0.48,
+      "no": 0.42,
+      "unsure": 0.1,
+      "uncertainty": 0.0448,
+      "observations": 710
+    },
+    "amendment-85": {
+      "yes": 0.59,
+      "no": 0.23,
+      "unsure": 0.18,
+      "uncertainty": 0.0448,
+      "observations": 710,
+      "versions": {
+        "plain-language": {
+          "yes": 0.67,
+          "no": 0.19,
+          "unsure": 0.15,
+          "observations": 340
+        },
+        "eighth-grade": {
+          "yes": 0.52,
+          "no": 0.27,
+          "unsure": 0.21,
+          "observations": 370
+        }
+      }
+    },
+    "amendment-86": {
+      "yes": 0.37,
+      "no": 0.28,
+      "unsure": 0.34,
+      "uncertainty": 0.0448,
+      "observations": 710
+    },
+    "proposition-134": {
+      "yes": 0.55,
+      "no": 0.34,
+      "unsure": 0.1,
+      "uncertainty": 0.0448,
+      "observations": 710
+    },
+    "proposition-135": {
+      "yes": 0.58,
+      "no": 0.31,
+      "unsure": 0.11,
+      "uncertainty": 0.0448,
+      "observations": 710,
+      "versions": {
+        "surgery-first": {
+          "yes": 0.63,
+          "no": 0.29,
+          "unsure": 0.08,
+          "observations": 327
+        },
+        "funding-first": {
+          "yes": 0.54,
+          "no": 0.32,
+          "unsure": 0.14,
+          "observations": 383
+        }
+      }
+    },
+    "proposition-nn": {
+      "yes": 0.42,
+      "no": 0.44,
+      "unsure": 0.14,
+      "uncertainty": 0.0448,
+      "observations": 710,
+      "versions": {
+        "revenue-first-no-tabor": {
+          "yes": 0.46,
+          "no": 0.43,
+          "unsure": 0.11,
+          "observations": 191
+        },
+        "revenue-first-tabor": {
+          "yes": 0.35,
+          "no": 0.54,
+          "unsure": 0.11,
+          "observations": 183
+        },
+        "education-first-tabor": {
+          "yes": 0.43,
+          "no": 0.37,
+          "unsure": 0.2,
+          "observations": 166
+        },
+        "education-first-no-tabor": {
+          "yes": 0.46,
+          "no": 0.4,
+          "unsure": 0.14,
+          "observations": 170
+        }
+      }
+    }
   },
   "coverageNote": "Direct estimates are available only for the listed statewide contests and ballot measures. Generic congressional ballot results are statewide context and are not district-specific forecasts."
 }

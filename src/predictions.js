@@ -1,7 +1,7 @@
 // Modeled records stay separate from observed and demo snapshots.
 // These calculators return a result from the numbers they are given.
 // They do not write those numbers back into a historical file or a vote count.
-export const predictionModels = ['historical-baseline', 'remaining-vote-beta', 'dirichlet-multinomial', 'kalman', 'markov-regime', 'spatial'];
+export const predictionModels = ['historical-baseline', 'remaining-vote-beta', 'dirichlet-multinomial', 'kalman', 'markov-regime', 'spatial', 'blended'];
 export const predictionStatus = ['planned', 'blocked', 'evaluated', 'released'];
 
 export function predictionUnavailable({contestId, target = 'final vote share', reason, model = null} = {}) {
@@ -31,6 +31,23 @@ export function historicalBaseline({contestId, target, histories = [], weights =
   const variance = deviations.reduce((sum, v, i) => sum + selected[i].weight * v, 0) / denominator;
   const spread = Math.sqrt(variance);
   return {schemaVersion: 1, kind: 'modeled', status: 'evaluated', contestId, target, model: 'historical-baseline', unavailable: false, estimate, interval: [Math.max(0, estimate - 1.96 * spread), Math.min(1, estimate + 1.96 * spread)], probability: null, sampleSize: selected.length, assumptions: ['Explicitly comparable position/district history only', 'Weights are supplied by the caller', 'Interval reflects historical spread, not full forecast uncertainty']};
+}
+
+// Blended baseline: CU is the prior, historical contests provide the adjustment.
+// The CU prior contributes two units of weight; each compatible historical contest
+// contributes one unit. This keeps the CU estimate primary while allowing observed
+// position/district history to move the result.
+export function blendedBaseline({contestId, target, cuShare, cuUncertainty = null, historicalShare = null, historicalSpread = null, historicalSampleSize = 0} = {}) {
+  if (!contestId || !target || !Number.isFinite(cuShare) || cuShare < 0 || cuShare > 1) throw Error('A blended baseline needs contest, target and a valid CU share.');
+  const priorWeight = 2;
+  const historyWeight = Number.isFinite(historicalSampleSize) ? Math.max(0, historicalSampleSize) : 0;
+  const hasHistory = Number.isFinite(historicalShare) && historicalShare >= 0 && historicalShare <= 1 && historyWeight > 0;
+  const denominator = priorWeight + (hasHistory ? historyWeight : 0);
+  const estimate = (priorWeight * cuShare + (hasHistory ? historyWeight * historicalShare : 0)) / denominator;
+  const cuSpread = Number.isFinite(cuUncertainty) && cuUncertainty >= 0 ? cuUncertainty : 0;
+  const histSpread = Number.isFinite(historicalSpread) && historicalSpread >= 0 ? historicalSpread : cuSpread;
+  const uncertainty = Math.sqrt((priorWeight * cuSpread ** 2 + (hasHistory ? historyWeight * histSpread ** 2 : 0)) / denominator);
+  return {schemaVersion: 1, kind: 'modeled', status: 'evaluated', contestId, target, model: 'blended', unavailable: false, estimate, interval: [Math.max(0, estimate - 1.96 * uncertainty), Math.min(1, estimate + 1.96 * uncertainty)], probability: null, sampleSize: hasHistory ? historyWeight : 0, cuShare, historicalShare: hasHistory ? historicalShare : null, historicalSampleSize: hasHistory ? historyWeight : 0, adjustment: estimate - cuShare, uncertainty, assumptions: ['CU predictive estimate is the baseline', 'Compatible historical contest shares adjust the CU baseline', 'CU contributes two prior weight units; each selected historical contest contributes one', 'Interval combines CU uncertainty with historical spread']};
 }
 
 // Tests the fundraising-performance assumption without treating correlation as causation.

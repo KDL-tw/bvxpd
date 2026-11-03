@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline, testFundraisingHypothesis, fundraisingAdjustedBaseline, betaInterval, remainingVoteBeta, allChoiceCount, kalmanFilter, markovRegimes, spatialAssociation} from '../src/predictions.js';
+import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline, blendedBaseline, testFundraisingHypothesis, fundraisingAdjustedBaseline, betaInterval, remainingVoteBeta, allChoiceCount, kalmanFilter, markovRegimes, spatialAssociation} from '../src/predictions.js';
 
 test('unavailable prediction carries no estimate', () => {
   const p = predictionUnavailable({contestId:'co-2022-general:us-house:8', reason:'No implemented model.'});
@@ -31,6 +31,15 @@ test('historical baseline averages only compatible weighted shares and returns a
 test('historical baseline refuses missing history', () => {
   const p=historicalBaseline({contestId:'co:house:8',target:'DEM final share'});
   assert.equal(p.unavailable,true);
+  validatePrediction(p);
+});
+
+test('blended baseline keeps CU primary and adjusts toward selected history', () => {
+  const p=blendedBaseline({contestId:'co:senate:state',target:'DEM final share',cuShare:.49,cuUncertainty:.04,historicalShare:.55,historicalSpread:.02,historicalSampleSize:2});
+  assert.equal(p.unavailable,false);
+  assert.equal(p.estimate,.52);
+  assert.ok(Math.abs(p.adjustment-.03)<1e-12);
+  assert.equal(p.historicalSampleSize,2);
   validatePrediction(p);
 });
 

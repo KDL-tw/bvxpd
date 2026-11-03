@@ -1,7 +1,7 @@
 // Modeled records stay separate from observed and demo snapshots.
 // These calculators return a result from the numbers they are given.
 // They do not write those numbers back into a historical file or a vote count.
-export const predictionModels = ['historical-baseline', 'remaining-vote-beta', 'dirichlet-multinomial', 'kalman', 'markov-regime', 'spatial', 'blended'];
+export const predictionModels = ['historical-baseline', 'remaining-vote-beta', 'dirichlet-multinomial', 'kalman', 'markov-regime', 'spatial', 'blended', 'blended-velocity'];
 export const predictionStatus = ['planned', 'blocked', 'evaluated', 'released'];
 
 export function predictionUnavailable({contestId, target = 'final vote share', reason, model = null} = {}) {
@@ -53,6 +53,15 @@ export function blendedBaseline({contestId, target, cuShare, cuUncertainty = nul
   const histSpread = Number.isFinite(historicalSpread) && historicalSpread >= 0 ? historicalSpread : cuSpread;
   const uncertainty = Math.sqrt((priorWeight * cuSpread ** 2 + (hasHistory ? historyWeight * histSpread ** 2 : 0)) / denominator);
   return {schemaVersion: 1, kind: 'modeled', status: 'evaluated', contestId, target, model: 'blended', unavailable: false, estimate, interval: [Math.max(0, estimate - 1.96 * uncertainty), Math.min(1, estimate + 1.96 * uncertainty)], probability: null, sampleSize: hasHistory ? historyWeight : 0, cuShare, cuAdjustedShare, thirdPartyPool, historicalMajorShare: allocation, undecidedAdjustment, historicalShare: hasHistory ? historicalShare : null, historicalSampleSize: hasHistory ? historyWeight : 0, adjustment: estimate - cuShare, uncertainty, assumptions: ['CU predictive estimate is the baseline', 'The CU third-party pool is allocated between major parties using the historical major-party split', 'Compatible historical contest shares adjust the CU baseline', 'CU contributes two prior weight units; each selected historical contest contributes one', 'Interval combines CU uncertainty with historical spread']};
+}
+
+// Applies a restrained one-day velocity signal on top of the blended baseline.
+// Blended history remains the anchor; velocity contributes 25% of the gap.
+export function velocityAdjustedBaseline({contestId, target, baseShare, velocityShare, influence = 0.25} = {}) {
+  if (!contestId || !target || !Number.isFinite(baseShare) || baseShare < 0 || baseShare > 1 || !Number.isFinite(velocityShare) || velocityShare < 0 || velocityShare > 1) throw Error('A velocity-adjusted baseline needs valid base and velocity shares.');
+  const weight = Math.max(0, Math.min(1, Number(influence) || 0));
+  const estimate = Math.max(0, Math.min(1, baseShare + weight * (velocityShare - baseShare)));
+  return {schemaVersion: 1, kind: 'modeled', status: 'evaluated', contestId, target, model: 'blended-velocity', unavailable: false, estimate, interval: [Math.max(0, estimate - .10), Math.min(1, estimate + .10)], probability: null, baseShare, velocityShare, influence: weight, adjustment: estimate - baseShare, assumptions: ['Blended CU-plus-history estimate remains the baseline', 'One-day relative velocity contributes a 25% bounded adjustment', 'The adjustment is clipped to [0,1]']};
 }
 
 // Tests the fundraising-performance assumption without treating correlation as causation.

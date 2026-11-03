@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline, blendedBaseline, testFundraisingHypothesis, fundraisingAdjustedBaseline, betaInterval, remainingVoteBeta, allChoiceCount, kalmanFilter, markovRegimes, spatialAssociation} from '../src/predictions.js';
+import {predictionUnavailable, validatePrediction, plannedPredictionCatalog, historicalBaseline, blendedBaseline, velocityAdjustedBaseline, testFundraisingHypothesis, fundraisingAdjustedBaseline, betaInterval, remainingVoteBeta, allChoiceCount, kalmanFilter, markovRegimes, spatialAssociation} from '../src/predictions.js';
 
 test('unavailable prediction carries no estimate', () => {
   const p = predictionUnavailable({contestId:'co-2022-general:us-house:8', reason:'No implemented model.'});
@@ -40,6 +40,13 @@ test('blended baseline keeps CU primary and adjusts toward selected history', ()
   assert.equal(p.estimate,.56125);
   assert.ok(Math.abs(p.undecidedAdjustment-.0825)<1e-12);
   assert.equal(p.historicalSampleSize,2);
+  validatePrediction(p);
+});
+
+test('velocity adjustment stays anchored to the blended baseline', () => {
+  const p=velocityAdjustedBaseline({contestId:'co:senate:state',target:'DEM final share',baseShare:.56,velocityShare:.60});
+  assert.ok(Math.abs(p.estimate-.57)<1e-12);
+  assert.ok(Math.abs(p.adjustment-.01)<1e-12);
   validatePrediction(p);
 });
 

@@ -7,10 +7,10 @@ function cuNamesMatch(a,b){
 }
 function partyBucket(value){
   const party=norm(value).replace(/[^a-z]/g,'');
+  if(!party) return null;
   if(party.startsWith('dem')) return 'dem';
   if(party.startsWith('rep')) return 'rep';
-  if(party.startsWith('ind')||party.startsWith('unaffil')) return 'ind';
-  return null;
+  return 'ind';
 }
 function isStatewide(contest){
   const district=norm(contest?.districtLabel||contest?.district||'');

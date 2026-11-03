@@ -1,5 +1,10 @@
 function norm(value){return String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
 export function normalizeCuName(name){return norm(name).replace(/\b(jr|sr|ii|iii|iv)\b/g,'').replace(/\s+/g,' ').trim();}
+function cuNamesMatch(a,b){
+  const tokens=value=>normalizeCuName(value).split(' ').filter(Boolean).filter(token=>token.length>1);
+  const left=tokens(a), right=tokens(b);
+  return left.join(' ')===right.join(' ') || (left.length===right.length && left.every((token,index)=>token===right[index]));
+}
 export function cuContestKey(contest){
   const office=norm(contest?.position||contest?.office||contest?.race);
   if(/u s senate|us senate|senate/.test(office) && !/state house|state senate/.test(office)) return 'us-senate';
@@ -15,7 +20,7 @@ export function cuContestEstimate(model, contest, focus){
   const name=normalizeCuName(focus?.name);
   let candidate=null;
   let kind='direct';
-  if(data.candidates && !Array.isArray(data.candidates)){ const hit=Object.entries(data.candidates).find(([label])=>normalizeCuName(label)===name); if(hit) candidate={name:hit[0],share:hit[1]}; } else if(Array.isArray(data.candidates)){ candidate=data.candidates.find(c=>normalizeCuName(c.name)===name); }
+  if(data.candidates && !Array.isArray(data.candidates)){ const hit=Object.entries(data.candidates).find(([label])=>cuNamesMatch(label,name)); if(hit) candidate={name:hit[0],share:hit[1]}; } else if(Array.isArray(data.candidates)){ candidate=data.candidates.find(c=>cuNamesMatch(c.name,name)); }
   if(!candidate && key==='generic-congressional-ballot' && (party==='dem'||party==='rep')) { const share=data[party]; if(Number.isFinite(Number(share))) { candidate={name:party.toUpperCase(),share}; kind='generic'; } }
   if(!candidate) return null;
   const share=Number(candidate.share); const uncertainty=Number(data.uncertainty??model.sample?.likelyVoterCredibleInterval); if(!Number.isFinite(share)) return null;

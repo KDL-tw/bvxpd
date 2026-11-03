@@ -16,6 +16,11 @@ function isStatewide(contest){
   const district=norm(contest?.districtLabel||contest?.district||'');
   return district===''||district==='state'||district==='statewide';
 }
+function allowsCompositionFallback(contest){
+  if(isStatewide(contest)) return true;
+  const office=norm(contest?.position||contest?.office||contest?.race);
+  return /state house|state senate|u s house|us house|congressional/.test(office);
+}
 export function cuContestKey(contest){
   const office=norm(contest?.position||contest?.office||contest?.race);
   if(/u s senate|us senate|senate/.test(office) && !/state house|state senate/.test(office)) return 'us-senate';
@@ -33,7 +38,7 @@ export function cuContestEstimate(model, contest, focus){
   let kind='direct';
   if(data.candidates && !Array.isArray(data.candidates)){ const hit=Object.entries(data.candidates).find(([label])=>cuNamesMatch(label,name)); if(hit) candidate={name:hit[0],share:hit[1]}; } else if(Array.isArray(data.candidates)){ candidate=data.candidates.find(c=>cuNamesMatch(c.name,name)); }
   if(!candidate && key==='generic-congressional-ballot' && (party==='dem'||party==='rep')) { const share=data[party]; if(Number.isFinite(Number(share))) { candidate={name:party.toUpperCase(),share}; kind='generic'; } }
-  if(!candidate && isStatewide(contest) && party && model?.composition){
+  if(!candidate && allowsCompositionFallback(contest) && party && model?.composition){
     const share=Number(model.composition[party]);
     if(Number.isFinite(share)){ candidate={name:focus?.name||party.toUpperCase(),share}; kind='composition'; }
   }

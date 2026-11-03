@@ -35,10 +35,10 @@ test('historical baseline refuses missing history', () => {
 });
 
 test('blended baseline keeps CU primary and adjusts toward selected history', () => {
-  const p=blendedBaseline({contestId:'co:senate:state',target:'DEM final share',cuShare:.49,cuUncertainty:.04,historicalShare:.55,historicalSpread:.02,historicalSampleSize:2});
+  const p=blendedBaseline({contestId:'co:senate:state',target:'DEM final share',cuShare:.49,cuUncertainty:.04,historicalShare:.55,historicalSpread:.02,historicalSampleSize:2,cuComposition:{dem:.49,rep:.36,ind:.15},targetParty:'dem',historicalMajorShare:.55});
   assert.equal(p.unavailable,false);
-  assert.equal(p.estimate,.52);
-  assert.ok(Math.abs(p.adjustment-.03)<1e-12);
+  assert.equal(p.estimate,.56125);
+  assert.ok(Math.abs(p.undecidedAdjustment-.0825)<1e-12);
   assert.equal(p.historicalSampleSize,2);
   validatePrediction(p);
 });

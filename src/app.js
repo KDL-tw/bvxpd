@@ -7,6 +7,7 @@ import {splashUrl} from './config.js';
 import {fields,parseFile,parseDelimited,suggestedMapping,normalize,validateMeta,summarize,demo} from './data.js';
 import {contestFundingAdvantage, normalizeTracerExport} from './finance.js';
 import {cuContestEstimate, cuMeasureEstimate} from './cu-model.js';
+import {cloudAvailable, cloudSession, requestCloudSignIn, cloudDropPayloads, saveCloudDrops} from './cloud-save.js';
 const financeKey='bullvixen.finance.normalized.v1';
 function loadFinance(){try{const raw=JSON.parse(localStorage.getItem(financeKey)||'[]'); return Array.isArray(raw)?raw:[];}catch{return [];}}
 function moneyFmt(n){return Number(n).toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});}
@@ -20,8 +21,9 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const key='bullvixen.snapshots.v1', pinKey='bullvixen.pins.v1', overviewDropKey='bullvixen.overview.drops.v1', ballotKey='bullvixen.ballots.v1', currentElectionId='co-2026-general-candidates', currentElectionYear=2026; let archives=[],snapshots=[],watchlist=[],pins=[],overviewDrops=[],researchDrops=[],ballotFile=null,ballotReturns=null,ballotReturnSeries=null,cuModel=null,financeSeed=[],ballotFinanceSeed=[],ballotExpenditureSeed=[],ballotDrops={},ballotViews={},ballotShadows={},mode='observed',selectedId='',race='',position='All positions',county='All imported areas',table=null,draft=null,fileToken=0,liveSnapshot=null,turnoutArchive=null,turnoutArchive2022=null,detail=null;
 const time=s=>s?new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Denver'}).format(new Date(s))+' MT':'No timestamp';
 function setSaveStatus(message='Saved locally'){const el=$('save-status');if(el)el.textContent=message;}
-function persistOverviewDrops(){try{localStorage.setItem(overviewDropKey,JSON.stringify(overviewDrops));setSaveStatus('Saved locally');return true;}catch{setSaveStatus('Save failed');toast('Couldn\'t save race drops in this browser.');return false;}}
-function persistBallotDrops(){try{localStorage.setItem(ballotKey,JSON.stringify(ballotDrops));setSaveStatus('Saved locally');return true;}catch{setSaveStatus('Save failed');toast('Could not save ballot drops in this browser.');return false;}}
+function cloudSync(type,payload){saveCloudDrops(type,payload).then(ok=>{if(ok)setSaveStatus('Saved locally + cloud');}).catch(()=>setSaveStatus('Saved locally · cloud retry needed'));}
+function persistOverviewDrops(){try{localStorage.setItem(overviewDropKey,JSON.stringify(overviewDrops));setSaveStatus('Saved locally');cloudSync('overview',overviewDrops);return true;}catch{setSaveStatus('Save failed');toast('Couldn\'t save race drops in this browser.');return false;}}
+function persistBallotDrops(){try{localStorage.setItem(ballotKey,JSON.stringify(ballotDrops));setSaveStatus('Saved locally');cloudSync('ballots',ballotDrops);return true;}catch{setSaveStatus('Save failed');toast('Could not save ballot drops in this browser.');return false;}}
 function overviewDropMap(snapshotId,contest){const map=new Map(); for(const d of overviewDrops){if(d.snapshotId===snapshotId&&d.contest===contest&&Number.isSafeInteger(d.votes)&&d.votes>=0) map.set(d.candidate,d.votes);} return map;}
 function overviewDropVotes(snapshotId,contest,candidate){return overviewDropMap(snapshotId,contest).get(candidate)||0;}
 function setOverviewDrop(snapshotId,contest,candidate,votes){
@@ -31,7 +33,7 @@ function setOverviewDrop(snapshotId,contest,candidate,votes){
 }
 function withOverviewDrops(candidates,snapshotId,contest){return candidates.map(c=>{const drop=overviewDropVotes(snapshotId,contest,c.name); return {...c,fileVotes:c.votes,drop,votes:c.votes+drop};});}
 
-function persistResearchDrops(){try{localStorage.setItem('bullvixen.research.drops.v1',JSON.stringify(researchDrops));setSaveStatus('Saved locally');return true;}catch{setSaveStatus('Save failed');toast('Couldn\'t save scenario drops in this browser.');return false;}}
+function persistResearchDrops(){try{localStorage.setItem('bullvixen.research.drops.v1',JSON.stringify(researchDrops));setSaveStatus('Saved locally');cloudSync('research',researchDrops);return true;}catch{setSaveStatus('Save failed');toast('Couldn\'t save scenario drops in this browser.');return false;}}
 function researchDropsFor(snapshotId,contest){return researchDrops.filter(d=>d.snapshotId===snapshotId&&d.contest===contest);}
 function researchDropTotal(snapshotId,contest){return researchDropsFor(snapshotId,contest).reduce((n,d)=>n+(Number.isSafeInteger(d.votes)&&d.votes>=0?d.votes:0),0);}
 // Scenario drops are attributed to named candidates in this pane only — never into the file or Overview tracker.
@@ -622,6 +624,33 @@ function setTheme(cyber){document.body.classList.toggle('cyberpunk',cyber);const
 let cyberTheme=false;try{cyberTheme=localStorage.getItem(themeKey)==='cyberpunk';}catch{}
 setTheme(cyberTheme);
 $('theme-toggle')?.addEventListener('click',()=>setTheme(!document.body.classList.contains('cyberpunk')));
+async function updateCloudButton(){
+  const button=$('cloud-save'); if(!button) return;
+  if(!cloudAvailable()){button.hidden=true; return;}
+  try { const session=await cloudSession(); button.textContent=session?'Cloud sync on':'Sign in to sync'; button.title=session?`Signed in as ${session.user.email||'workspace user'}`:'Send a secure sign-in link'; }
+  catch { button.textContent='Sign in to sync'; }
+}
+async function restoreCloudDrops(){
+  if(!cloudAvailable()) return;
+  try {
+    const payloads=await cloudDropPayloads();
+    if(!payloads) return;
+    if(Array.isArray(payloads.overview)){overviewDrops=payloads.overview;localStorage.setItem(overviewDropKey,JSON.stringify(overviewDrops));}
+    if(payloads.ballots&&typeof payloads.ballots==='object'){ballotDrops=payloads.ballots;localStorage.setItem(ballotKey,JSON.stringify(ballotDrops));}
+    if(Array.isArray(payloads.research)){researchDrops=payloads.research;localStorage.setItem('bullvixen.research.drops.v1',JSON.stringify(researchDrops));}
+    setSaveStatus('Cloud drops restored'); render(); renderBallots(); renderBallotReturns(); mountResearch();
+  } catch { setSaveStatus('Saved locally · cloud unavailable'); }
+}
+$('cloud-save')?.addEventListener('click',async()=>{
+  if(!cloudAvailable()) return;
+  const session=await cloudSession().catch(()=>null);
+  if(session){toast('Cloud sync is active for this workspace.');return;}
+  const email=prompt('Enter your email to receive a secure sign-in link:');
+  if(!email||!email.includes('@')) return;
+  try { await requestCloudSignIn(email.trim()); setSaveStatus('Check your email to finish sync'); toast('Sign-in link sent. Your drops remain saved locally until you confirm it.'); }
+  catch(error){setSaveStatus('Cloud sign-in failed');toast(error?.message||'Could not start cloud sign-in.');}
+});
+updateCloudButton();
 function downloadSavedData(){const payload={schemaVersion:1,savedAt:new Date().toISOString(),snapshots,pins,overviewDrops,researchDrops,ballotDrops,finance:loadFinance(),theme:document.body.classList.contains('cyberpunk')?'cyberpunk':'light'}; try{const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`bullvixen-data-${new Date().toISOString().slice(0,10)}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setSaveStatus('Backup downloaded');toast('Saved data backup downloaded.');}catch{setSaveStatus('Backup failed');toast('Could not create a data backup.');}}
 $('save-data')?.addEventListener('click',downloadSavedData);
 function enter(){$('intro').hidden=true;$('workspace').hidden=false;$('main').focus();try{localStorage.setItem('bullvixen.skipIntro',String($('remember').checked));}catch{} }
@@ -632,4 +661,4 @@ $('splash-art').src=splashUrl;
 try{if(localStorage.getItem('bullvixen.skipIntro')==='true')$('remember').checked=true;else if(!location.hash){$('intro').hidden=false;$('workspace').hidden=true;}}catch{}
 render();page(location.hash.slice(1)||'now');
 
-loadArchives();
+loadArchives().then(restoreCloudDrops);

@@ -8,6 +8,7 @@ import {fields,parseFile,parseDelimited,suggestedMapping,normalize,validateMeta,
 import {contestFundingAdvantage, normalizeTracerExport} from './finance.js';
 import {cuContestEstimate, cuMeasureEstimate} from './cu-model.js';
 import {cloudAvailable, cloudSession, requestCloudSignIn, cloudDropPayloads, saveCloudDrops} from './cloud-save.js';
+import {normalizeDetailWorkbook, detailReportToSnapshot} from './detail-report.js';
 const financeKey='bullvixen.finance.normalized.v1';
 function loadFinance(){try{const raw=JSON.parse(localStorage.getItem(financeKey)||'[]'); return Array.isArray(raw)?raw:[];}catch{return [];}}
 function moneyFmt(n){return Number(n).toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});}
@@ -18,7 +19,7 @@ function fundCompareLabel(hit){if(!hit) return ''; if(hit.mode==='category') ret
 function fundNote(hit){if(!hit) return ''; return `Focus ${moneyFmt(hit.focusReceipts)} vs ${fundCompareLabel(hit)} · ${hit.advantage.toFixed(3)}`;}
 const $=id=>document.getElementById(id), fmt=n=>n.toLocaleString('en-US');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const key='bullvixen.snapshots.v1', pinKey='bullvixen.pins.v1', overviewDropKey='bullvixen.overview.drops.v1', ballotKey='bullvixen.ballots.v1', currentElectionId='co-2026-general-candidates', currentElectionYear=2026; let archives=[],snapshots=[],watchlist=[],pins=[],overviewDrops=[],researchDrops=[],ballotFile=null,ballotReturns=null,ballotReturnSeries=null,cuModel=null,financeSeed=[],ballotFinanceSeed=[],ballotExpenditureSeed=[],ballotDrops={},ballotViews={},ballotShadows={},mode='observed',selectedId='',race='',position='All positions',county='All imported areas',table=null,draft=null,fileToken=0,liveSnapshot=null,turnoutArchive=null,turnoutArchive2022=null,detail=null,returnWindow='all';
+const key='bullvixen.snapshots.v1', pinKey='bullvixen.pins.v1', overviewDropKey='bullvixen.overview.drops.v1', ballotKey='bullvixen.ballots.v1', detailReportsKey='bullvixen.detail.reports.v1', currentElectionId='co-2026-general-candidates', currentElectionYear=2026; let archives=[],snapshots=[],detailReports=[],watchlist=[],pins=[],overviewDrops=[],researchDrops=[],ballotFile=null,ballotReturns=null,ballotReturnSeries=null,cuModel=null,financeSeed=[],ballotFinanceSeed=[],ballotExpenditureSeed=[],ballotDrops={},ballotViews={},ballotShadows={},mode='observed',selectedId='',race='',position='All positions',county='All imported areas',table=null,draft=null,fileToken=0,liveSnapshot=null,turnoutArchive=null,turnoutArchive2022=null,detail=null,returnWindow='all';
 const time=s=>s?new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Denver'}).format(new Date(s))+' MT':'No timestamp';
 function setSaveStatus(message='Saved locally'){const el=$('save-status');if(el)el.textContent=message;}
 function cloudSync(type,payload){saveCloudDrops(type,payload).then(ok=>{if(ok)setSaveStatus('Saved locally + cloud');}).catch(()=>setSaveStatus('Saved locally · cloud retry needed'));}
@@ -59,6 +60,7 @@ function clearResearchDrops(snapshotId,contest){researchDrops=researchDrops.filt
 
 function toast(message){$('toast').textContent=message;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').textContent='',6500);}
 try {const saved=JSON.parse(localStorage.getItem(key)||'[]'); if(!Array.isArray(saved)) throw Error(); snapshots=saved.map(s=>{validateMeta(s); if(!Array.isArray(s.records)||!s.id||!Number.isFinite(Date.parse(s.importedAt))) throw Error(); normalize({headers:fields,rows:s.records.map(r=>fields.map(f=>String(r[f]??'')))},Object.fromEntries(fields.map((f,i)=>[f,i]))); return s;}); const watches=JSON.parse(localStorage.getItem('bullvixen.watchlist')||'[]'); if(Array.isArray(watches)) watchlist=watches.filter(s=>typeof s==='string'); const savedOverviewDrops=JSON.parse(localStorage.getItem(overviewDropKey)||'[]'); if(Array.isArray(savedOverviewDrops)) overviewDrops=savedOverviewDrops.filter(d=>d&&typeof d.snapshotId==='string'&&typeof d.contest==='string'&&typeof d.candidate==='string'&&Number.isSafeInteger(d.votes)&&d.votes>=0); const savedResearchDrops=JSON.parse(localStorage.getItem('bullvixen.research.drops.v1')||'[]'); if(Array.isArray(savedResearchDrops)) researchDrops=savedResearchDrops;}catch{toast('Saved data could not be read. Import a file to keep going. Nothing already stored was overwritten.');snapshots=[];}
+try {const saved=JSON.parse(localStorage.getItem(detailReportsKey)||'[]'); if(Array.isArray(saved)) detailReports=saved.filter(r=>r&&r.schemaVersion===1&&typeof r.id==='string'&&Array.isArray(r.records));} catch {detailReports=[];}
 function save(next){try{localStorage.setItem(key,JSON.stringify(next)); snapshots=next;return true;}catch{toast('This browser can\'t store that. Download a backup, remove an old snapshot, and try again.');return false;}}
 try {const raw=JSON.parse(localStorage.getItem(pinKey)||'[]'); if(Array.isArray(raw)) pins=raw.filter(p=>p&&typeof p.id==='string'&&typeof p.snapshotId==='string'&&typeof p.race==='string');} catch {pins=[];}
 try {const raw=JSON.parse(localStorage.getItem(ballotKey)||'{}'); if(raw&&typeof raw==='object') ballotDrops=raw;} catch {ballotDrops={};}
@@ -207,6 +209,32 @@ function renderWatches(){const s=active(), mine=s?pins.filter(p=>p.snapshotId===
 $('watch-current').onclick=()=>{const s=active(); if(s&&race) togglePin(s.id,race);};
 function invalidate(){draft=null;$('preview').hidden=true;$('commit').disabled=true;}
 $('import-form').addEventListener('input',invalidate);$('mapping').addEventListener('change',invalidate);
+function persistDetailReports(){try{localStorage.setItem(detailReportsKey,JSON.stringify(detailReports));setSaveStatus('Saved locally');cloudSync('detail',detailReports);return true;}catch{toast('Detail report history could not be saved in this browser.');return false;}}
+function renderDetailHistory(){const box=$('detail-history');if(!box)return;box.innerHTML=detailReports.length?detailReports.slice().sort((a,b)=>String(b.sourceReportedAt).localeCompare(String(a.sourceReportedAt))).map(report=>{const races=new Set(report.records.map(row=>row.race)).size;return `<div class="detail-history-row"><span><strong>${esc(time(report.sourceReportedAt))}</strong><small>${esc(report.filename)} · ${fmt(races)} contests · ${fmt(report.records.length)} rows</small></span><span class="badge">SAVED</span></div>`;}).join(''):'<p class="muted">Reports will appear here in timestamp order.</p>';}
+async function importDetailReport(file){const status=$('detail-status');if(!file)return;try{
+  if(file.size>25*1024*1024) throw Error('Detail workbooks must be 25 MB or smaller.');
+  const asOf=$('detail-as-of')?.value;
+  if(!asOf) throw Error('Enter the report timestamp before importing.');
+  const parsed=new Date(asOf); if(!Number.isFinite(parsed.getTime())) throw Error('Enter a valid report timestamp.');
+  if(!globalThis.XLSX) throw Error('The workbook reader is unavailable. Refresh once and try again.');
+  const current=archives.find(s=>s.id===currentElectionId);
+  const partyByCandidate=new Map((current?.records||[]).map(row=>[String(row.candidate||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),row.party||'']));
+  const workbook=globalThis.XLSX.read(await file.arrayBuffer(),{type:'array',cellDates:false});
+  const sourceUrl=$('detail-source-url')?.value.trim()||'https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html';
+  const report=normalizeDetailWorkbook(workbook,{filename:file.name,sourceReportedAt:parsed.toISOString(),sourceUrl,partyByCandidate});
+  const duplicate=detailReports.some(previous=>previous.sourceReportedAt===report.sourceReportedAt&&previous.filename===report.filename&&JSON.stringify(previous.records)===JSON.stringify(report.records));
+  if(duplicate) throw Error('That report is already saved.');
+  const snapshot=detailReportToSnapshot(report);
+  if(!save([snapshot,...snapshots])) return;
+  detailReports=[report,...detailReports]; if(!persistDetailReports()) return;
+  selectedId=snapshot.id; mode='observed'; race=''; position='All positions'; county='All imported areas';
+  render();renderHistory();mountCalculators(true);renderDetailHistory();
+  status.textContent=`Saved ${report.records.length.toLocaleString()} rows from ${file.name}. This report is appended to history.`;
+  $('detail-file').value=''; toast('SOS detail report saved. Earlier reports remain available.');
+}catch(error){status.textContent=error.message;}
+}
+$('detail-file')?.addEventListener('change',e=>importDetailReport(e.target.files[0]));
+renderDetailHistory();
  $('finance-file').onchange=async()=>{const file=$('finance-file').files[0];if(!file)return;const status=$('finance-status');status.textContent='Reading the TRACER file…';try{const rows=parseDelimited(await file.text());const headers=rows.shift().map(x=>x.trim());const normalized=normalizeTracerExport(headers,rows,file.name);localStorage.setItem('bullvixen.finance.normalized.v1',JSON.stringify(normalized));status.textContent=`Turned ${rows.length.toLocaleString()} TRACER rows into ${normalized.length.toLocaleString()} records. Still only on this computer.`; mountCalculators(true);}catch(e){status.textContent=e.message;}};
 $('file').onchange=async()=>{const token=++fileToken;invalidate();table=null;$('mapping').replaceChildren();const file=$('file').files[0];if(!file)return;try{if(file.size>10*1024*1024)throw Error('Maximum file size is 10 MB.');if(!/\.(csv|tsv|json)$/i.test(file.name))throw Error('Choose a CSV, TSV or JSON file.');const text=await file.text();if(token!==fileToken)return;table=parseFile(text,file.name);const mapping=suggestedMapping(table.headers);$('mapping').innerHTML=fields.map(f=>`<label>${f==='candidate'?'Candidate / choice':f[0].toUpperCase()+f.slice(1)} ${['county','party'].includes(f)?'(optional)':'*'}<select id="map-${f}"><option value="-1">${f==='county'?'Statewide totals':f==='party'?'No party column':'Select column'}</option>${table.headers.map((h,i)=>`<option value="${i}" ${mapping[f]===i?'selected':''}>${esc(h)}</option>`).join('')}</select></label>`).join('');status(`${fmt(table.rows.length)} rows from ${file.name}. Check the column map before you save.`);}catch(e){if(token===fileToken)status(e.message,true);}};
 function status(message,error=false){$('import-status').textContent=message;$('import-status').classList.toggle('error',error);}
@@ -663,6 +691,7 @@ async function restoreCloudDrops(){
     if(Array.isArray(payloads.overview)){overviewDrops=payloads.overview;localStorage.setItem(overviewDropKey,JSON.stringify(overviewDrops));}
     if(payloads.ballots&&typeof payloads.ballots==='object'){ballotDrops=payloads.ballots;localStorage.setItem(ballotKey,JSON.stringify(ballotDrops));}
     if(Array.isArray(payloads.research)){researchDrops=payloads.research;localStorage.setItem('bullvixen.research.drops.v1',JSON.stringify(researchDrops));}
+    if(Array.isArray(payloads.detail)){detailReports=payloads.detail.filter(report=>report&&report.schemaVersion===1&&typeof report.id==='string'&&Array.isArray(report.records));localStorage.setItem(detailReportsKey,JSON.stringify(detailReports)); const restored=detailReports.map(detailReportToSnapshot); const known=new Set(snapshots.map(snapshot=>snapshot.id)); const additions=restored.filter(snapshot=>!known.has(snapshot.id)); if(additions.length) save([...additions,...snapshots]);}
     setSaveStatus('Cloud drops restored'); render(); renderBallots(); renderBallotReturns(); mountResearch();
   } catch { setSaveStatus('Saved locally · cloud unavailable'); }
 }

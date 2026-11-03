@@ -169,6 +169,7 @@ nav button.active{background:#304968;border-color:#5479a8}
 .research-drop-list{display:grid;gap:6px;margin-top:10px;font-size:13px}
 .research-drop-list .drop-row{display:flex;gap:8px;align-items:baseline;justify-content:space-between;padding:6px 0;border-bottom:1px solid #d5e0eb}
 .research-drop-list .drop-row button{padding:4px 8px;font-size:12px}
+.detail-history{display:grid;gap:6px;margin-top:10px}.detail-history-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:13px}.detail-history-row small{display:block;margin-top:3px;font-size:11px}
 .research-drop-actions{margin-top:8px}
 .research-drop-actions button{font-size:12px}
 #research-scenario .funding-opts{opacity:.55}

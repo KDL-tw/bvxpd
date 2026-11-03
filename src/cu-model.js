@@ -48,3 +48,14 @@ export function cuContestEstimate(model, contest, focus){
   return {key,share,uncertainty:u,marginUncertainty:Number.isFinite(marginUncertainty)?marginUncertainty:u*2,interval:[Math.max(0,share-u),Math.min(1,share+u)],label:kind==='generic'?'Generic congressional ballot context':kind==='composition'?'CU weighted partisan composition':'CU statewide estimate',kind,observations:data.observations||null, sampleN:model.sample?.likelyVoterN||null};
 }
 export function cuMeasureEstimate(model, issueId){const data=model?.measures?.[issueId]; if(!data) return null; const uncertainty=Number(data.uncertainty??model.sample?.likelyVoterCredibleInterval); return {...data,uncertainty:Number.isFinite(uncertainty)?uncertainty:0,interval:[Math.max(0,Number(data.yes)-uncertainty),Math.min(1,Number(data.yes)+uncertainty)]};}
+
+// Funding shifts the measure-specific CU baseline without replacing it. The
+// pseudo-count keeps a zero-dollar side from creating a 100% forecast.
+export function ballotFundingEstimate({baselineShare, yesFunding, noFunding, influence=.3, smoothing=1}={}){
+  const baseline=Number(baselineShare), yes=Number(yesFunding), no=Number(noFunding);
+  if(!Number.isFinite(baseline)||baseline<0||baseline>1||!Number.isFinite(yes)||!Number.isFinite(no)||yes<0||no<0||(yes+no)<=0) return null;
+  const pseudo=Math.max(0,Number(smoothing)||0), fundingShare=(yes+pseudo)/(yes+no+(2*pseudo));
+  const weight=Math.min(.35,Math.max(0,Number(influence)));
+  const estimate=Math.max(0,Math.min(1,baseline+weight*(fundingShare-baseline)));
+  return {baselineShare:baseline, fundingShare, estimate, influence:weight, smoothing:pseudo, yesFunding:yes, noFunding:no};
+}

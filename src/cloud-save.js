@@ -15,7 +15,10 @@ export function cloudAvailable() { return Boolean(supabase); }
 export async function cloudSession() {
   if (!supabase) return null;
   const { data } = await supabase.auth.getSession();
-  return data?.session || null;
+  if (data?.session) return data.session;
+  const { data: anonymous, error } = await supabase.auth.signInAnonymously();
+  if (error) throw error;
+  return anonymous?.session || null;
 }
 export async function requestCloudSignIn(email) {
   if (!supabase) throw new Error('Cloud saving is unavailable in this preview.');

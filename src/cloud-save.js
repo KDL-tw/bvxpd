@@ -1,5 +1,6 @@
 const SUPABASE_URL = 'https://vmwqewuqhfvynykrpjer.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_rm3M3ETOt9BJ7StowWqriw_8zlKIRo1';
+const PRODUCTION_URL = 'https://bvxpd.vercel.app/';
 const DROP_TABLE = 'bullvixen_drop_snapshots';
 const WORKSPACE = 'bullvixen-workspace-v1';
 
@@ -18,7 +19,8 @@ export async function cloudSession() {
 }
 export async function requestCloudSignIn(email) {
   if (!supabase) throw new Error('Cloud saving is unavailable in this preview.');
-  const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: globalThis.location?.href || undefined } });
+  const redirectTo = `${PRODUCTION_URL}${globalThis.location?.hash || '#ballots'}`;
+  const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: redirectTo } });
   if (error) throw error;
 }
 export async function cloudDropPayloads() {

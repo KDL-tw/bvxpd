@@ -1,0 +1,164 @@
+{
+  "id": "co-2026-general-ballot-returns-series",
+  "label": "Colorado 2026 General ballot return time series",
+  "election": "2026 General",
+  "sourceUrl": "https://www.sos.state.co.us/pubs/elections/vote/2026-election-activity.html",
+  "sourceFiles": [
+    "20261019GenElectionActivity.xlsx",
+    "20261020GeneralElectionActivity.xlsx",
+    "20261022GenElectionActivity.xlsx",
+    "20261025GenElectionActivity.xlsx",
+    "20261028GenElectionActivity.xlsx",
+    "20261029GenElectionActivity.xlsx",
+    "20261101GenElectionActivity.xlsx"
+  ],
+  "records": [
+    {
+      "reportDate": "2026-10-19",
+      "sourceFile": "20261019GenElectionActivity.xlsx",
+      "eligibleRegistered": 4608826,
+      "totalReturned": 509364,
+      "partyTotals": {
+        "ACN": 577,
+        "APV": 167,
+        "CTR": 273,
+        "DEM": 169977,
+        "FWD": 59,
+        "GRN": 606,
+        "LBR": 2353,
+        "NOL": 1496,
+        "REP": 123197,
+        "UAF": 210525,
+        "UNI": 134
+      },
+      "mailTotal": 508120,
+      "inPersonTotal": 1244
+    },
+    {
+      "reportDate": "2026-10-20",
+      "sourceFile": "20261020GeneralElectionActivity.xlsx",
+      "eligibleRegistered": 4609864,
+      "totalReturned": 585485,
+      "partyTotals": {
+        "ACN": 652,
+        "APV": 188,
+        "CTR": 303,
+        "DEM": 194551,
+        "FWD": 66,
+        "GRN": 684,
+        "LBR": 2652,
+        "NOL": 1754,
+        "REP": 142162,
+        "UAF": 242319,
+        "UNI": 154
+      },
+      "mailTotal": 583310,
+      "inPersonTotal": 2175
+    },
+    {
+      "reportDate": "2026-10-22",
+      "sourceFile": "20261022GenElectionActivity.xlsx",
+      "eligibleRegistered": 4611750,
+      "totalReturned": 730614,
+      "partyTotals": {
+        "ACN": 833,
+        "APV": 243,
+        "CTR": 393,
+        "DEM": 239304,
+        "FWD": 87,
+        "GRN": 853,
+        "LBR": 3398,
+        "NOL": 2280,
+        "REP": 179646,
+        "UAF": 303379,
+        "UNI": 198
+      },
+      "mailTotal": 726564,
+      "inPersonTotal": 4050
+    },
+    {
+      "reportDate": "2026-10-25",
+      "sourceFile": "20261025GenElectionActivity.xlsx",
+      "eligibleRegistered": 4613040,
+      "totalReturned": 842056,
+      "partyTotals": {
+        "ACN": 1003,
+        "APV": 283,
+        "CTR": 460,
+        "DEM": 273604,
+        "FWD": 109,
+        "GRN": 1005,
+        "LBR": 3966,
+        "NOL": 2732,
+        "REP": 207426,
+        "UAF": 351235,
+        "UNI": 233
+      },
+      "mailTotal": 836601,
+      "inPersonTotal": 5455
+    },
+    {
+      "reportDate": "2026-10-28",
+      "sourceFile": "20261028GenElectionActivity.xlsx",
+      "eligibleRegistered": 4616875,
+      "totalReturned": 1227635,
+      "partyTotals": {
+        "ACN": 1500,
+        "APV": 436,
+        "CTR": 717,
+        "DEM": 390922,
+        "FWD": 149,
+        "GRN": 1544,
+        "LBR": 5909,
+        "NOL": 4380,
+        "REP": 301916,
+        "UAF": 519813,
+        "UNI": 349
+      },
+      "mailTotal": 1216280,
+      "inPersonTotal": 11355
+    },
+    {
+      "reportDate": "2026-10-29",
+      "sourceFile": "20261029GenElectionActivity.xlsx",
+      "eligibleRegistered": 4617904,
+      "totalReturned": 1335298,
+      "partyTotals": {
+        "ACN": 1671,
+        "APV": 514,
+        "CTR": 818,
+        "DEM": 422326,
+        "FWD": 157,
+        "GRN": 1716,
+        "LBR": 6581,
+        "NOL": 4913,
+        "REP": 328816,
+        "UAF": 567398,
+        "UNI": 388
+      },
+      "mailTotal": 1321503,
+      "inPersonTotal": 13795
+    },
+    {
+      "reportDate": "2026-11-01",
+      "sourceFile": "20261101GenElectionActivity.xlsx",
+      "eligibleRegistered": 4619609,
+      "totalReturned": 1599988,
+      "partyTotals": {
+        "ACN": 2132,
+        "APV": 655,
+        "CTR": 1035,
+        "DEM": 498204,
+        "FWD": 186,
+        "GRN": 2094,
+        "LBR": 8209,
+        "NOL": 6268,
+        "REP": 390897,
+        "UAF": 689827,
+        "UNI": 481
+      },
+      "mailTotal": 1575743,
+      "inPersonTotal": 24245
+    }
+  ]
+}

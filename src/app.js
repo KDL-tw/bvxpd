@@ -240,7 +240,7 @@ async function importDetailReport(file){const status=$('detail-status');if(!file
   if(!save([snapshot,...snapshots])) return;
   detailReports=[report,...detailReports]; if(!persistDetailReports()) return;
   selectedId=snapshot.id; mode='observed'; race=''; position='All positions'; county='All imported areas';
-  render();renderHistory();mountCalculators(true);renderDetailHistory();
+  render();renderBallots();renderHistory();mountCalculators(true);renderDetailHistory();
   status.textContent=`Saved ${report.records.length.toLocaleString()} rows from ${file.name}. This report is appended to history.`;
   $('detail-file').value=''; toast('SOS detail report saved. Earlier reports remain available.');
 }catch(error){status.textContent=error.message;}

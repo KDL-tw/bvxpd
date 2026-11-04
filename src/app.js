@@ -297,11 +297,12 @@ async function loadArchives(){
     const ag2022=await fetch('data/historical/co-2022-attorney-general.json'); if(ag2022.ok) archives.push(await ag2022.json());
     const ag2018=await fetch('data/historical/co-2018-attorney-general.json'); if(ag2018.ok) archives.push(await ag2018.json());
     archives=archives.map(a=>({...a,kind:a.kind||'observed',election:a.election||a.label||a.id,filename:a.filename||`${a.id}.json`,url:a.url||a.sourceUrl,retrievedAt:a.retrievedAt||null}));
+    let defaultSnapshotId=currentElectionId;
     if(current.ok){const file=await current.json(); archives.unshift({...file,kind:file.kind||'observed',election:file.election||file.label||file.id,filename:file.filename||`${file.id}.json`,url:file.url||file.sourceUrl||'',retrievedAt:file.retrievedAt||null});}
-    if(detailCurrent.ok){const file=await detailCurrent.json(); archives.push({...file,kind:'observed',election:file.election||'2026 General',filename:file.filename||'detail.xlsx',url:file.url||file.sourceUrl||'',retrievedAt:file.retrievedAt||file.importedAt||null});}
+    if(detailCurrent.ok){const file=await detailCurrent.json(); archives.push({...file,kind:'observed',election:file.election||'2026 General',filename:file.filename||'detail.xlsx',url:file.url||file.sourceUrl||'',retrievedAt:file.retrievedAt||file.importedAt||null}); defaultSnapshotId=file.id;}
     const turnout2020=await fetch('data/historical/co-2020-turnout.json'); if(turnout2020.ok) turnoutArchive=await turnout2020.json();
     const turnout2022=await fetch('data/historical/co-2022-turnout.json'); if(turnout2022.ok) turnoutArchive2022=await turnout2022.json();
-    selectedId=currentElectionId; mode='observed'; adoptLooseWatches(); render();renderBallots();renderBallotReturns();renderHistory(); mountCalculators(true); mountResearch();
+    selectedId=defaultSnapshotId; mode='observed'; adoptLooseWatches(); render();renderBallots();renderBallotReturns();renderHistory(); mountCalculators(true); mountResearch();
   }catch{adoptLooseWatches(); toast('The bundled history didn\'t load. Imports and the demo still work.'); render(); mountCalculators(true); mountResearch();}
 }
 const pct=n=>Number.isFinite(n)?(n*100).toFixed(2)+'%':'—';

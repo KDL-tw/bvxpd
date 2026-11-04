@@ -233,7 +233,7 @@ async function importDetailReport(file){const status=$('detail-status');if(!file
   const partyByCandidate=new Map((current?.records||[]).map(row=>[String(row.candidate||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),row.party||'']));
   const workbook=globalThis.XLSX.read(await file.arrayBuffer(),{type:'array',cellDates:false});
   const sourceUrl='https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html';
-  const report=normalizeDetailWorkbook(workbook,{filename:file.name,sourceReportedAt:parsed.toISOString(),sourceUrl,partyByCandidate});
+  const report=normalizeDetailWorkbook(workbook,{filename:file.name,sourceReportedAt:parsed.toISOString(),sourceUrl,partyByCandidate,utils:globalThis.XLSX.utils});
   const duplicate=detailReports.some(previous=>previous.sourceReportedAt===report.sourceReportedAt&&previous.filename===report.filename&&JSON.stringify(previous.records)===JSON.stringify(report.records));
   if(duplicate) throw Error('That report is already saved.');
   const snapshot=detailReportToSnapshot(report);

@@ -5,13 +5,15 @@ export const DETAIL_SCHEMA_VERSION = 1;
 const clean = value => String(value ?? '').trim();
 const keyName = value => clean(value).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
-export function normalizeDetailWorkbook(workbook, {filename = 'detail.xlsx', sourceReportedAt, sourceUrl = '', partyByCandidate = new Map()} = {}) {
+export function normalizeDetailWorkbook(workbook, {filename = 'detail.xlsx', sourceReportedAt, sourceUrl = '', partyByCandidate = new Map(), utils = workbook?.utils} = {}) {
   if (!workbook?.SheetNames?.length) throw Error('The workbook has no worksheets.');
+  const sheetToJson=utils?.sheet_to_json;
+  if(typeof sheetToJson!=='function') throw Error('The workbook reader is unavailable. Refresh once and try again.');
   const reports = [];
   const seen = new Set();
   for (const sheetName of workbook.SheetNames) {
     const sheet = workbook.Sheets[sheetName];
-    const rows = workbook.utils.sheet_to_json(sheet, {header: 1, defval: ''});
+    const rows = sheetToJson(sheet, {header: 1, defval: ''});
     if (!rows.length) continue;
     const title = clean(rows[0]?.[0]);
     if (!title || /table of contents|registered voters/i.test(title)) continue;

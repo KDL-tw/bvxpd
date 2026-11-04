@@ -285,6 +285,7 @@ async function loadArchives(){
     const ballotFinance=await fetch('data/current/co-2026-ballot-committee-funding.json'); if(ballotFinance.ok){const payload=await ballotFinance.json(); ballotFinanceSeed=Array.isArray(payload.records)?payload.records:[];}
     const ballotExpenditure=await fetch('data/current/co-2026-ballot-committee-expenditures.json'); if(ballotExpenditure.ok){const payload=await ballotExpenditure.json(); ballotExpenditureSeed=Array.isArray(payload.records)?payload.records:[];}
     const current=await fetch('data/current/co-2026-general-candidates.json');
+    const detailCurrent=await fetch('data/current/co-2026-detail-20261103.json');
     const response=await fetch('data/historical/co-2022-general.json');
     if(!response.ok)throw Error('Archive unavailable');
     archives=[validateArchive(await response.json())];
@@ -297,6 +298,7 @@ async function loadArchives(){
     const ag2018=await fetch('data/historical/co-2018-attorney-general.json'); if(ag2018.ok) archives.push(await ag2018.json());
     archives=archives.map(a=>({...a,kind:a.kind||'observed',election:a.election||a.label||a.id,filename:a.filename||`${a.id}.json`,url:a.url||a.sourceUrl,retrievedAt:a.retrievedAt||null}));
     if(current.ok){const file=await current.json(); archives.unshift({...file,kind:file.kind||'observed',election:file.election||file.label||file.id,filename:file.filename||`${file.id}.json`,url:file.url||file.sourceUrl||'',retrievedAt:file.retrievedAt||null});}
+    if(detailCurrent.ok){const file=await detailCurrent.json(); archives.push({...file,kind:'observed',election:file.election||'2026 General',filename:file.filename||'detail.xlsx',url:file.url||file.sourceUrl||'',retrievedAt:file.retrievedAt||file.importedAt||null});}
     const turnout2020=await fetch('data/historical/co-2020-turnout.json'); if(turnout2020.ok) turnoutArchive=await turnout2020.json();
     const turnout2022=await fetch('data/historical/co-2022-turnout.json'); if(turnout2022.ok) turnoutArchive2022=await turnout2022.json();
     selectedId=currentElectionId; mode='observed'; adoptLooseWatches(); render();renderBallots();renderBallotReturns();renderHistory(); mountCalculators(true); mountResearch();

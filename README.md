@@ -55,7 +55,7 @@ The archive supplies an election date but no reporting timestamp. `asOf` is ther
 ## Manual Colorado SOS workflow
 
 1. Visit [Colorado SOS results and data](https://www.sos.state.co.us/pubs/elections/resultsData.html) or the [historical election database](https://historicalelectiondata.coloradosos.gov/). Select one election and reporting snapshot. Save the exact source page URL and source reporting timestamp.
-2. For ordinary imports, obtain candidate-result rows as CSV, TSV or flat JSON. For election-night SOS detail reports, use the **SOS detail report** importer in Import center and select the populated `.xlsx` workbook. It reads the standard SOS detail layout, retains registered-voter pools, and stores each timestamped report separately. Search-summary exports and ballot-return files are different datasets.
+2. For ordinary imports, obtain candidate-result rows as CSV, TSV or flat JSON. For election-night SOS detail reports, use the **SOS detail report** importer in Import center and select one or more populated `.xlsx` workbooks. Each file is timestamped automatically at upload, reads the standard SOS detail layout, retains registered-voter pools, and stores each report separately. Search-summary exports and ballot-return files are different datasets.
 3. Keep one row per **race + candidate/choice + county**, or one statewide total per race/candidate. Include district identifiers in race names; never combine primary parties, elections, precinct detail, voting-method detail or statewide/county totals. Remove total, ballots-cast, turnout, overvote and undervote rows. Retain all candidate choices needed for the comparison. The importer validates structure but cannot prove that the selected source is complete.
 4. In Import center, select the file (10 MB / 100,000 rows maximum) and map Race, Candidate/choice and Votes. County and Party are optional; without County, every row is treated as a statewide total.
 5. Set classification. **Demo is the default.** Observed requires an HTTPS Colorado SOS page, election name, source timestamp with timezone, reporting stage and explicit source verification. An observed label means manually sourced, not independently authenticated. Certified is a source label, not a dashboard certification.
@@ -64,7 +64,7 @@ The archive supplies an election date but no reporting timestamp. `asOf` is ther
 
 ### SOS detail report series
 
-The detail importer is append-only. Each workbook becomes one observed snapshot with `sourceReportedAt`, `filename`, and rows keyed by `race`, `county`, and `candidate`; each row also retains `registeredVoters`. Re-importing a later workbook does not replace an earlier report, so successive drops remain selectable in Source history and available for time-series work. The current-election guard applies: historical election files cannot be added as new drops.
+The detail importer is append-only. Each workbook becomes one observed snapshot with an automatic upload-time `sourceReportedAt`, `filename`, and rows keyed by `race`, `county`, and `candidate`; each row also retains `registeredVoters`. Multiple workbooks can be selected together. Re-importing a later workbook does not replace an earlier report, so successive drops remain selectable in Source history and available for time-series work. The current-election guard applies: historical election files cannot be added as new drops.
 
 Schema example (synthetic, not actual election results):
 

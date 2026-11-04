@@ -226,14 +226,12 @@ function persistDetailReports(){try{localStorage.setItem(detailReportsKey,JSON.s
 function renderDetailHistory(){const box=$('detail-history');if(!box)return;box.innerHTML=detailReports.length?detailReports.slice().sort((a,b)=>String(b.sourceReportedAt).localeCompare(String(a.sourceReportedAt))).map(report=>{const races=new Set(report.records.map(row=>row.race)).size;return `<div class="detail-history-row"><span><strong>${esc(time(report.sourceReportedAt))}</strong><small>${esc(report.filename)} · ${fmt(races)} contests · ${fmt(report.records.length)} rows</small></span><span class="badge">SAVED</span></div>`;}).join(''):'<p class="muted">Reports will appear here in timestamp order.</p>';}
 async function importDetailReport(file){const status=$('detail-status');if(!file)return;try{
   if(file.size>25*1024*1024) throw Error('Detail workbooks must be 25 MB or smaller.');
-  const asOf=$('detail-as-of')?.value;
-  if(!asOf) throw Error('Enter the report timestamp before importing.');
-  const parsed=new Date(asOf); if(!Number.isFinite(parsed.getTime())) throw Error('Enter a valid report timestamp.');
+  const parsed=new Date();
   if(!globalThis.XLSX) throw Error('The workbook reader is unavailable. Refresh once and try again.');
   const current=archives.find(s=>s.id===currentElectionId);
   const partyByCandidate=new Map((current?.records||[]).map(row=>[String(row.candidate||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),row.party||'']));
   const workbook=globalThis.XLSX.read(await file.arrayBuffer(),{type:'array',cellDates:false});
-  const sourceUrl=$('detail-source-url')?.value.trim()||'https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html';
+  const sourceUrl='https://www.coloradosos.gov/pubs/elections/vote/generalCandidates.html';
   const report=normalizeDetailWorkbook(workbook,{filename:file.name,sourceReportedAt:parsed.toISOString(),sourceUrl,partyByCandidate});
   const duplicate=detailReports.some(previous=>previous.sourceReportedAt===report.sourceReportedAt&&previous.filename===report.filename&&JSON.stringify(previous.records)===JSON.stringify(report.records));
   if(duplicate) throw Error('That report is already saved.');
@@ -246,7 +244,7 @@ async function importDetailReport(file){const status=$('detail-status');if(!file
   $('detail-file').value=''; toast('SOS detail report saved. Earlier reports remain available.');
 }catch(error){status.textContent=error.message;}
 }
-$('detail-file')?.addEventListener('change',e=>importDetailReport(e.target.files[0]));
+$('detail-file')?.addEventListener('change',async e=>{for(const file of [...e.target.files]) await importDetailReport(file);});
 renderDetailHistory();
  $('finance-file').onchange=async()=>{const file=$('finance-file').files[0];if(!file)return;const status=$('finance-status');status.textContent='Reading the TRACER file…';try{const rows=parseDelimited(await file.text());const headers=rows.shift().map(x=>x.trim());const normalized=normalizeTracerExport(headers,rows,file.name);localStorage.setItem('bullvixen.finance.normalized.v1',JSON.stringify(normalized));status.textContent=`Turned ${rows.length.toLocaleString()} TRACER rows into ${normalized.length.toLocaleString()} records. Still only on this computer.`; mountCalculators(true);}catch(e){status.textContent=e.message;}};
 $('file').onchange=async()=>{const token=++fileToken;invalidate();table=null;$('mapping').replaceChildren();const file=$('file').files[0];if(!file)return;try{if(file.size>10*1024*1024)throw Error('Maximum file size is 10 MB.');if(!/\.(csv|tsv|json)$/i.test(file.name))throw Error('Choose a CSV, TSV or JSON file.');const text=await file.text();if(token!==fileToken)return;table=parseFile(text,file.name);const mapping=suggestedMapping(table.headers);$('mapping').innerHTML=fields.map(f=>`<label>${f==='candidate'?'Candidate / choice':f[0].toUpperCase()+f.slice(1)} ${['county','party'].includes(f)?'(optional)':'*'}<select id="map-${f}"><option value="-1">${f==='county'?'Statewide totals':f==='party'?'No party column':'Select column'}</option>${table.headers.map((h,i)=>`<option value="${i}" ${mapping[f]===i?'selected':''}>${esc(h)}</option>`).join('')}</select></label>`).join('');status(`${fmt(table.rows.length)} rows from ${file.name}. Check the column map before you save.`);}catch(e){if(token===fileToken)status(e.message,true);}};

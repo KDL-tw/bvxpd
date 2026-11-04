@@ -148,7 +148,7 @@ document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click'
 window.addEventListener('hashchange',()=>page(location.hash.slice(1)));
 const allSnapshots=()=>[...(liveSnapshot?[liveSnapshot]:[]),...snapshots,...archives];
 const isArchive=s=>archives.includes(s);
-function historicalFile(s){return !!s&&isArchive(s)&&s.id!==currentElectionId;}
+function historicalFile(s){return !!s&&isArchive(s)&&s.id!==currentElectionId&&!s.detailReport;}
 function currentYearFile(s){return !!s&&!historicalFile(s)&&(s.id===currentElectionId||new RegExp(`\\b${currentElectionYear}\\b`).test(s.election||''));}
 function currentFirst(files){return [...files.filter(s=>s.id===currentElectionId),...files.filter(s=>s.id!==currentElectionId&&currentYearFile(s)),...files.filter(s=>s.id!==currentElectionId&&!currentYearFile(s))];}
 function active(){return mode==='demo'&&selectedId==='demo'?demo:allSnapshots().find(s=>s.id===selectedId&&s.kind===mode);}
